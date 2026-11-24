@@ -27,13 +27,22 @@
 ## 2. Platform Architecture & Features Built
 
 1. **Luminous Brand Aesthetics:** Pristine pearl alabaster (`#FAF7F2`), deep botanical lotus leaf emerald (`#0B281E`), and burnished champagne gold (`#C59B3F`).
-2. **Interactive 3D / Canvas Organic Lotus Petals:** Custom-rendered canvas with drifting 3D-shaded lotus petals and golden starlight particles that react to cursor breeze.
-3. **The 3 Dining Sanctuaries (Client-Centric):**
+2. **Interactive 3D / Canvas Organic Lotus Petals:** Custom-rendered canvas with drifting 3D-shaded lotus petals and golden starlight particles that react to cursor air currents.
+3. **The 3 Dining Sanctuaries:**
    - **The Starlit Terrace Garden:** Open-air breezy dining under fairy lights and palms.
    - **The Imperial Velvet AC Lounge & Bar:** Plush emerald velvet booths, artisan mixology, intimate dining.
    - **Private Group Banquets:** 15 to 50+ guests celebration enclaves.
 4. **Saras Baug Dedicated Parking Showcase:** Highlights the 10–15 on-site car slots—solving the #1 diner hesitation in the Parvati/Swargate area.
-5. **Interactive Culinary Menu Deck:** Filterable menu showcase with exact pricing (Burmese Khao Suey ₹671, Kamal Ke Kebab ₹481, Prawns Tempura ₹644, Dhaba Chicken ₹642, Eggless Tiramisu ₹497).
+5. **Authentic Text-Based Luxury Menu Deck (Zero Misleading Stock Photos):**
+   - 36+ real White Lotus items organized by category:
+     - **Appetizers & Meat on Stick:** Kamal Ke Kebab (₹481), Kashmiri Tabak Maaz (₹795), Shish Taouk Chicken (₹655), Arabic Grilled Chicken (₹545), Dahi Ke Kebab (₹440), Sambal Baby Potatoes (₹415), Loaded Grande Nachos (₹400), Golden Prawns Tempura (₹644), Rawa Fried Surmai / Fish Amritsari (₹675).
+     - **Soups, Salads & Bao:** Rich Chicken Chowder Soup (₹335), Thai Raw Mango & Peanut Salad (₹480), Crispy Panko Paneer Bao (₹425), Teriyaki Glazed Chicken Bao (₹485).
+     - **Pizzas, Pasta & Risotto:** Pink Sauce Penne Rigatoni (₹520), Chicken Alfredo Fettuccine (₹640), White Mushroom & Truffle Pizza (₹560), Arborio Wild Mushroom Risotto (₹585).
+     - **Continental & Asian Bowls:** Burmese Khao Suey (₹671), Chicken Red Thai Curry Bowl (₹660), Char-Grilled Pepper Steak / Meat on Steak (₹745), Wok-Tossed Hakka Noodles & Rice (₹385).
+     - **Heritage Indian Mains & Breads:** Subz Diwani Handi (₹575), Paneer Tikka Lababdar (₹495), 18-Hour Dal Bukhara (₹465), Murgh E Khas / Butter Chicken Royale (₹577), Slow-Braised Rahra Gosht (₹835), Artisan Tandoori Breads (Butter Naan ₹90, Garlic Naan ₹110, Cheese Garlic Naan ₹145, Laccha Paratha ₹85).
+     - **Artisan Desserts & Natural Ice Creams:** Her Highness Tiramisu (₹495), Floating Vanilla Panna Cotta (₹465), Baked New York Cheesecake (₹495), Red Velvet Swirl Cheesecake (₹485), Warm Walnut Fudge Brownie with Ice Cream (₹425), Authentic Preservative-Free Natural Ice Creams (₹240).
+     - **The Bar & Mixology:** Signature Cocktails & Mojitos (₹475–₹650), Artisan Mocktails & Shakes (₹290–₹340), Single Malts (Glenfiddich, Talisker), Scotch (Black Label, Chivas 12), Vodka (Grey Goose, Absolut), Brandy, Craft Beers, Wines & Shots.
+   - Built-in instant live text search bar and dietary badges (Veg, Non-Veg, Bar).
 6. **Instant VIP Table Booking & CRM:** Form submits pre-filled booking to Floor Captain on WhatsApp (`+91 95135 75757`) and simultaneously syncs to Google Sheets CRM.
 7. **2x Smart NFC Google Review Counter Tap Cards:** Pre-programmed contactless review cards placed at billing counter. Diners tap to leave a review in 3 seconds.
 
@@ -53,9 +62,9 @@
 
 ## 4. Deliverables in this Directory
 
-- `index.html`: Production-ready luxury restaurant portal.
+- `index.html`: Production-ready luxury restaurant portal with text-based menu.
 - `proposal-quotation.html`: 3-page executive proposal and investment document.
-- `White_Lotus_Executive_Quotation.pdf`: Pixel-perfect executive PDF quotation generated via Edge headless (~933 KB).
+- `White_Lotus_Executive_Quotation.pdf`: Pixel-perfect executive PDF quotation generated via Edge headless (~915 KB).
 - `google-apps-script.js`: Automated Google Sheets table booking CRM backend.
 - `404.html`: Custom branded error page.
 - `README.md`: System manual and client presentation guide.

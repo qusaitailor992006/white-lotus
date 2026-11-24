@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>White Lotus: Food Vibe Folks | Luxury Fine Dining & Bar | Saras Baug Road, Pune</title>
-  <meta name="description" content="Experience White Lotus: Food Vibe Folks on Saras Baug Road, Pune. An opulent dining sanctuary featuring open-air starlit terrace gardens, royal velvet AC lounge, artisanal North Indian, Burmese Khao Suey, handcrafted Italian, craft mixology, and dedicated on-site parking. 4.6★ Rated (1,660+ Reviews).">
-  <meta name="keywords" content="White Lotus Pune, White Lotus Saras Baug Rd, Restaurants near Saras Baug, Fine dining Parvati Pune, Terrace restaurant Pune, Best multi-cuisine restaurant Swargate, Mitra Mandal Chowk dining, White Lotus Food Vibe Folks, Khao Suey Pune, Tiramisu Pune, Private parking restaurant Pune">
+  <meta name="description" content="Experience White Lotus: Food Vibe Folks on Saras Baug Road, Pune. An opulent dining sanctuary featuring open-air starlit terrace gardens, royal velvet AC lounge, artisanal North Indian, Burmese Khao Suey, Tabak Maaz, handcrafted Italian, craft mixology, and dedicated on-site parking. 4.6★ Rated (1,660+ Reviews).">
+  <meta name="keywords" content="White Lotus Pune, White Lotus Saras Baug Rd, Restaurants near Saras Baug, Fine dining Parvati Pune, Terrace restaurant Pune, Best multi-cuisine restaurant Swargate, Mitra Mandal Chowk dining, White Lotus Food Vibe Folks, Khao Suey Pune, Her Highness Tiramisu Pune, Tabak Maaz Pune, Private parking restaurant Pune">
   <meta name="author" content="White Lotus: Food Vibe Folks">
 
   <!-- Open Graph -->
   <meta property="og:type" content="restaurant.restaurant">
   <meta property="og:title" content="White Lotus: Food Vibe Folks — Luxury Fine Dining & Bar">
-  <meta property="og:description" content="4.6 ★ Rated on Google (1,660+ Diners). Open-air starlit terrace, velvet cocktail lounge, Burmese Khao Suey, artisan tandoor, and dedicated on-site parking on Saras Baug Road, Pune.">
+  <meta property="og:description" content="4.6 ★ Rated on Google (1,660+ Diners). Open-air starlit terrace, velvet cocktail lounge, Burmese Khao Suey, Tabak Maaz, Her Highness Tiramisu, and dedicated on-site parking on Saras Baug Road, Pune.">
   <meta property="og:site_name" content="White Lotus: Food Vibe Folks">
   <meta property="og:locale" content="en_IN">
 
@@ -90,7 +90,7 @@
       "longitude": 73.8524
     },
     "telephone": "+919513575757",
-    "servesCuisine": ["North Indian", "Burmese", "Pan-Asian", "Italian", "Continental"],
+    "servesCuisine": ["North Indian", "Burmese", "Kashmiri", "Pan-Asian", "Italian", "Continental", "Bar"],
     "priceRange": "₹₹",
     "openingHoursSpecification": [
       {
@@ -169,19 +169,70 @@
       border: 1px solid rgba(197, 155, 63, 0.2);
     }
 
-    .glass-botanical {
-      background: rgba(11, 40, 30, 0.94);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(197, 155, 63, 0.25);
+    /* Fine-Dining Text Menu Item Card */
+    .menu-item-row {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(197, 155, 63, 0.2);
+    }
+    .menu-item-row:hover {
+      border-color: #C59B3F;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(11, 40, 30, 0.08);
     }
 
-    /* Interactive Menu Card Hover */
-    .menu-card {
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Veg / Non-Veg Badges */
+    .diet-badge-veg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 15px;
+      height: 15px;
+      border: 1.5px solid #059669;
+      border-radius: 3px;
+      padding: 2px;
+      flex-shrink: 0;
     }
-    .menu-card:hover {
-      transform: translateY(-6px);
+    .diet-badge-veg::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background-color: #059669;
+      border-radius: 50%;
+    }
+
+    .diet-badge-nonveg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 15px;
+      height: 15px;
+      border: 1.5px solid #DC2626;
+      border-radius: 3px;
+      padding: 2px;
+      flex-shrink: 0;
+    }
+    .diet-badge-nonveg::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 7px solid #DC2626;
+    }
+
+    .diet-badge-bar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 15px;
+      height: 15px;
+      border: 1.5px solid #C59B3F;
+      border-radius: 3px;
+      padding: 1px;
+      flex-shrink: 0;
+      font-size: 9px;
+      color: #936D1B;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -246,7 +297,7 @@
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="#menu" class="hover:text-gold transition-colors py-2 relative group">
-            Signature Menu
+            Dining & Bar Menu
             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="#parking" class="hover:text-gold transition-colors py-2 relative group">
@@ -292,7 +343,7 @@
     <div id="mobile-menu" class="hidden lg:hidden bg-alabaster border-b border-gold/20 px-6 py-6 transition-all duration-300">
       <div class="flex flex-col space-y-4 text-xs font-bold uppercase tracking-widest text-botanical-deep">
         <a href="#sanctuaries" class="mobile-nav-link py-2 border-b border-gold/10">The Sanctuaries</a>
-        <a href="#menu" class="mobile-nav-link py-2 border-b border-gold/10">Signature Menu</a>
+        <a href="#menu" class="mobile-nav-link py-2 border-b border-gold/10">Dining & Bar Menu</a>
         <a href="#parking" class="mobile-nav-link py-2 border-b border-gold/10">Dedicated Parking</a>
         <a href="#reviews" class="mobile-nav-link py-2 border-b border-gold/10">Diner Stories</a>
         <a href="#banquets" class="mobile-nav-link py-2 border-b border-gold/10">Celebrations & Banquets</a>
@@ -340,7 +391,7 @@
 
             <!-- SUBTITLE -->
             <p class="text-base sm:text-lg text-charcoal/80 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Pune’s celebrated fine dining destination on Saras Baug Road. Indulge in an enchanting starlit terrace, handcrafted Burmese Khao Suey, slow-simmered Punjabi gravies, stone pizzas, and artisanal mixology — with guaranteed on-site parking.
+              Pune’s celebrated fine dining destination on Saras Baug Road. Indulge in an enchanting starlit terrace, handcrafted Burmese Khao Suey, Tabak Maaz, Her Highness Tiramisu, stone pizzas, and artisanal mixology — with guaranteed on-site parking.
             </p>
 
             <!-- VALUE PILLARS ROW -->
@@ -370,7 +421,7 @@
               </button>
 
               <a href="#menu" class="inline-flex items-center justify-center gap-2 px-7 py-4 bg-white/80 hover:bg-white text-botanical-deep text-xs font-bold uppercase tracking-widest rounded-full border border-gold/30 hover:border-gold transition-all duration-300 shadow-sm">
-                <span>Explore Culinary Menu</span>
+                <span>Explore Full Menu & Bar</span>
               </a>
             </div>
 
@@ -382,7 +433,7 @@
 
           </div>
 
-          <!-- RIGHT HERO VISUAL (ELEGANT RESTAURANT PORTAL CARD) -->
+          <!-- RIGHT HERO VISUAL (TERRACE ATMOSPHERE PORTAL CARD) -->
           <div class="lg:col-span-5 relative">
             <div class="relative mx-auto max-w-md lg:max-w-none">
               
@@ -394,7 +445,7 @@
                 
                 <!-- Atmosphere Image with Overlay -->
                 <div class="relative h-72 sm:h-80 overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="White Lotus Dining Sanctuary Pune" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                  <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="White Lotus Dining Terrace Pune" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
                   <div class="absolute inset-0 bg-gradient-to-t from-botanical-deep via-botanical-deep/40 to-transparent"></div>
                   
                   <!-- Floating Badge on Image -->
@@ -619,208 +670,782 @@
       </div>
     </section>
 
-    <!-- SECTION 3: SIGNATURE CULINARY MASTERPIECES (INTERACTIVE MENU DECK) -->
+    <!-- SECTION 3: THE COMPREHENSIVE LUXURY TEXT MENU & BAR DECK -->
     <section id="menu" class="py-24 bg-cream relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold">Culinary Mastery</span>
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold">Curated Gastronomy</span>
           <h2 class="font-serif text-3xl sm:text-5xl font-normal text-botanical-deep">
-            Signature <span class="italic font-normal">Creations</span>
+            The White Lotus <span class="italic font-normal">Culinary & Bar Deck</span>
           </h2>
-          <p class="text-sm sm:text-base text-charcoal/70 leading-relaxed">
-            From the beloved Burmese Khao Suey that Pune raves about, to melt-in-mouth Kamal Ke Kebab and authentic stone-fired Italian pastas.
+          <p class="text-sm sm:text-base text-charcoal/75 leading-relaxed">
+            Crafted with uncompromising devotion to flavor. From Kashmiri Tabak Maaz and tender Kamal Ke Kebab, to Burmese Khao Suey, artisan wood-fired pizzas, Her Highness Tiramisu, and master-crafted mixology.
           </p>
         </div>
 
-        <!-- CATEGORY TABS -->
-        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
-          <button onclick="filterMenu('all')" class="menu-tab-btn active px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-botanical-deep text-white shadow-sm border border-gold/30" data-cat="all">
-            All Masterpieces
+        <!-- CATEGORY NAVIGATION TABS -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+          <button onclick="filterMenu('all')" class="menu-tab-btn active px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-botanical-deep text-white shadow-sm border border-gold/30" data-cat="all">
+            All Creations
           </button>
-          <button onclick="filterMenu('starters')" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="starters">
-            Tandoor & Starters
+          <button onclick="filterMenu('munch-appetizers')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="munch-appetizers">
+            Appetizers & Meat on Stick
           </button>
-          <button onclick="filterMenu('asian-italian')" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="asian-italian">
-            Asian & Continental
+          <button onclick="filterMenu('soups-salads-bao')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="soups-salads-bao">
+            Soups, Salads & Bao
           </button>
-          <button onclick="filterMenu('mains')" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="mains">
-            Heritage Mains
+          <button onclick="filterMenu('pizza-pasta-risotto')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="pizza-pasta-risotto">
+            Pizzas, Pasta & Risotto
           </button>
-          <button onclick="filterMenu('desserts')" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="desserts">
-            Desserts & Bar
+          <button onclick="filterMenu('continental-bowls')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="continental-bowls">
+            Continental & Asian Bowls
+          </button>
+          <button onclick="filterMenu('heritage-curries-breads')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="heritage-curries-breads">
+            Heritage Mains & Breads
+          </button>
+          <button onclick="filterMenu('desserts-icecream')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="desserts-icecream">
+            Artisan Desserts & Natural Ice Cream
+          </button>
+          <button onclick="filterMenu('bar-mixology')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="bar-mixology">
+            The Bar & Mixology
           </button>
         </div>
 
-        <!-- MENU ITEMS GRID -->
-        <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- SEARCH & DIETARY FILTER BAR -->
+        <div class="max-w-xl mx-auto mb-10 flex flex-col sm:flex-row items-center gap-3">
+          <div class="relative w-full">
+            <input type="text" id="menu-search-input" onkeyup="searchMenuItems()" placeholder="Search dishes (e.g. Tiramisu, Khao Suey, Tabak Maaz, Kebab...)" class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white border border-gold/30 text-xs focus:outline-none focus:border-gold shadow-sm">
+            <svg class="w-4 h-4 text-gold absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <div class="flex items-center gap-3 text-xs font-semibold shrink-0">
+            <span class="flex items-center gap-1.5"><span class="diet-badge-veg"></span> Pure Veg</span>
+            <span class="flex items-center gap-1.5"><span class="diet-badge-nonveg"></span> Non-Veg</span>
+            <span class="flex items-center gap-1.5"><span class="diet-badge-bar">🍸</span> Bar</span>
+          </div>
+        </div>
+
+        <!-- COMPREHENSIVE TEXT-BASED MENU GRID (NO FOOD PICTURES) -->
+        <div id="menu-deck-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           
-          <!-- Dish 1: Burmese Khao Suey -->
-          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="asian-italian">
-            <div class="relative h-56 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80" alt="Burmese Khao Suey" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
-                ★ Diner Favorite #1
-              </span>
-              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
-                ₹671
-              </span>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
-              <div>
-                <div class="flex items-center justify-between">
-                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Burmese Khao Suey</h3>
-                  <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md">Veg / Non-Veg</span>
+          <!-- ITEM 1: KAMAL KE KEBAB -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="munch-appetizers">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Kamal Ke Kebab</h4>
                 </div>
-                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
-                  Fragrant slow-simmered spiced coconut milk broth poured over egg noodles, served with 8 traditional crunch garnishes, roasted peanuts, fried garlic, and fresh lime.
-                </p>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹481</span>
               </div>
-              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
-                <span class="text-charcoal/50 italic">Chef's Signature Recipe</span>
-                <button onclick="openBookingModal('terrace')" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
-              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Tender pan-seared lotus stem patties infused with green cardamom, roasted cumin, and royal herbs. Served with chilled mint-pomegranate dip.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">White Lotus Signature</span>
+              <button onclick="openBookingModal('terrace')" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
             </div>
           </div>
 
-          <!-- Dish 2: Kamal Ke Kebab -->
-          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="starters">
-            <div class="relative h-56 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=700&q=80" alt="Kamal Ke Kebab" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
-                White Lotus Special
-              </span>
-              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
-                ₹481
-              </span>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
-              <div>
-                <div class="flex items-center justify-between">
-                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Kamal Ke Kebab</h3>
-                  <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md">Pure Veg</span>
+          <!-- ITEM 2: TABAK MAAZ -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="munch-appetizers">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Non-Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Kashmiri Tabak Maaz</h4>
                 </div>
-                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
-                  Tender, pan-seared lotus root (kamal kakdi) patties infused with green cardamom, roasted cumin, and royal herbs. Served with chilled pomegranate-mint raita.
-                </p>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹795</span>
               </div>
-              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
-                <span class="text-charcoal/50 italic">House Innovation</span>
-                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
-              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Authentic Kashmiri Wazwan specialty. Tender baby mutton ribs poached with saffron milk and whole aromatics, then flash-crisped in pure desi ghee.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Royal Heritage Dish</span>
+              <button onclick="openBookingModal('lounge')" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
             </div>
           </div>
 
-          <!-- Dish 3: Prawns Tempura -->
-          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="starters">
-            <div class="relative h-56 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=700&q=80" alt="Prawns Tempura" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
-                Coastal Favorite
-              </span>
-              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
-                ₹644
-              </span>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
-              <div>
-                <div class="flex items-center justify-between">
-                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Golden Prawns Tempura</h3>
-                  <span class="text-xs text-red-700 font-semibold bg-red-50 px-2 py-0.5 rounded-md">Seafood</span>
+          <!-- ITEM 3: SHISH TAOUK (MEAT ON STICK) -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="munch-appetizers">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Non-Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Shish Taouk (Meat on Stick)</h4>
                 </div>
-                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
-                  Jumbo Arabian Sea prawns flash-fried in light Japanese tempura lace batter. Accompanied by citrus wasabi mayo and sweet mirin-tentsuyu dip.
-                </p>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹655</span>
               </div>
-              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
-                <span class="text-charcoal/50 italic">Crispy Perfection</span>
-                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
-              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Lebanese style char-grilled chicken skewers marinated in garlic toum, lemon zest, paprika, and sumac. Served on wooden skewers with pickled beetroots.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Charcoal Smoked</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
             </div>
           </div>
 
-          <!-- Dish 4: Dhaba Chicken Curry -->
-          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="mains">
-            <div class="relative h-56 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Dhaba Chicken Curry" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
-                Heritage Recipe
-              </span>
-              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
-                ₹642
-              </span>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
-              <div>
-                <div class="flex items-center justify-between">
-                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Rustic Dhaba Chicken</h3>
-                  <span class="text-xs text-red-700 font-semibold bg-red-50 px-2 py-0.5 rounded-md">Non-Veg</span>
+          <!-- ITEM 4: ARABIC CHICKEN -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="munch-appetizers">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Non-Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Arabic Grilled Chicken</h4>
                 </div>
-                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
-                  Tender chicken morsels slow-cooked on iron kadhais with roasted whole spices, caramelized onions, and country butter. Paired best with butter garlic naan.
-                </p>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹545</span>
               </div>
-              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
-                <span class="text-charcoal/50 italic">North Indian Gold Standard</span>
-                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
-              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Succulent boneless chicken morsels infused with za'atar herbs, crushed black pepper, and extra virgin olive oil. Served with warm pita bread.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Middle Eastern Grill</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
             </div>
           </div>
 
-          <!-- Dish 5: Pink Sauce Penne Pasta -->
-          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="asian-italian">
-            <div class="relative h-56 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1621996346565-e3d5d62817d4?auto=format&fit=crop&w=700&q=80" alt="Pink Sauce Penne Pasta" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
-                Italian Bistro
-              </span>
-              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
-                ₹520
-              </span>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
-              <div>
-                <div class="flex items-center justify-between">
-                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Pink Sauce Penne Rigati</h3>
-                  <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md">Veg / Chicken</span>
+          <!-- ITEM 5: DAHI KE KEBAB -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="munch-appetizers">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Awadhi Dahi Ke Kebab</h4>
                 </div>
-                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
-                  Artisanal al-dente penne folded in a delicate blend of San Marzano plum tomato marinara and Italian parmesan cream, topped with fresh basil and herb oil.
-                </p>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹440</span>
               </div>
-              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
-                <span class="text-charcoal/50 italic">Creamy & Tangy</span>
-                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
-              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Melt-in-mouth golden croquettes of spiced hung curd, crushed roasted cashews, and fresh green chilies with a paper-thin crispy crust.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Vegetarian Classic</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
             </div>
           </div>
 
-          <!-- Dish 6: Classic Eggless Tiramisu -->
-          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="desserts">
-            <div class="relative h-56 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=80" alt="Eggless Tiramisu" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
-                Sweet Finale
-              </span>
-              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
-                ₹497
-              </span>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
-              <div>
-                <div class="flex items-center justify-between">
-                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Signature Eggless Tiramisu</h3>
-                  <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md">Eggless Veg</span>
+          <!-- ITEM 6: SAMBAL BABY POTATOES -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="munch-appetizers">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Sambal Baby Potatoes</h4>
                 </div>
-                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
-                  Layers of dark espresso-drenched savoiardi biscuits and airy mascarpone custard, finished with a heavy blanket of Belgian Dutch-processed cocoa powder.
-                </p>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹415</span>
               </div>
-              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
-                <span class="text-charcoal/50 italic">Pune's Favorite Dessert</span>
-                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Crisp baby jacket potatoes tossed in fiery Balinese red chili sambal, kaffir lime, crushed lemongrass, and toasted sesame seeds.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Munchies Favorite</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 7: LOADED NACHOS -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="munch-appetizers">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Loaded Grande Nachos</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹400</span>
               </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Crispy house-made corn tortilla crisps drenched in jalapeño cheddar queso, charred corn salsa, refried beans, and dollops of sour cream.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Bar Nibbles</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 8: GOLDEN PRAWNS TEMPURA -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="munch-appetizers">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Seafood"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Golden Prawns Tempura</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹644</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Jumbo Arabian Sea prawns flash-fried in airy Japanese tempura lace batter. Accompanied by zesty wasabi cream and sweet tentsuyu dip.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Coastal Delicacy</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 9: RAWA FRIED SURMAI / FISH AMRITSARI -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="munch-appetizers">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Fish / Seafood"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Rawa Fried Surmai / Fish Amritsari</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹675</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Fresh Kingfish fillets coated in semolina and hand-pounded coastal spices, pan-crisped to golden perfection with mint chutney and lemon wedges.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Fresh Catch Special</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 10: CRISPY PANEER BAO -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="soups-salads-bao">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Crispy Panko Paneer Bao</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹425</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Pillowy steamed open lotus bao buns filled with crunchy panko-crusted cottage cheese, pickled cucumbers, sriracha mayo, and scallions.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Asian Street Food</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 11: TERIYAKI CHICKEN BAO -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="soups-salads-bao">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Non-Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Teriyaki Glazed Chicken Bao</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹485</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Fluffy bao buns layered with dark mirin-soy glazed chicken thighs, crushed roasted peanuts, micro-greens, and toasted sesame.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Steamed Artisan Bao</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 12: CHICKEN CHOWDER SOUP -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="soups-salads-bao">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Non-Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Rich Chicken Chowder Soup</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹335</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Velvety American country chowder broth simmered with tender shredded chicken, sweet golden corn kernels, thyme, and herb garlic croutons.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Comfort Soup</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 13: THAI RAW MANGO SALAD -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="soups-salads-bao">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Thai Raw Mango & Peanut Salad</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹480</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Crisp julienned raw mango, bird's eye chili, palm sugar dressing, fresh cilantro, and roasted crushed peanuts. Tangy, zesty and refreshing.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Garden Fresh</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 14: PINK SAUCE PENNE RIGATONI -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="pizza-pasta-risotto">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian / Non-Veg Option"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Pink Sauce Penne Rigatoni</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹520</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Artisanal pasta tossed in an exquisite fusion of San Marzano plum tomato pomodoro and velvet mascarpone parmesan cream, garnished with fresh basil.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Italian Bistro Favorite</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 15: CHICKEN ALFREDO FETTUCCINE -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="pizza-pasta-risotto">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Non-Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Classic Chicken Alfredo Fettuccine</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹640</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Hand-rolled ribbon fettuccine folded in roasted garlic butter, heavy cream, cracked peppercorns, grilled chicken strips, and aged Grana Padano.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Creamy Indulgence</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 16: WHITE MUSHROOM & TRUFFLE PIZZA -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="pizza-pasta-risotto">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">White Mushroom & Truffle Pizza</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹560</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Stone-baked artisan crust topped with sautéed button & porcini mushrooms, fior di latte mozzarella, roasted garlic cream, and aromatic white truffle oil.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Stone-Fired Pizza</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 17: ARBORIO WILD MUSHROOM RISOTTO -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="pizza-pasta-risotto">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Arborio Wild Mushroom Risotto</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹585</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Authentic Italian arborio rice slow-cooked in rich vegetable broth with shiitake and porcini mushrooms, finished with cold butter and parmesan crisp.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Slow-Simmered Italian</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 18: BURMESE KHAO SUEY -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="continental-bowls">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Veg / Non-Veg Option"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Burmese Khao Suey Bowl</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹671</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Chef's crown jewel. Slow-simmered spiced coconut milk broth poured over egg noodles, accompanied by 8 authentic crunch toppings, fried garlic, peanuts & lime.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">#1 Pune Diner Favorite</span>
+              <button onclick="openBookingModal('terrace')" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 19: CHICKEN RED THAI CURRY BOWL -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="continental-bowls">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Non-Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Chicken Red Thai Curry Bowl</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹660</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Authentic aromatic Thai red curry paste simmered with coconut cream, tender chicken, bamboo shoots, and basil. Served with steamed jasmine rice.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Asian Specialty Bowl</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 20: MEAT ON STEAK (PEPPER STEAK) -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="continental-bowls">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Non-Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Char-Grilled Pepper Steak (Meat on Steak)</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹745</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Master steak char-grilled with coarse tellicherry peppercorn glaze, served with creamy potato puree, sautéed buttered greens, and red wine thyme jus.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Continental Main</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 21: PAN-ASIAN HAKKA NOODLES & RICE -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="continental-bowls">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Veg / Egg / Chicken Option"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Wok-Tossed Hakka Noodles / Fried Rice</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹385</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Wok-charred thin wheat noodles or long grain jasmine rice tossed with crunchy julienned veggies, scallions, light soy, and toasted white sesame.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Wok Specialty</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 22: DIWANI HANDI -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="heritage-curries-breads">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Subz Diwani Handi</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹575</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Assorted garden vegetables, baby corn, and fresh spinach tossed in an opulent cashew nut and brown onion gravy, tempered with whole spices in an earthen pot.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Royal Vegetarian</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 23: PANEER TIKKA LABABDAR -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="heritage-curries-breads">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Paneer Tikka Lababdar</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹495</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Smoky clay-oven grilled paneer cubes simmered in a luscious tomato-onion lababdar gravy, finished with shredded paneer and fresh cream.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Tandoor Specialty</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 24: DAL BUKHARA -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="heritage-curries-breads">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">18-Hour Slow Cooked Dal Bukhara</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹465</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Select whole black urad lentils slow-simmered over tandoor embers for 18 hours with vine-ripened tomatoes, country butter, and dried kasuri methi.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Heritage Legacy</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 25: MURGH E KHAS / BUTTER CHICKEN -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="heritage-curries-breads">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Non-Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Murgh E Khas (Royale Butter Chicken)</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹577</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Tandoor-roasted shredded chicken simmered in an indulgent, velvety satin makhani gravy enriched with honey, churned butter, and fragrant cardamom.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">North Indian Star</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 26: SLOW BRAISED RAHRA GOSHT -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="heritage-curries-breads">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-nonveg" title="Mutton"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Slow-Braised Rahra Gosht</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹835</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Succulent bone-in mutton shanks slow-braised alongside fine minced mutton keema in a rich, dark roasted onion and whole garam masala gravy.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Mutton Masterpiece</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 27: ARTISAN TANDOORI BREADS -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="heritage-curries-breads">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Artisan Tandoori Breads Basket</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹90 – ₹145</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Freshly baked clay oven breads: Butter Garlic Naan (₹110), Cheese Chili Garlic Naan (₹145), Flaky Laccha Paratha (₹85), Tandoori Butter Roti (₹55).
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Fresh from Clay Oven</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 28: HER HIGHNESS TIRAMISU -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="desserts-icecream">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Eggless Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Her Highness Tiramisu</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹495</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                White Lotus's legendary dessert. Espresso & dark amaretto soaked savoiardi biscuits layered with cloud-like mascarpone sabayon, finished with Belgian cocoa.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Iconic Signature Dessert</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 29: FLOATING PANNA COTTA -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="desserts-icecream">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Floating Vanilla Panna Cotta</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹465</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Silky Madagascar vanilla bean infused cooked cream floating gracefully in tart wild berry coulis, accented with candied mint leaves.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Velvety Italian</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 30: BAKED NEW YORK CHEESECAKE -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="desserts-icecream">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Baked New York Cheesecake</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹495</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Authentic dense and creamy Philadelphia cream cheese cake baked over a buttery speculoos biscuit crust, served with blueberry compote.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Pastry Perfection</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 31: RED VELVET CHEESECAKE -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="desserts-icecream">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Red Velvet Swirl Cheesecake</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹485</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Moist red velvet cocoa sponge cake swirled with rich cream cheese mousse and topped with white chocolate curls.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Celebration Special</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 32: WARM WALNUT FUDGE BROWNIE -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="desserts-icecream">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Vegetarian"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Warm Walnut Fudge Brownie</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹425</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Gooey dark Belgian chocolate brownie loaded with toasted California walnuts, served sizzling hot with handcrafted vanilla bean ice cream.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Warm Indulgence</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 33: AUTHENTIC NATURAL ICE CREAMS -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="desserts-icecream">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Pure Veg"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Authentic Natural Ice Creams</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹240</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Handcrafted pure milk artisanal ice creams without preservatives: Roasted Almond, Sitaphal / Custard Apple, Alfonso Mango, and Dark Chocolate.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Natural Churn</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 34: CRAFT COCKTAILS & MOJITOS -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="bar-mixology">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-bar">🍸</span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Signature Cocktails & Mojitos</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹475 – ₹650</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Smoked Old Fashioned (₹650), Botanical Gin & Rosemary Tonic (₹550), Classic Cuban Fresh Mint Mojito (₹475), Passion Fruit Caprioska (₹495).
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Mixologist Curated</span>
+              <button onclick="openBookingModal('lounge')" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Bar &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 35: ARTISAN MOCKTAILS & SHAKES -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="bar-mixology">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-veg" title="Non-Alcoholic"></span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Artisan Mocktails & Thick Shakes</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">₹290 – ₹340</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Signature Smoked Lotus Cooler (₹320), Fresh Berry Blast (₹310), Virgin Mint Mojito (₹290), Thick Belgian Dark Chocolate Fudge Shake (₹340).
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Zero-Proof Botanicals</span>
+              <button onclick="openBookingModal()" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Order at Table &rarr;</button>
+            </div>
+          </div>
+
+          <!-- ITEM 36: FINE SPIRITS, SINGLE MALTS & WINES -->
+          <div class="menu-item-row p-6 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="bar-mixology">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="diet-badge-bar">🥃</span>
+                  <h4 class="font-serif text-lg font-bold text-botanical-deep group-hover:text-gold transition-colors">Single Malts, Scotch & Premium Spirits</h4>
+                </div>
+                <span class="font-serif text-base font-bold text-botanical-deep shrink-0">By Peg / Bottle</span>
+              </div>
+              <p class="text-xs text-charcoal/70 leading-relaxed mt-2 font-normal">
+                Glenfiddich 12 Yrs, Talisker 10 Yrs, Black Label, Chivas Regal 12, Grey Goose Vodka, Absolut, French Brandy, Tequila Shots, Draught Beers & Fine Wines.
+              </p>
+            </div>
+            <div class="pt-3 mt-4 border-t border-gold/15 flex items-center justify-between text-[11px]">
+              <span class="text-gold font-bold uppercase tracking-wider">Full Licensed Bar</span>
+              <button onclick="openBookingModal('lounge')" class="text-botanical-deep hover:text-gold font-bold uppercase tracking-wider">Reserve Bar Table &rarr;</button>
             </div>
           </div>
 
@@ -829,10 +1454,10 @@
         <!-- Download Full Menu CTA -->
         <div class="mt-14 text-center">
           <div class="inline-flex flex-col sm:flex-row items-center gap-4 p-4 rounded-2xl bg-white border border-gold/25 shadow-sm">
-            <span class="text-xs text-charcoal/80 font-medium">Want to explore our complete 140+ dish menu & bar catalog?</span>
+            <span class="text-xs text-charcoal/80 font-medium">Looking for customized banquet menus or seasonal chef specials?</span>
             <a href="https://wa.me/919513575757?text=Hello%20White%20Lotus,%20please%20send%20me%20your%20complete%20PDF%20dining%20and%20cocktail%20menu." target="_blank" rel="noopener" class="px-5 py-2.5 bg-botanical-deep text-white text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-botanical-surface transition-all flex items-center gap-2">
               <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              <span>Receive Full Menu on WhatsApp</span>
+              <span>WhatsApp Floor Captain Desk</span>
             </a>
           </div>
         </div>
@@ -872,7 +1497,7 @@
             <div class="space-y-3">
               <div class="text-gold text-sm">★★★★★</div>
               <p class="text-xs sm:text-sm text-charcoal/80 leading-relaxed italic">
-                "The Burmese Khao Suey at White Lotus is genuinely one of the best in Pune! The open-air terrace vibe with fairy lights makes evening dinners magical. Plus, having reserved car parking right opposite Sanas Ground saves so much headache!"
+                "The Burmese Khao Suey and Kashmiri Tabak Maaz at White Lotus are unmatched in Pune! The open-air terrace vibe with fairy lights makes evening dinners magical. Plus, having reserved car parking right opposite Sanas Ground saves so much headache!"
               </p>
             </div>
             <div class="pt-4 border-t border-gold/15 flex items-center gap-3">
@@ -891,7 +1516,7 @@
             <div class="space-y-3">
               <div class="text-gold text-sm">★★★★★</div>
               <p class="text-xs sm:text-sm text-charcoal/80 leading-relaxed italic">
-                "We celebrated my father's 60th birthday in the AC Lounge. The hospitality is remarkable, the Kamal Ke Kebab and Dhaba Chicken Curry were outstanding, and the Floor Captain personally made sure our family was comfortable throughout."
+                "We celebrated my father's 60th birthday in the AC Lounge. The hospitality is remarkable, the Kamal Ke Kebab and Shish Taouk were outstanding, and the Floor Captain personally made sure our family was comfortable throughout."
               </p>
             </div>
             <div class="pt-4 border-t border-gold/15 flex items-center gap-3">
@@ -910,7 +1535,7 @@
             <div class="space-y-3">
               <div class="text-gold text-sm">★★★★★</div>
               <p class="text-xs sm:text-sm text-charcoal/80 leading-relaxed italic">
-                "Super chic ambiance without being pretentious. The cocktails are balanced, pasta is al dente, and you cannot leave without having their Eggless Tiramisu. It melts in seconds. Highly recommended!"
+                "Super chic ambiance without being pretentious. The cocktails are balanced, pasta is al dente, and you cannot leave without having Her Highness Tiramisu and Floating Panna Cotta. It melts in seconds. Highly recommended!"
               </p>
             </div>
             <div class="pt-4 border-t border-gold/15 flex items-center gap-3">
@@ -993,14 +1618,14 @@
 
         <!-- Col 2: Sanctuaries & Menu -->
         <div class="space-y-3">
-          <h4 class="font-serif text-lg font-normal text-gold-light">Sanctuaries & Taste</h4>
+          <h4 class="font-serif text-lg font-normal text-gold-light">Sanctuaries & Culinary</h4>
           <ul class="space-y-2 text-xs text-white/75">
             <li><a href="#sanctuaries" class="hover:text-gold transition-colors">The Starlit Terrace Garden</a></li>
             <li><a href="#sanctuaries" class="hover:text-gold transition-colors">Imperial Velvet AC Lounge</a></li>
             <li><a href="#sanctuaries" class="hover:text-gold transition-colors">Private Banquets & Gatherings</a></li>
-            <li><a href="#menu" class="hover:text-gold transition-colors">Burmese Khao Suey</a></li>
-            <li><a href="#menu" class="hover:text-gold transition-colors">Artisan Kamal Ke Kebab</a></li>
-            <li><a href="#menu" class="hover:text-gold transition-colors">Eggless Italian Tiramisu</a></li>
+            <li><a href="#menu" class="hover:text-gold transition-colors">Burmese Khao Suey & Tabak Maaz</a></li>
+            <li><a href="#menu" class="hover:text-gold transition-colors">Kamal Ke Kebab & Shish Taouk</a></li>
+            <li><a href="#menu" class="hover:text-gold transition-colors">Her Highness Tiramisu</a></li>
           </ul>
         </div>
 
@@ -1144,7 +1769,7 @@
     </div>
   </div>
 
-  <!-- JAVASCRIPT: PETAL PHYSICS, MODAL & CRM INTEGRATION -->
+  <!-- JAVASCRIPT: PETAL PHYSICS, SEARCH & FILTER, CRM -->
   <script>
     // 1. MOBILE MENU TOGGLE
     const mobileBtn = document.getElementById('mobile-menu-toggle');
@@ -1179,7 +1804,6 @@
     function closeBookingModal() {
       bookingModal.classList.add('hidden');
     }
-    // Close on backdrop click
     bookingModal.addEventListener('click', (e) => {
       if (e.target === bookingModal) closeBookingModal();
     });
@@ -1195,7 +1819,6 @@
       const ambiance = document.getElementById('ambiance-choice').value;
       const notes = document.getElementById('special-request').value || 'None';
 
-      // Format WhatsApp Message for Floor Captain (+91 95135 75757)
       const waText = `*VIP TABLE RESERVATION — WHITE LOTUS PUNE*%0A%0A` +
         `👤 *Guest Name:* ${encodeURIComponent(name)}%0A` +
         `📞 *Contact:* ${encodeURIComponent(phone)}%0A` +
@@ -1207,22 +1830,16 @@
         `_Please confirm availability and table allocation. Thank you!_`;
 
       const waUrl = `https://wa.me/919513575757?text=${waText}`;
-
-      // Optional: Asynchronously send to Google Apps Script endpoint if configured
-      try {
-        // Background ping to GAS endpoint if active
-        // fetch('https://script.google.com/macros/s/.../exec', { method: 'POST', body: JSON.stringify({...}) });
-      } catch (err) {}
-
-      // Open WhatsApp Desk
       window.open(waUrl, '_blank');
       closeBookingModal();
       alert(`Thank you, ${name}! Your reservation request has been prepared for the White Lotus Floor Captain (+91 95135 75757).`);
     }
 
     // 5. CULINARY MENU FILTERING
+    let currentCategory = 'all';
     function filterMenu(category) {
-      const cards = document.querySelectorAll('.menu-card');
+      currentCategory = category;
+      const cards = document.querySelectorAll('.menu-item-row');
       const buttons = document.querySelectorAll('.menu-tab-btn');
 
       buttons.forEach(btn => {
@@ -1242,9 +1859,27 @@
           card.style.display = 'none';
         }
       });
+      // clear search input if active
+      const searchInput = document.getElementById('menu-search-input');
+      if (searchInput && searchInput.value) searchInput.value = '';
     }
 
-    // 6. 3D FLOATING ORGANIC LOTUS PETALS & GOLD DUST CANVAS PHYSICS
+    // 6. INSTANT SEARCH FILTER FOR MENU
+    function searchMenuItems() {
+      const query = document.getElementById('menu-search-input').value.toLowerCase();
+      const cards = document.querySelectorAll('.menu-item-row');
+      
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 7. 3D FLOATING ORGANIC LOTUS PETALS & GOLD DUST CANVAS PHYSICS
     const canvas = document.getElementById('petals-canvas');
     const ctx = canvas.getContext('2d');
     let width, height;
@@ -1285,8 +1920,8 @@
         this.rotation = Math.random() * Math.PI * 2;
         this.rotSpeed = (Math.random() - 0.5) * 0.03;
         this.opacity = 0.4 + Math.random() * 0.45;
-        this.isGoldDust = Math.random() > 0.65; // Mix of pink lotus petals and golden floating dust
-        this.petalColor = Math.random() > 0.5 ? '#E58B9E' : '#F8C8D2'; // Lotus blush tones
+        this.isGoldDust = Math.random() > 0.65;
+        this.petalColor = Math.random() > 0.5 ? '#E58B9E' : '#F8C8D2';
       }
 
       update() {
@@ -1294,7 +1929,6 @@
         this.x += this.speedX + Math.sin(this.y * 0.01) * 0.5;
         this.rotation += this.rotSpeed;
 
-        // Interaction with mouse breeze
         const dx = this.x - mouse.x;
         const dy = this.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -1317,7 +1951,6 @@
         ctx.globalAlpha = this.opacity;
 
         if (this.isGoldDust) {
-          // Draw subtle glowing golden starlight particle
           ctx.beginPath();
           ctx.arc(0, 0, this.size * 0.15, 0, Math.PI * 2);
           ctx.fillStyle = '#C59B3F';
@@ -1325,7 +1958,6 @@
           ctx.shadowColor = '#F6E7C4';
           ctx.fill();
         } else {
-          // Draw elegant 3D shaded lotus petal
           ctx.beginPath();
           ctx.moveTo(0, -this.size);
           ctx.bezierCurveTo(this.size * 0.6, -this.size * 0.5, this.size * 0.6, this.size * 0.6, 0, this.size);
