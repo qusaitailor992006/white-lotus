@@ -1,483 +1,452 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  
-  <!-- SEO & Social Meta -->
-  <title>White Lotus: Food Vibe Folks | Multi-Cuisine Fine Dining &amp; Bar | Saras Baug Rd, Pune</title>
-  <meta name="description" content="Experience White Lotus: Food Vibe Folks on Saras Baug Road, Pune. An immersive multi-cuisine dining sanctuary &amp; bar featuring open-air terrace garden dining, artisanal North Indian, Burmese Khao Suey, Italian, craft mixology &amp; private parking. 4.6★ Rated (1,660+ Reviews).">
-  <meta name="keywords" content="White Lotus Pune, White Lotus Saras Baug Rd, Restaurants near Saras Baug, Fine dining Parvati Pune, Terrace restaurant Pune, Best multi-cuisine restaurant Swargate, Mitra Mandal Chowk dining, White Lotus Food Vibe Folks, Khao Suey Pune, Tiramisu Pune">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Lotus: Food Vibe Folks | Luxury Fine Dining & Bar | Saras Baug Road, Pune</title>
+  <meta name="description" content="Experience White Lotus: Food Vibe Folks on Saras Baug Road, Pune. An opulent dining sanctuary featuring open-air starlit terrace gardens, royal velvet AC lounge, artisanal North Indian, Burmese Khao Suey, handcrafted Italian, craft mixology, and dedicated on-site parking. 4.6★ Rated (1,660+ Reviews).">
+  <meta name="keywords" content="White Lotus Pune, White Lotus Saras Baug Rd, Restaurants near Saras Baug, Fine dining Parvati Pune, Terrace restaurant Pune, Best multi-cuisine restaurant Swargate, Mitra Mandal Chowk dining, White Lotus Food Vibe Folks, Khao Suey Pune, Tiramisu Pune, Private parking restaurant Pune">
   <meta name="author" content="White Lotus: Food Vibe Folks">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://whitelotuspune.com/">
 
-  <!-- Geo-Targeting for Pune Local Search Ranking -->
-  <meta name="geo.region" content="IN-MH">
-  <meta name="geo.placename" content="Parvati Paytha, Pune">
-  <meta name="geo.position" content="18.498522;73.854211">
-  <meta name="ICBM" content="18.498522, 73.854211">
-
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="restaurant.restaurant">
-  <meta property="og:url" content="https://whitelotuspune.com/">
-  <meta property="og:title" content="White Lotus: Food Vibe Folks — Multi-Cuisine Fine Dining &amp; Bar">
-  <meta property="og:description" content="4.6 ★ Rated on Google (1,660+ Diners). Step through the gates of White Lotus for open-air terrace dining, Pan-Asian, Continental, and craft cocktails on Saras Baug Road, Pune.">
+  <meta property="og:title" content="White Lotus: Food Vibe Folks — Luxury Fine Dining & Bar">
+  <meta property="og:description" content="4.6 ★ Rated on Google (1,660+ Diners). Open-air starlit terrace, velvet cocktail lounge, Burmese Khao Suey, artisan tandoor, and dedicated on-site parking on Saras Baug Road, Pune.">
   <meta property="og:site_name" content="White Lotus: Food Vibe Folks">
   <meta property="og:locale" content="en_IN">
 
-  <!-- Favicon: Glowing Lotus Crest Data URI -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23070A09' stroke='%23F59E0B' stroke-width='2.5'/><circle cx='32' cy='32' r='24' fill='none' stroke='%23D946EF' stroke-width='1' stroke-opacity='0.6'/><path d='M32 14 C36 24, 48 30, 48 38 C48 46, 40 50, 32 50 C24 50, 16 46, 16 38 C16 30, 28 24, 32 14 Z' fill='%23D946EF' fill-opacity='0.3' stroke='%23F59E0B' stroke-width='1.5'/><circle cx='32' cy='36' r='4' fill='%23F59E0B'/></svg>">
-  <meta name="theme-color" content="#070A09">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 15 C45 35 25 50 15 65 C30 75 45 60 50 85 C55 60 70 75 85 65 C75 50 55 35 50 15 Z' fill='%23C59B3F'/><circle cx='50' cy='50' r='8' fill='%23E58B9E'/></svg>">
 
-  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+  <!-- Google Fonts: Cormorant Garamond, Cinzel & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-
-  <!-- Three.js CDN for Interactive 3D Lotus Blossom -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            midnight: '#070A09',
-            obsidian: '#0C100E',
-            surface: '#121715',
-            surfaceCard: '#171E1B',
+            alabaster: '#FAF7F2',
+            cream: '#F4EFE6',
+            silk: '#EFE7DA',
+            botanical: {
+              DEFAULT: '#0B281E',
+              deep: '#061812',
+              surface: '#11382A',
+              card: '#164534',
+              border: '#1E523F'
+            },
             gold: {
-              DEFAULT: '#F59E0B',
-              light: '#FDE68A',
-              glow: '#D97706',
-              dark: '#B45309'
+              DEFAULT: '#C59B3F',
+              light: '#E5C16C',
+              pale: '#F6E7C4',
+              dark: '#936D1B'
             },
             lotus: {
-              DEFAULT: '#D946EF',
-              glow: '#E879F9',
-              deep: '#86198F',
-              ambient: '#4A044E'
+              DEFAULT: '#E58B9E',
+              light: '#F8C8D2',
+              dark: '#B8556B'
             },
-            emerald: {
-              botanical: '#059669',
-              dark: '#064E3B'
-            }
+            charcoal: '#1A1E1C'
           },
           fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             cinzel: ['"Cinzel"', 'serif'],
-            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif']
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
           },
           boxShadow: {
-            'glow-gold': '0 0 40px -10px rgba(245, 158, 11, 0.35)',
-            'glow-lotus': '0 0 50px -10px rgba(217, 70, 239, 0.3)',
-            'card-glass': '0 20px 50px -15px rgba(0, 0, 0, 0.7)'
+            'luxury': '0 20px 40px -15px rgba(11, 40, 30, 0.08), 0 0 1px 1px rgba(197, 155, 63, 0.15)',
+            'luxury-hover': '0 30px 60px -20px rgba(11, 40, 30, 0.16), 0 0 0 1px rgba(197, 155, 63, 0.35)',
+            'gold-glow': '0 10px 30px -5px rgba(197, 155, 63, 0.4)',
+            'botanical-glow': '0 25px 50px -12px rgba(6, 24, 18, 0.35)'
           }
         }
       }
     }
   </script>
 
-  <!-- Schema.org JSON-LD Structured Data for High Google Ranking -->
+  <!-- Schema.org JSON-LD Structured Data for Google Rich Results -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Restaurant",
+    "name": "White Lotus: Food Vibe Folks",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "202, 203 Saras Baug Rd, Opposite Sanas Ground, Parvati",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411009",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 18.5015,
+      "longitude": 73.8524
+    },
+    "telephone": "+919513575757",
+    "servesCuisine": ["North Indian", "Burmese", "Pan-Asian", "Italian", "Continental"],
+    "priceRange": "₹₹",
+    "openingHoursSpecification": [
       {
-        "@type": ["Restaurant", "BarOrPub", "FoodEstablishment"],
-        "@id": "https://whitelotuspune.com/#restaurant",
-        "name": "White Lotus: Food Vibe Folks",
-        "alternateName": "व्हाइट लोटस पुणे",
-        "description": "Multi-cuisine fine dining restaurant and bar featuring lush open-air terrace garden dining, Pan-Asian, North Indian, Continental, Italian dishes, and craft mixology on Saras Baug Road, Pune.",
-        "url": "https://whitelotuspune.com/",
-        "telephone": "+91-9513575757",
-        "priceRange": "₹₹",
-        "image": "https://whitelotuspune.com/og-image.jpg",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "202, 203, Saras Baug Rd, near Vyankatesh Apt, behind Naivedyam Hotel, Mitra Mandal Colony, Parvati Paytha",
-          "addressLocality": "Pune",
-          "addressRegion": "Maharashtra",
-          "postalCode": "411009",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 18.498522,
-          "longitude": 73.854211
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.6",
-          "reviewCount": "1660",
-          "bestRating": "5"
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "12:00",
-            "closes": "23:30"
-          }
-        ],
-        "acceptsReservations": "True"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://whitelotuspune.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What are the signature dishes at White Lotus on Saras Baug Road?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "White Lotus is celebrated for its Burmese Khao Suey, Kamal Ke Kebab, Dhaba Chicken Curry with Butter Kulcha, Dynamite Prawns, Pink Sauce Penne Pasta, and signature Eggless Tiramisu."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is private car parking available at White Lotus?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, White Lotus provides dedicated on-site parking for 10–15 cars plus ample two-wheeler space on Saras Baug Road."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How can I reserve a table at White Lotus?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Tables can be reserved online through our interactive portal or via WhatsApp directly with our floor captain at +91 95135 75757."
-            }
-          }
-        ]
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "23:30"
       }
-    ]
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "1660"
+    },
+    "hasMenu": "#menu",
+    "acceptsReservations": "True"
   }
   </script>
 
   <style>
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
-      background-color: #070A09;
-      color: #FAF8F5;
+    /* Custom Smooth Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C59B3F;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #936D1B;
     }
 
-    ::selection {
-      background-color: #D946EF;
-      color: #FFFFFF;
-    }
-
-    .gold-gradient {
-      background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #B45309 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .lotus-gradient {
-      background: linear-gradient(135deg, #E879F9 0%, #D946EF 50%, #86198F 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .text-glow {
-      text-shadow: 0 0 30px rgba(245, 158, 11, 0.4);
-    }
-
-    .glass-panel {
-      background: rgba(18, 24, 22, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .glass-card {
-      background: rgba(23, 30, 27, 0.65);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .glass-card:hover {
-      border-color: rgba(245, 158, 11, 0.45);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px -15px rgba(217, 70, 239, 0.18);
-    }
-
-    /* 3D Canvas Scene */
-    #lotus-canvas-container {
-      width: 100%;
-      height: 100%;
+    /* Subtle Animated Water Ripple / Petal Drift Canvas */
+    #petals-canvas {
       position: absolute;
       top: 0;
       left: 0;
-      pointer-events: auto;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
       z-index: 1;
     }
 
-    /* Ambient background pulses */
-    .ambient-glow-1 {
-      position: absolute;
-      top: -10%;
-      right: -5%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(217, 70, 239, 0.15) 0%, transparent 70%);
-      filter: blur(80px);
-      pointer-events: none;
+    /* Elegant Gold Gradient Text */
+    .gold-shimmer {
+      background: linear-gradient(135deg, #936D1B 0%, #C59B3F 45%, #F6E7C4 55%, #C59B3F 75%, #936D1B 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 8s ease infinite;
     }
 
-    .ambient-glow-2 {
-      position: absolute;
-      bottom: 5%;
-      left: -10%;
-      width: 650px;
-      height: 650px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
-      filter: blur(90px);
-      pointer-events: none;
+    @keyframes shine {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    /* Architectural scrollbar */
-    ::-webkit-scrollbar {
-      width: 6px;
+    /* Soft Floating Animation */
+    @keyframes subtleFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1deg); }
     }
-    ::-webkit-scrollbar-track {
-      background: #070A09;
+    .animate-float {
+      animation: subtleFloat 6s ease-in-out infinite;
     }
-    ::-webkit-scrollbar-thumb {
-      background: #F59E0B;
-      border-radius: 3px;
+
+    /* Custom Glass Panel for Light Luxury */
+    .glass-light {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(197, 155, 63, 0.2);
     }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #D946EF;
+
+    .glass-botanical {
+      background: rgba(11, 40, 30, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(197, 155, 63, 0.25);
+    }
+
+    /* Interactive Menu Card Hover */
+    .menu-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .menu-card:hover {
+      transform: translateY(-6px);
     }
   </style>
 </head>
+<body class="bg-alabaster text-charcoal font-sans antialiased selection:bg-gold-pale selection:text-botanical-deep overflow-x-hidden">
 
-<body class="bg-midnight text-ivory font-sans antialiased selection:bg-lotus selection:text-white overflow-x-hidden">
-
-  <!-- TOP LIVE VIP TICKER -->
-  <aside id="top-ticker" class="bg-obsidian border-b border-white/10 text-xs py-2 px-4 relative z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
-      <div class="flex items-center gap-2.5 overflow-hidden text-ellipsis whitespace-nowrap">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-lotus/20 text-lotus-glow font-bold text-[10px] tracking-wider uppercase border border-lotus/40">
-          <span class="w-1.5 h-1.5 rounded-full bg-lotus animate-pulse"></span>
-          ★ 4.6 GOOGLE RATED
+  <!-- TOP VIP ANNOUNCEMENT & CONTACT BAR -->
+  <div class="bg-botanical-deep text-gold-pale border-b border-gold/20 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-gold/20 text-gold-light font-semibold tracking-wide text-[11px]">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold animate-ping"></span>
+          TABLE RESERVATIONS OPEN
         </span>
-        <span class="text-white/40 hidden sm:inline">•</span>
-        <span class="text-white/80 truncate text-[11px] sm:text-xs font-medium">
-          1,660+ Verified Diners • Saras Baug Rd, Pune • Open Daily: 12:00 PM – 11:30 PM • 15+ Private Car Parking
-        </span>
+        <span class="hidden md:inline text-white/70">|</span>
+        <span class="text-white/90">202, 203 Saras Baug Road, Pune (Opposite Sanas Ground)</span>
       </div>
-      <div class="flex items-center gap-3 shrink-0">
-        <a href="tel:+919513575757" class="hidden sm:inline-flex items-center gap-1.5 text-gold hover:text-white transition-colors text-[11px] font-semibold">
-          <span>VIP Desk: +91 95135 75757</span>
+      <div class="flex items-center gap-5 text-[11px] tracking-wide">
+        <span class="text-white/80">Open Daily: <strong>12:00 PM – 11:30 PM</strong></span>
+        <span class="text-white/40">|</span>
+        <span class="text-gold-light flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <strong>4.6 ★</strong> (1,660+ Reviews)
+        </span>
+        <span class="text-white/40">|</span>
+        <a href="tel:+919513575757" class="hover:text-white transition-colors flex items-center gap-1 text-gold-light">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          +91 95135 75757
         </a>
-        <button onclick="document.getElementById('top-ticker').style.display='none'" class="text-white/40 hover:text-white text-base leading-none px-1" title="Dismiss" aria-label="Dismiss Ticker">&times;</button>
       </div>
     </div>
-  </aside>
+  </div>
 
-  <!-- STICKY GLASSMORPHIC NAVBAR -->
-  <header class="sticky top-0 z-40 bg-midnight/85 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+  <!-- STICKY OPULENT NAVBAR -->
+  <header class="sticky top-0 z-40 bg-alabaster/90 backdrop-blur-xl border-b border-gold/15 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20 sm:h-24">
+      <div class="flex items-center justify-between h-20">
         
-        <!-- Brand Crest (Clickable) -->
-        <a href="#" class="flex items-center gap-3.5 group" aria-label="White Lotus Home">
-          <div class="relative w-12 h-12 rounded-full bg-surface border-2 border-gold flex items-center justify-center text-ivory shadow-glow-gold transition-transform duration-300 group-hover:scale-105 shrink-0">
-            <span class="font-cinzel text-lg font-bold tracking-tight gold-gradient">WL</span>
-            <div class="absolute -bottom-0.5 w-1.5 h-1.5 bg-lotus rounded-full shadow-glow-lotus"></div>
+        <!-- BRAND LOGO -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-full bg-botanical-deep flex items-center justify-center border-2 border-gold/40 shadow-sm group-hover:border-gold transition-all duration-300">
+            <!-- Stylized White Lotus Flower SVG -->
+            <svg class="w-7 h-7 text-gold group-hover:scale-110 transition-transform duration-300" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M50 18 C46 36 28 50 18 64 C32 73 45 61 50 82 C55 61 68 73 82 64 C72 50 54 36 50 18 Z"/>
+              <path d="M50 35 C42 48 32 58 26 68 C38 74 46 66 50 80 C54 66 62 74 74 68 C68 58 58 48 50 35 Z" fill="#E58B9E" opacity="0.85"/>
+              <circle cx="50" cy="52" r="5" fill="#FAF7F2"/>
+            </svg>
           </div>
-          <div class="flex flex-col">
-            <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight group-hover:text-gold transition-colors">
-              White Lotus
+          <div>
+            <span class="block font-serif text-2xl sm:text-3xl font-semibold tracking-wider text-botanical-deep leading-none">
+              WHITE LOTUS
             </span>
-            <span class="text-[9px] sm:text-[10px] uppercase tracking-widest text-gold/80 font-bold">
-              Food • Vibe • Folks • Saras Baug Rd
+            <span class="block font-sans text-[10px] tracking-[0.25em] uppercase text-gold font-bold mt-1">
+              Food · Vibe · Folks
             </span>
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-7 text-xs font-semibold uppercase tracking-widest text-white/80">
-          <a href="#experience" class="hover:text-gold transition-colors">The Experience</a>
-          <a href="#gates" class="hover:text-gold transition-colors">Gate Layers</a>
-          <a href="#menu" class="hover:text-gold transition-colors">Signature Menu</a>
-          <a href="#ambiance" class="hover:text-gold transition-colors">Terrace &amp; Lounge</a>
-          <a href="#reviews" class="hover:text-gold transition-colors">4.6★ Diners</a>
-          <a href="#location" class="hover:text-gold transition-colors">Location &amp; Parking</a>
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="hidden lg:flex items-center gap-8 font-sans text-xs tracking-widest uppercase font-semibold text-charcoal/80">
+          <a href="#sanctuaries" class="hover:text-gold transition-colors py-2 relative group">
+            The Sanctuaries
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#menu" class="hover:text-gold transition-colors py-2 relative group">
+            Signature Menu
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#parking" class="hover:text-gold transition-colors py-2 relative group">
+            Private Parking
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#reviews" class="hover:text-gold transition-colors py-2 relative group">
+            Diner Stories
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#banquets" class="hover:text-gold transition-colors py-2 relative group">
+            Celebrations
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+          </a>
         </nav>
 
-        <!-- Right Desk Action -->
-        <div class="hidden sm:flex items-center gap-4">
-          <!-- Vibe Mode Selector -->
-          <div class="flex items-center p-1 rounded-full bg-surface border border-white/10 text-[10px] font-bold uppercase tracking-wider">
-            <button id="vibe-terrace" onclick="switchVibe('terrace')" class="px-2.5 py-1 rounded-full transition-all bg-gold/20 text-gold-light border border-gold/40">
-              🌿 Terrace
-            </button>
-            <button id="vibe-neon" onclick="switchVibe('neon')" class="px-2.5 py-1 rounded-full transition-all text-white/60 hover:text-white">
-              🍸 Lounge
-            </button>
-          </div>
-
-          <a href="#reserve" class="relative inline-flex items-center justify-center px-5 py-2.5 text-xs font-bold tracking-widest uppercase text-midnight bg-gradient-to-r from-gold-light via-gold to-gold-dark rounded-full shadow-glow-gold hover:opacity-95 transition-all duration-300">
-            <span>Book Table</span>
+        <!-- CTA & ACTION BUTTONS -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://wa.me/919513575757?text=Hello%20White%20Lotus%20Pune,%20I%20would%20like%20to%20inquire%20about%20table%20availability." target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-botanical-deep/20 text-xs font-semibold tracking-wider uppercase text-botanical-deep hover:bg-botanical-deep hover:text-white transition-all duration-300">
+            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.777.818 2.796.818 3.179 0 5.766-2.587 5.766-5.768 0-3.18-2.586-5.767-5.766-5.767zm0 10.375c-.911 0-1.637-.253-2.408-.687l-.173-.099-1.785.468.477-1.74-.112-.179c-.47-.751-.718-1.503-.718-2.371 0-2.511 2.043-4.553 4.555-4.553 2.51 0 4.552 2.042 4.552 4.553 0 2.512-2.042 4.554-4.553 4.554z"/></svg>
+            <span>WhatsApp Floor</span>
           </a>
-        </div>
-
-        <!-- Mobile Toggle Button -->
-        <div class="flex lg:hidden items-center gap-2">
-          <a href="tel:+919513575757" class="p-2 text-gold sm:hidden" aria-label="Call White Lotus Desk">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-          </a>
-          <button id="mobile-toggle" type="button" class="p-2.5 text-white hover:text-gold focus:outline-none rounded-lg border border-white/10 bg-surface" aria-label="Toggle Navigation Menu">
-            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          
+          <button onclick="openBookingModal()" class="relative inline-flex items-center justify-center px-6 py-2.5 text-xs font-bold tracking-widest uppercase text-white bg-botanical-deep hover:bg-botanical-surface rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-gold/40">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-gold animate-ping"></span>
+              Reserve Table
+            </span>
           </button>
         </div>
 
+        <!-- MOBILE MENU BUTTON -->
+        <button id="mobile-menu-toggle" aria-label="Toggle navigation menu" class="lg:hidden p-2 text-botanical-deep hover:text-gold focus:outline-none">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-obsidian px-5 pt-4 pb-6 space-y-3.5 shadow-2xl">
-      <a href="#experience" class="mobile-nav-link block py-2 text-xs font-bold uppercase tracking-widest text-white/90 hover:text-gold">The Experience</a>
-      <a href="#gates" class="mobile-nav-link block py-2 text-xs font-bold uppercase tracking-widest text-white/90 hover:text-gold">Gate Layers</a>
-      <a href="#menu" class="mobile-nav-link block py-2 text-xs font-bold uppercase tracking-widest text-white/90 hover:text-gold">Signature Menu</a>
-      <a href="#ambiance" class="mobile-nav-link block py-2 text-xs font-bold uppercase tracking-widest text-white/90 hover:text-gold">Terrace &amp; Lounge</a>
-      <a href="#reviews" class="mobile-nav-link block py-2 text-xs font-bold uppercase tracking-widest text-white/90 hover:text-gold">4.6★ Diners</a>
-      <a href="#location" class="mobile-nav-link block py-2 text-xs font-bold uppercase tracking-widest text-white/90 hover:text-gold">Location &amp; Parking</a>
-      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
-        <a href="tel:+919513575757" class="text-xs font-medium text-gold flex items-center gap-2 py-1">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-          Direct Table Desk: +91 95135 75757
-        </a>
-        <a href="#reserve" class="mobile-nav-link w-full text-center py-3 text-xs font-bold tracking-widest uppercase text-midnight bg-gradient-to-r from-gold-light to-gold rounded-full shadow-glow-gold">
-          Book Table Online
-        </a>
+    <!-- MOBILE DROPDOWN DRAWER -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-alabaster border-b border-gold/20 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col space-y-4 text-xs font-bold uppercase tracking-widest text-botanical-deep">
+        <a href="#sanctuaries" class="mobile-nav-link py-2 border-b border-gold/10">The Sanctuaries</a>
+        <a href="#menu" class="mobile-nav-link py-2 border-b border-gold/10">Signature Menu</a>
+        <a href="#parking" class="mobile-nav-link py-2 border-b border-gold/10">Dedicated Parking</a>
+        <a href="#reviews" class="mobile-nav-link py-2 border-b border-gold/10">Diner Stories</a>
+        <a href="#banquets" class="mobile-nav-link py-2 border-b border-gold/10">Celebrations & Banquets</a>
+        <div class="pt-3 flex flex-col gap-3">
+          <button onclick="openBookingModal()" class="w-full text-center py-3 text-xs font-bold tracking-widest uppercase text-white bg-botanical-deep rounded-full shadow-md">
+            Reserve Table Online
+          </button>
+          <a href="https://wa.me/919513575757?text=Hello%20White%20Lotus%20Pune,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener" class="w-full text-center py-3 text-xs font-bold tracking-widest uppercase text-botanical-deep border border-botanical-deep rounded-full">
+            WhatsApp Concierge (+91 95135 75757)
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO SECTION WITH INTERACTIVE 3D BLOOMING LOTUS -->
-    <section id="experience" class="relative min-h-[90vh] flex items-center pt-10 pb-20 border-b border-white/10 overflow-hidden">
+    <!-- HERO SECTION WITH INTERACTIVE 3D/CANVAS LOTUS PETALS -->
+    <section class="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-b from-cream via-alabaster to-silk pt-12 pb-20">
       
-      <!-- Ambient Lighting Glows -->
-      <div id="ambient-glow" class="ambient-glow-1"></div>
-      <div class="ambient-glow-2"></div>
+      <!-- Interactive Lotus Petals Canvas -->
+      <canvas id="petals-canvas"></canvas>
 
-      <!-- 3D Three.js Interactive Lotus Blossom Canvas -->
-      <div id="lotus-canvas-container" class="opacity-95"></div>
+      <!-- Soft Radial Light Glow Behind Hero -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-gold-pale/40 via-lotus-light/20 to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          <!-- Hero Text & Positioning -->
-          <div class="lg:col-span-7 space-y-6">
+          <!-- LEFT HERO CONTENT -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-panel border border-gold/40 text-xs font-bold tracking-widest uppercase">
-              <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-              <span class="gold-gradient">Food • Vibe • Folks • Saras Baug Road</span>
+            <!-- EXCELLENCE BADGE -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-botanical-deep/5 border border-gold/30 text-xs font-medium text-botanical-surface shadow-sm">
+              <span class="flex text-gold">
+                ★★★★★
+              </span>
+              <span class="font-bold text-botanical-deep">4.6 Rated</span>
+              <span class="text-charcoal/60">· Over 1,660+ Verified Diners on Google</span>
             </div>
 
-            <h1 class="font-cinzel text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08]">
-              Where <span class="lotus-gradient italic font-serif">Flavors</span> Collide &amp; Nights Turn Into <span class="gold-gradient">Memories.</span>
+            <!-- MAIN HEADLINE -->
+            <h1 class="font-serif text-4xl sm:text-6xl xl:text-7xl font-normal tracking-tight text-botanical-deep leading-[1.08]">
+              Where Flavours Bloom & <span class="italic font-normal gold-shimmer">Evenings Unwind</span>
             </h1>
 
-            <p class="text-base sm:text-lg text-white/80 font-normal leading-relaxed max-w-2xl">
-              Step through the gates of White Lotus. An electric multi-cuisine dining sanctuary &amp; bar featuring breezy terrace garden seating, slow-simmered Punjabi gravies, artisanal Burmese Khao Suey, Italian stone pizzas, craft cocktails, and an unmistakable Pune vibe.
+            <!-- SUBTITLE -->
+            <p class="text-base sm:text-lg text-charcoal/80 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Pune’s celebrated fine dining destination on Saras Baug Road. Indulge in an enchanting starlit terrace, handcrafted Burmese Khao Suey, slow-simmered Punjabi gravies, stone pizzas, and artisanal mixology — with guaranteed on-site parking.
             </p>
 
-            <!-- Dual Action CTAs -->
-            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <a href="#reserve" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gradient-to-r from-gold-light via-gold to-gold-dark text-midnight text-xs font-bold uppercase tracking-widest rounded-full shadow-glow-gold hover:scale-105 transition-all duration-300">
-                <span>Reserve a Table Online</span>
-                <svg class="w-4 h-4 text-midnight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </a>
+            <!-- VALUE PILLARS ROW -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left">
+              <div class="p-3.5 rounded-2xl bg-white/70 border border-gold/20 shadow-sm backdrop-blur-sm">
+                <span class="block text-gold text-lg mb-1">🌿</span>
+                <span class="block text-xs font-bold text-botanical-deep uppercase tracking-wider">Terrace Garden</span>
+                <span class="text-[11px] text-charcoal/70">Open-air Pune breeze & lights</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white/70 border border-gold/20 shadow-sm backdrop-blur-sm">
+                <span class="block text-gold text-lg mb-1">🚗</span>
+                <span class="block text-xs font-bold text-botanical-deep uppercase tracking-wider">Private Parking</span>
+                <span class="text-[11px] text-charcoal/70">10–15 reserved on-site slots</span>
+              </div>
+              <div class="col-span-2 sm:col-span-1 p-3.5 rounded-2xl bg-white/70 border border-gold/20 shadow-sm backdrop-blur-sm">
+                <span class="block text-gold text-lg mb-1">🍸</span>
+                <span class="block text-xs font-bold text-botanical-deep uppercase tracking-wider">Artisan Bar</span>
+                <span class="text-[11px] text-charcoal/70">Craft botanicals & cocktails</span>
+              </div>
+            </div>
 
-              <a href="https://wa.me/919513575757?text=Hello%20White%20Lotus,%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 glass-panel text-white text-xs font-bold uppercase tracking-widest rounded-full hover:border-gold transition-all duration-300">
-                <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                <span>WhatsApp Floor Captain</span>
+            <!-- HERO CTAS -->
+            <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4">
+              <button onclick="openBookingModal()" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-botanical-deep text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-lg hover:bg-botanical-surface hover:scale-[1.02] transition-all duration-300 border border-gold/40">
+                <span>Reserve A Table Online</span>
+                <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+
+              <a href="#menu" class="inline-flex items-center justify-center gap-2 px-7 py-4 bg-white/80 hover:bg-white text-botanical-deep text-xs font-bold uppercase tracking-widest rounded-full border border-gold/30 hover:border-gold transition-all duration-300 shadow-sm">
+                <span>Explore Culinary Menu</span>
               </a>
             </div>
 
-            <!-- Trust Bar -->
-            <div class="pt-6 grid grid-cols-3 gap-3 border-t border-white/10">
-              <div>
-                <div class="font-cinzel text-3xl font-bold gold-gradient">4.6 ★</div>
-                <div class="text-[11px] font-bold uppercase tracking-wider text-white/60">1,660+ Reviews</div>
-              </div>
-              <div>
-                <div class="font-cinzel text-3xl font-bold text-lotus-glow">2 Vibes</div>
-                <div class="text-[11px] font-bold uppercase tracking-wider text-white/60">Terrace &amp; AC Lounge</div>
-              </div>
-              <div>
-                <div class="font-cinzel text-3xl font-bold text-emerald-400">15+ Cars</div>
-                <div class="text-[11px] font-bold uppercase tracking-wider text-white/60">Private Parking</div>
-              </div>
+            <!-- LIVE STATUS INDICATOR -->
+            <div class="flex items-center justify-center lg:justify-start gap-2 text-xs text-charcoal/70 pt-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Floor Captain is Live at <strong>+91 95135 75757</strong> · Instant Confirmation</span>
             </div>
 
           </div>
 
-          <!-- Right Column: Interactive 3D Lotus Hint Card -->
-          <div class="lg:col-span-5 relative z-10">
-            <div class="glass-panel rounded-3xl p-7 sm:p-9 border-2 border-gold/40 shadow-card-glass space-y-6">
+          <!-- RIGHT HERO VISUAL (ELEGANT RESTAURANT PORTAL CARD) -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
               
-              <div class="flex items-center justify-between pb-4 border-b border-white/10">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-full bg-lotus/20 border border-lotus flex items-center justify-center font-cinzel text-sm text-lotus-glow font-bold">
-                    3D
+              <!-- Luxury Outer Glow -->
+              <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-gold/30 to-botanical-deep/20 blur-xl opacity-75"></div>
+
+              <!-- Main Visual Card -->
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-gold/30 bg-botanical-deep text-white">
+                
+                <!-- Atmosphere Image with Overlay -->
+                <div class="relative h-72 sm:h-80 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="White Lotus Dining Sanctuary Pune" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                  <div class="absolute inset-0 bg-gradient-to-t from-botanical-deep via-botanical-deep/40 to-transparent"></div>
+                  
+                  <!-- Floating Badge on Image -->
+                  <div class="absolute top-4 left-4 bg-botanical-deep/80 backdrop-blur-md border border-gold/30 px-3.5 py-1.5 rounded-full flex items-center gap-2 text-xs">
+                    <span class="w-2 h-2 rounded-full bg-gold"></span>
+                    <span class="font-serif tracking-wider text-gold-light">Sanctuary of Saras Baug</span>
                   </div>
-                  <div>
-                    <div class="text-xs uppercase tracking-widest text-gold font-bold">Interactive 3D Experience</div>
-                    <div class="text-xs text-white/60 font-serif italic">Move cursor or drag to bloom &amp; orbit</div>
+
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <span class="text-xs uppercase tracking-widest text-gold-light font-bold block mb-1">Tonight's Atmosphere</span>
+                    <h3 class="font-serif text-2xl font-normal text-white">The Starlit Garden Terrace</h3>
+                    <p class="text-xs text-white/80 mt-0.5">Fairy lights, soothing ambient tunes & crisp Pune night air</p>
                   </div>
                 </div>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold uppercase border border-emerald-500/40">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Live Open Today
-                </span>
+
+                <!-- Instant Booking Widget inside Hero -->
+                <div class="p-6 bg-botanical-deep space-y-4 border-t border-gold/20">
+                  <div class="flex items-center justify-between text-xs">
+                    <span class="text-white/70 uppercase tracking-wider font-semibold">Priority Dining Window</span>
+                    <span class="text-gold-light font-bold">12:00 PM – 11:30 PM</span>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-2 text-xs">
+                    <button onclick="openBookingModal('terrace')" class="p-3 rounded-xl bg-botanical-surface border border-gold/25 hover:border-gold text-left transition-all group">
+                      <span class="block text-gold group-hover:scale-110 transition-transform origin-left">🌿</span>
+                      <span class="font-bold text-white block mt-1">Terrace Seating</span>
+                      <span class="text-[10px] text-white/60">Open-air breezy</span>
+                    </button>
+                    <button onclick="openBookingModal('lounge')" class="p-3 rounded-xl bg-botanical-surface border border-gold/25 hover:border-gold text-left transition-all group">
+                      <span class="block text-gold group-hover:scale-110 transition-transform origin-left">🍸</span>
+                      <span class="font-bold text-white block mt-1">Velvet AC Lounge</span>
+                      <span class="text-[10px] text-white/60">Luxury & Bar</span>
+                    </button>
+                  </div>
+
+                  <button onclick="openBookingModal()" class="w-full py-3.5 bg-gradient-to-r from-gold-dark via-gold to-gold-light hover:brightness-110 text-botanical-deep font-sans font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md">
+                    Claim Reserved Table Now &rarr;
+                  </button>
+                </div>
+
               </div>
 
-              <!-- Quick Facts -->
-              <div class="space-y-3.5 text-xs">
-                <div class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                  <span class="text-gold text-lg">📍</span>
-                  <div>
-                    <strong class="text-white block font-medium">Saras Baug Road Sanctuary</strong>
-                    <span class="text-white/70">Near Vyankatesh Apt, behind Naivedyam Hotel, Parvati Paytha, Pune 411009</span>
-                  </div>
+              <!-- Floating Micro Card -->
+              <div class="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 bg-white p-3.5 rounded-2xl shadow-luxury border border-gold/25 animate-float">
+                <div class="w-10 h-10 rounded-xl bg-gold/15 flex items-center justify-center text-gold text-xl font-bold">
+                  🚗
                 </div>
-
-                <div class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                  <span class="text-lotus text-lg">⏰</span>
-                  <div>
-                    <strong class="text-white block font-medium">Open All 7 Days Continuously</strong>
-                    <span class="text-white/70">12:00 PM – 11:30 PM (Lunch, Sunlit Afternoon, Cocktails &amp; Dinner)</span>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                  <span class="text-emerald-400 text-lg">🚗</span>
-                  <div>
-                    <strong class="text-white block font-medium">Dedicated On-Site Car Parking</strong>
-                    <span class="text-white/70">No circling for parking. Reserved bays for 10–15 cars + two-wheelers.</span>
-                  </div>
+                <div>
+                  <span class="block text-xs font-bold text-botanical-deep">Zero Parking Stress</span>
+                  <span class="block text-[11px] text-charcoal/70">10-15 Dedicated Car Slots</span>
                 </div>
               </div>
-
-              <a href="#reserve" class="block w-full py-3.5 text-center text-xs font-bold uppercase tracking-widest text-midnight bg-gradient-to-r from-gold-light to-gold rounded-full shadow-glow-gold hover:opacity-95 transition-all">
-                Lock Your Table Window &rarr;
-              </a>
 
             </div>
           </div>
@@ -486,82 +455,102 @@
       </div>
     </section>
 
-    <!-- "GATE LAYERS" / WALK-IN EXPERIENCE ARCHITECTURAL HOOK -->
-    <section id="gates" class="py-20 lg:py-28 bg-obsidian border-b border-white/10 relative">
+    <!-- SECTION 1: THE THREE DINING SANCTUARIES -->
+    <section id="sanctuaries" class="py-24 bg-white relative border-b border-gold/15">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="max-w-3xl mx-auto text-center space-y-3 mb-16">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lotus/10 text-lotus-glow text-xs font-bold uppercase tracking-widest border border-lotus/30">
-            Road Presence in Motion
-          </div>
-          <h2 class="font-cinzel text-3xl sm:text-5xl font-bold tracking-tight text-white">
-            Walk Through the Gates of <span class="gold-gradient">White Lotus</span>
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold">Curated Ambiances</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-botanical-deep">
+            Three Distinct <span class="italic font-normal">Sanctuaries</span>
           </h2>
-          <p class="text-sm sm:text-base text-white/70 leading-relaxed">
-            Leave the chaotic rush of Saras Baug Road behind. Step through our three immersive architectural layers:
+          <p class="text-sm sm:text-base text-charcoal/70 leading-relaxed">
+            Whether you seek an open-air starlit terrace, an intimate air-conditioned cocktail lounge, or a private celebratory banquet, White Lotus has been thoughtfully designed for every mood.
           </p>
         </div>
 
-        <!-- 3 Gate Layers Grid -->
+        <!-- 3 Ambiance Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <!-- Gate 1 -->
-          <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-900/40 border border-emerald-400/30 flex items-center justify-center font-cinzel text-lg font-bold text-emerald-300 mb-6">
-              01
+          <!-- Sanctuary 1: Starlit Terrace -->
+          <div class="rounded-3xl overflow-hidden bg-alabaster border border-gold/20 shadow-luxury hover:shadow-luxury-hover transition-all duration-300 flex flex-col group">
+            <div class="relative h-64 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=800&q=80" alt="Starlit Terrace Garden" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-botanical-deep/60 via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-botanical-deep tracking-wider uppercase border border-gold/30">
+                Open-Air Experience
+              </span>
             </div>
-            <div class="space-y-3">
-              <span class="text-[10px] uppercase tracking-widest text-emerald-400 font-bold block">Gate Layer 01</span>
-              <h3 class="font-cinzel text-2xl font-bold text-white group-hover:text-gold transition-colors">
-                The Lush Terrace Garden
-              </h3>
-              <p class="text-xs sm:text-sm text-white/70 leading-relaxed">
-                Open-air dining under Pune’s evening skies. Framed by living tropical greenery, breezy wooden gazebos, and fairy lights, it is the city’s favorite backdrop for sundowners and date nights.
-              </p>
-            </div>
-            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-white/60">
-              <span>Breezy Open-Air</span>
-              <span class="text-gold font-bold">12 PM – 11:30 PM</span>
-            </div>
-          </div>
-
-          <!-- Gate 2 -->
-          <div class="glass-card rounded-3xl p-8 relative overflow-hidden group border-2 border-gold/40 shadow-glow-gold">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-gold/20 to-amber-900/40 border border-gold/40 flex items-center justify-center font-cinzel text-lg font-bold text-gold mb-6">
-              02
-            </div>
-            <div class="space-y-3">
-              <span class="text-[10px] uppercase tracking-widest text-gold font-bold block">Gate Layer 02</span>
-              <h3 class="font-cinzel text-2xl font-bold text-white group-hover:text-gold transition-colors">
-                The Velvet Indoor Lounge
-              </h3>
-              <p class="text-xs sm:text-sm text-white/70 leading-relaxed">
-                Climate-controlled acoustic serenity. Featuring plush royal banquette seating, ambient chandeliers, and an energetic mixology bar serving signature craft cocktails, coolers, and aged spirits.
-              </p>
-            </div>
-            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-white/60">
-              <span>AC Fine Dining &amp; Bar</span>
-              <span class="text-gold font-bold">Full Bar Available</span>
+            <div class="p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-serif text-2xl font-normal text-botanical-deep group-hover:text-gold transition-colors">
+                  The Starlit Terrace Garden
+                </h3>
+                <p class="text-xs sm:text-sm text-charcoal/75 leading-relaxed mt-2">
+                  Immerse in the breezy Pune evenings under twinkling fairy lights and lush botanical canopies. Perfect for romantic dates, spirited laughter with friends, and soulful conversations under the stars.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-charcoal/60">Vibe: Breezy · Acoustic · Starlit</span>
+                <button onclick="openBookingModal('terrace')" class="font-bold text-gold hover:text-gold-dark uppercase tracking-wider">
+                  Book Terrace &rarr;
+                </button>
+              </div>
             </div>
           </div>
 
-          <!-- Gate 3 -->
-          <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-lotus/20 to-purple-900/40 border border-lotus/40 flex items-center justify-center font-cinzel text-lg font-bold text-lotus-glow mb-6">
-              03
+          <!-- Sanctuary 2: Imperial Velvet AC Lounge -->
+          <div class="rounded-3xl overflow-hidden bg-botanical-deep border border-gold/30 text-white shadow-luxury hover:shadow-luxury-hover transition-all duration-300 flex flex-col group">
+            <div class="relative h-64 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=800&q=80" alt="Imperial Velvet AC Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+              <div class="absolute inset-0 bg-gradient-to-t from-botanical-deep via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 bg-botanical-deep/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-gold-light tracking-wider uppercase border border-gold/30">
+                Climate Controlled
+              </span>
             </div>
-            <div class="space-y-3">
-              <span class="text-[10px] uppercase tracking-widest text-lotus-glow font-bold block">Gate Layer 03</span>
-              <h3 class="font-cinzel text-2xl font-bold text-white group-hover:text-gold transition-colors">
-                Private Diners &amp; Banquets
-              </h3>
-              <p class="text-xs sm:text-sm text-white/70 leading-relaxed">
-                Expansive table layouts tailored for birthdays, corporate mixers, family anniversaries, and reunions. Complete with custom multi-cuisine tasting menus and dedicated floor captain service.
-              </p>
+            <div class="p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-serif text-2xl font-normal text-white group-hover:text-gold transition-colors">
+                  The Imperial Velvet Lounge & Bar
+                </h3>
+                <p class="text-xs sm:text-sm text-white/80 leading-relaxed mt-2">
+                  Plush emerald velvet seating, warm candlelight, and an artisanal mixology counter. Enjoy relaxed family dining, high-energy weekend gatherings, and handcrafted cocktails crafted by master bartenders.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gold/20 flex items-center justify-between text-xs">
+                <span class="text-white/60">Vibe: Plush · Intimate · Full Bar</span>
+                <button onclick="openBookingModal('lounge')" class="font-bold text-gold-light hover:text-white uppercase tracking-wider">
+                  Book Lounge &rarr;
+                </button>
+              </div>
             </div>
-            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-white/60">
-              <span>Party Tables 10–30+</span>
-              <span class="text-gold font-bold">Pre-Booking Open</span>
+          </div>
+
+          <!-- Sanctuary 3: Private Banquets & Celebrations -->
+          <div class="rounded-3xl overflow-hidden bg-alabaster border border-gold/20 shadow-luxury hover:shadow-luxury-hover transition-all duration-300 flex flex-col group">
+            <div class="relative h-64 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=80" alt="Private Group Banquets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-botanical-deep/60 via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-botanical-deep tracking-wider uppercase border border-gold/30">
+                15 to 50+ Guests
+              </span>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-serif text-2xl font-normal text-botanical-deep group-hover:text-gold transition-colors">
+                  Private Celebrations & Banquets
+                </h3>
+                <p class="text-xs sm:text-sm text-charcoal/75 leading-relaxed mt-2">
+                  Dedicated dining enclaves configured specifically for birthdays, anniversaries, family get-togethers, and corporate dinners. Complete with customized buffet spreads and personalized hospitality.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-charcoal/60">Vibe: Exclusive · Custom Menus</span>
+                <button onclick="openBookingModal('banquet')" class="font-bold text-gold hover:text-gold-dark uppercase tracking-wider">
+                  Plan Event &rarr;
+                </button>
+              </div>
             </div>
           </div>
 
@@ -570,560 +559,368 @@
       </div>
     </section>
 
-    <!-- SIGNATURE MENU SHOWCASE -->
-    <section id="menu" class="py-20 lg:py-28 bg-midnight border-b border-white/10 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-3xl mx-auto text-center space-y-3 mb-14">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/10 text-gold-light text-xs font-bold uppercase tracking-widest border border-gold/30">
-            Gastronomic Excellence
-          </div>
-          <h2 class="font-cinzel text-3xl sm:text-5xl font-bold tracking-tight text-white">
-            The Signature <span class="gold-gradient">Masterpieces</span>
-          </h2>
-          <p class="text-sm sm:text-base text-white/75 leading-relaxed">
-            Crafted fresh daily with authentic spices, slow clay tandoors, and artisanal Pan-Asian &amp; Italian culinary techniques.
-          </p>
+    <!-- SECTION 2: THE SARAS BAUG ROAD ADVANTAGE — GUARANTEED DEDICATED PARKING -->
+    <section id="parking" class="py-20 bg-botanical-deep text-white relative overflow-hidden border-b border-gold/20">
+      
+      <!-- Subtle Decorative Lotus Element -->
+      <div class="absolute -right-20 -bottom-20 w-96 h-96 opacity-10 pointer-events-none">
+        <svg viewBox="0 0 100 100" fill="currentColor" class="text-gold w-full h-full">
+          <path d="M50 15 C45 35 25 50 15 65 C30 75 45 60 50 85 C55 60 70 75 85 65 C75 50 55 35 50 15 Z"/>
+        </svg>
+      </div>
 
-          <!-- Interactive Category Tabs -->
-          <div class="pt-6 flex flex-wrap items-center justify-center gap-2.5">
-            <button onclick="filterMenu('all')" class="menu-pill active px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-gold text-midnight shadow-glow-gold">
-              All Creations
-            </button>
-            <button onclick="filterMenu('starters')" class="menu-pill px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all glass-panel text-white/80 hover:text-white hover:border-gold">
-              Starters &amp; Kebabs
-            </button>
-            <button onclick="filterMenu('mains')" class="menu-pill px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all glass-panel text-white/80 hover:text-white hover:border-gold">
-              Mains &amp; Curries
-            </button>
-            <button onclick="filterMenu('pizzas-pasta')" class="menu-pill px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all glass-panel text-white/80 hover:text-white hover:border-gold">
-              Pizzas &amp; Pastas
-            </button>
-            <button onclick="filterMenu('desserts-bar')" class="menu-pill px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all glass-panel text-white/80 hover:text-white hover:border-gold">
-              Bar &amp; Desserts
-            </button>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="bg-botanical-surface rounded-3xl p-8 sm:p-12 border border-gold/30 shadow-2xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-8 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/20 text-gold-light text-xs font-bold tracking-widest uppercase">
+                <span>🚗 The Saras Baug Convenience Advantage</span>
+              </div>
+              <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white">
+                Never Circle for Parking Again in Parvati & Swargate
+              </h2>
+              <p class="text-white/80 text-sm sm:text-base leading-relaxed">
+                Finding parking on Saras Baug Road is notoriously challenging for Pune food lovers. At White Lotus, we eliminate the hassle: enjoy <strong>10 to 15 dedicated on-site car parking slots</strong> right in front of our entrance, with on-duty attendants to ensure your arrival and departure are completely effortless.
+              </p>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-xs">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center text-gold-light font-bold">✓</div>
+                  <span class="text-white/90">Dedicated On-Site Slots</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center text-gold-light font-bold">✓</div>
+                  <span class="text-white/90">Attendant Assistance</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center text-gold-light font-bold">✓</div>
+                  <span class="text-white/90">Direct Ramp Access</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-4 text-center lg:text-right">
+              <div class="inline-block p-6 rounded-2xl bg-botanical-deep border border-gold/30 shadow-lg text-center w-full max-w-sm">
+                <span class="text-4xl block mb-2">🅿️</span>
+                <span class="font-serif text-3xl font-bold text-gold-light block">10–15 Cars</span>
+                <span class="text-xs text-white/70 block uppercase tracking-wider mt-1">Guaranteed On-Site Capacity</span>
+                <div class="mt-4 pt-4 border-t border-gold/20">
+                  <a href="https://maps.google.com/?q=White+Lotus+Saras+Baug+Road+Pune" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-gold hover:bg-gold-light text-botanical-deep font-bold text-xs uppercase tracking-wider rounded-xl transition-all">
+                    <span>Open in Google Maps</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Menu Grid -->
-        <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+    <!-- SECTION 3: SIGNATURE CULINARY MASTERPIECES (INTERACTIVE MENU DECK) -->
+    <section id="menu" class="py-24 bg-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold">Culinary Mastery</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-botanical-deep">
+            Signature <span class="italic font-normal">Creations</span>
+          </h2>
+          <p class="text-sm sm:text-base text-charcoal/70 leading-relaxed">
+            From the beloved Burmese Khao Suey that Pune raves about, to melt-in-mouth Kamal Ke Kebab and authentic stone-fired Italian pastas.
+          </p>
+        </div>
+
+        <!-- CATEGORY TABS -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+          <button onclick="filterMenu('all')" class="menu-tab-btn active px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-botanical-deep text-white shadow-sm border border-gold/30" data-cat="all">
+            All Masterpieces
+          </button>
+          <button onclick="filterMenu('starters')" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="starters">
+            Tandoor & Starters
+          </button>
+          <button onclick="filterMenu('asian-italian')" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="asian-italian">
+            Asian & Continental
+          </button>
+          <button onclick="filterMenu('mains')" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="mains">
+            Heritage Mains
+          </button>
+          <button onclick="filterMenu('desserts')" class="menu-tab-btn px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="desserts">
+            Desserts & Bar
+          </button>
+        </div>
+
+        <!-- MENU ITEMS GRID -->
+        <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           <!-- Dish 1: Burmese Khao Suey -->
-          <div class="menu-card mains glass-card rounded-3xl p-7 flex flex-col justify-between border-2 border-gold/40 shadow-glow-gold">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-lotus/20 text-lotus-glow border border-lotus/40">
-                  ★ #1 Pune Favorite
-                </span>
-                <span class="font-cinzel text-xl font-bold gold-gradient">₹671</span>
-              </div>
-              <h3 class="font-cinzel text-2xl font-bold text-white">Burmese Khao Suey</h3>
-              <p class="text-xs text-white/70 leading-relaxed">
-                Silky, spiced coconut milk broth simmered with fresh turmeric, crushed kaffir lime, served over springy noodles with 8 tableside toppings (fried garlic, crispy noodles, crushed peanuts &amp; chili flakes).
-              </p>
+          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="asian-italian">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80" alt="Burmese Khao Suey" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
+                ★ Diner Favorite #1
+              </span>
+              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
+                ₹671
+              </span>
             </div>
-            <div class="pt-5 mt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="text-white/60">Pan-Asian Special</span>
-              <a href="#reserve" class="text-gold font-bold uppercase text-[11px] tracking-wider hover:underline">Reserve to Taste &rarr;</a>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Burmese Khao Suey</h3>
+                  <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md">Veg / Non-Veg</span>
+                </div>
+                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
+                  Fragrant slow-simmered spiced coconut milk broth poured over egg noodles, served with 8 traditional crunch garnishes, roasted peanuts, fried garlic, and fresh lime.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-charcoal/50 italic">Chef's Signature Recipe</span>
+                <button onclick="openBookingModal('terrace')" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
+              </div>
             </div>
           </div>
 
           <!-- Dish 2: Kamal Ke Kebab -->
-          <div class="menu-card starters glass-card rounded-3xl p-7 flex flex-col justify-between">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-                  Vegetarian Royalty
-                </span>
-                <span class="font-cinzel text-xl font-bold gold-gradient">₹481</span>
-              </div>
-              <h3 class="font-cinzel text-2xl font-bold text-white">Kamal Ke Kebab</h3>
-              <p class="text-xs text-white/70 leading-relaxed">
-                Delicate lotus stem patties infused with roasted royal Awadhi spices, charred to a smoky tenderness on a heavy iron griddle, served with mint-anardana chutney.
-              </p>
+          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="starters">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=700&q=80" alt="Kamal Ke Kebab" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
+                White Lotus Special
+              </span>
+              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
+                ₹481
+              </span>
             </div>
-            <div class="pt-5 mt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="text-white/60">Clay Tandoor</span>
-              <a href="#reserve" class="text-gold font-bold uppercase text-[11px] tracking-wider hover:underline">Reserve to Taste &rarr;</a>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Kamal Ke Kebab</h3>
+                  <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md">Pure Veg</span>
+                </div>
+                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
+                  Tender, pan-seared lotus root (kamal kakdi) patties infused with green cardamom, roasted cumin, and royal herbs. Served with chilled pomegranate-mint raita.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-charcoal/50 italic">House Innovation</span>
+                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
+              </div>
             </div>
           </div>
 
-          <!-- Dish 3: Dynamite Prawns & Tempura -->
-          <div class="menu-card starters glass-card rounded-3xl p-7 flex flex-col justify-between">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40">
-                  Seafood Sensation
-                </span>
-                <span class="font-cinzel text-xl font-bold gold-gradient">₹644</span>
-              </div>
-              <h3 class="font-cinzel text-2xl font-bold text-white">Dynamite Prawns</h3>
-              <p class="text-xs text-white/70 leading-relaxed">
-                Jumbo tiger prawns flash-fried in airy Japanese tempura batter, generously tossed in our signature creamy sriracha glaze and toasted black sesame.
-              </p>
+          <!-- Dish 3: Prawns Tempura -->
+          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="starters">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=700&q=80" alt="Prawns Tempura" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
+                Coastal Favorite
+              </span>
+              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
+                ₹644
+              </span>
             </div>
-            <div class="pt-5 mt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="text-white/60">Crispy Starters</span>
-              <a href="#reserve" class="text-gold font-bold uppercase text-[11px] tracking-wider hover:underline">Reserve to Taste &rarr;</a>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Golden Prawns Tempura</h3>
+                  <span class="text-xs text-red-700 font-semibold bg-red-50 px-2 py-0.5 rounded-md">Seafood</span>
+                </div>
+                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
+                  Jumbo Arabian Sea prawns flash-fried in light Japanese tempura lace batter. Accompanied by citrus wasabi mayo and sweet mirin-tentsuyu dip.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-charcoal/50 italic">Crispy Perfection</span>
+                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
+              </div>
             </div>
           </div>
 
-          <!-- Dish 4: Dhaba Chicken & Butter Kulcha -->
-          <div class="menu-card mains glass-card rounded-3xl p-7 flex flex-col justify-between">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-gold/20 text-gold-light border border-gold/40">
-                  Signature Main
-                </span>
-                <span class="font-cinzel text-xl font-bold gold-gradient">₹642</span>
-              </div>
-              <h3 class="font-cinzel text-2xl font-bold text-white">Dhaba Chicken &amp; Kulcha</h3>
-              <p class="text-xs text-white/70 leading-relaxed">
-                Rustic Grand Trunk highway style slow-simmered chicken curry in roasted whole coriander and kasuri methi gravy, paired with piping hot, flaky tandoor butter kulchas.
-              </p>
+          <!-- Dish 4: Dhaba Chicken Curry -->
+          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="mains">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Dhaba Chicken Curry" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
+                Heritage Recipe
+              </span>
+              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
+                ₹642
+              </span>
             </div>
-            <div class="pt-5 mt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="text-white/60">North Indian Royal</span>
-              <a href="#reserve" class="text-gold font-bold uppercase text-[11px] tracking-wider hover:underline">Reserve to Taste &rarr;</a>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Rustic Dhaba Chicken</h3>
+                  <span class="text-xs text-red-700 font-semibold bg-red-50 px-2 py-0.5 rounded-md">Non-Veg</span>
+                </div>
+                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
+                  Tender chicken morsels slow-cooked on iron kadhais with roasted whole spices, caramelized onions, and country butter. Paired best with butter garlic naan.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-charcoal/50 italic">North Indian Gold Standard</span>
+                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
+              </div>
             </div>
           </div>
 
           <!-- Dish 5: Pink Sauce Penne Pasta -->
-          <div class="menu-card pizzas-pasta glass-card rounded-3xl p-7 flex flex-col justify-between">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40">
-                  Italian Classical
-                </span>
-                <span class="font-cinzel text-xl font-bold gold-gradient">₹520</span>
-              </div>
-              <h3 class="font-cinzel text-2xl font-bold text-white">Pink Sauce Penne</h3>
-              <p class="text-xs text-white/70 leading-relaxed">
-                Al dente penne bathed in a velvet blend of San Marzano plum tomatoes and heavy cream with parmesan shavings, served with crunchy garlic herb toast.
-              </p>
-            </div>
-            <div class="pt-5 mt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="text-white/60">Continental &amp; Italian</span>
-              <a href="#reserve" class="text-gold font-bold uppercase text-[11px] tracking-wider hover:underline">Reserve to Taste &rarr;</a>
-            </div>
-          </div>
-
-          <!-- Dish 6: Signature Eggless Tiramisu -->
-          <div class="menu-card desserts-bar glass-card rounded-3xl p-7 flex flex-col justify-between border-2 border-lotus/40 shadow-glow-lotus">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-lotus/20 text-lotus-glow border border-lotus/40">
-                  ★ 1,600+ Praised
-                </span>
-                <span class="font-cinzel text-xl font-bold gold-gradient">₹497</span>
-              </div>
-              <h3 class="font-cinzel text-2xl font-bold text-white">Signature Tiramisu</h3>
-              <p class="text-xs text-white/70 leading-relaxed">
-                Espresso-drenched savoiardi biscuits layered with silky Italian mascarpone cheese and dusted with fine Belgian dark cocoa. Pune diners call it "Pure heaven in every spoonful."
-              </p>
-            </div>
-            <div class="pt-5 mt-5 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="text-white/60">Desserts &amp; Patisserie</span>
-              <a href="#reserve" class="text-gold font-bold uppercase text-[11px] tracking-wider hover:underline">Reserve to Taste &rarr;</a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 4.6★ DINERS WALL OF PRAISE -->
-    <section id="reviews" class="py-20 lg:py-24 bg-obsidian border-b border-white/10 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-3xl mx-auto text-center space-y-3 mb-14">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/10 text-gold text-xs font-bold uppercase tracking-widest border border-gold/30">
-            Verified Social Proof
-          </div>
-          <h2 class="font-cinzel text-3xl sm:text-5xl font-bold tracking-tight text-white">
-            Loved by Over <span class="gold-gradient">1,660+ Diners</span>
-          </h2>
-          <p class="text-sm sm:text-base text-white/70 leading-relaxed">
-            From romantic dates on our terrace to family banquets, here is what Pune is saying about White Lotus on Google.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <div class="glass-card rounded-3xl p-7 space-y-4">
-            <div class="flex items-center gap-1 text-gold text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-white/80 italic leading-relaxed">
-              &ldquo;The ambiance at White Lotus is truly magnificent. The outdoor terrace garden at night is so romantic. Their Burmese Khao Suey and Paneer Lollipop are the best I have tasted in Pune. Plus, they have private car parking right outside!&rdquo;
-            </p>
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="font-bold text-white">Aditya Deshmukh</span>
-              <span class="text-gold text-[10px] uppercase font-bold">Google Review</span>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-3xl p-7 space-y-4 border-2 border-gold/40 shadow-glow-gold">
-            <div class="flex items-center gap-1 text-gold text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-white/80 italic leading-relaxed">
-              &ldquo;Celebrated our wedding anniversary here last week. The staff treated us like royalty. Dhaba Chicken Curry with flaky butter kulchas was rich and authentic. And DO NOT miss their Tiramisu — it is worth every single calorie!&rdquo;
-            </p>
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="font-bold text-white">Dr. Priya Kulkarni</span>
-              <span class="text-gold text-[10px] uppercase font-bold">Google Review</span>
-            </div>
-          </div>
-
-          <div class="glass-card rounded-3xl p-7 space-y-4">
-            <div class="flex items-center gap-1 text-gold text-sm">★★★★★</div>
-            <p class="text-xs sm:text-sm text-white/80 italic leading-relaxed">
-              &ldquo;A complete 10/10 dining experience. Great cocktails, polite floor captains, energetic music, and spacious seating. Finding parking in Swargate/Saras Baug is normally impossible, but White Lotus has dedicated parking for 15+ cars!&rdquo;
-            </p>
-            <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="font-bold text-white">Rohan Mehra</span>
-              <span class="text-gold text-[10px] uppercase font-bold">Google Review</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- INTERACTIVE TABLE RESERVATION SYSTEM -->
-    <section id="reserve" class="py-20 lg:py-28 bg-midnight border-b border-white/10 relative">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center space-y-3 mb-12">
-          <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-lotus/20 text-lotus-glow text-xs font-bold uppercase tracking-widest border border-lotus/40">
-            Instant Table Lock
-          </div>
-          <h2 class="font-cinzel text-3xl sm:text-5xl font-bold tracking-tight text-white">
-            Reserve Your <span class="gold-gradient">White Lotus</span> Table
-          </h2>
-          <p class="text-sm sm:text-base text-white/70 max-w-xl mx-auto">
-            Direct online table bookings with immediate floor captain confirmation.
-          </p>
-        </div>
-
-        <!-- Form Card -->
-        <div class="glass-panel rounded-3xl border-2 border-gold/40 shadow-card-glass p-6 sm:p-10">
-          
-          <form id="reservation-form" onsubmit="handleReservationSubmit(event)" class="space-y-6">
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
-              <!-- Guest Name -->
-              <div>
-                <label for="guest-name" class="block text-xs font-bold uppercase tracking-wider text-gold mb-2">
-                  Full Name <span class="text-red-400">*</span>
-                </label>
-                <input 
-                  type="text" 
-                  id="guest-name" 
-                  name="guest_name" 
-                  required 
-                  maxlength="80"
-                  placeholder="e.g. Vikramaditya Patil" 
-                  class="w-full px-4 py-3.5 bg-surfaceCard border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-gold transition-colors"
-                >
-                <p id="name-error" class="hidden text-xs text-red-400 mt-1">Please enter your name.</p>
-              </div>
-
-              <!-- Phone / WhatsApp -->
-              <div>
-                <label for="guest-phone" class="block text-xs font-bold uppercase tracking-wider text-gold mb-2">
-                  Phone / WhatsApp <span class="text-red-400">*</span>
-                </label>
-                <div class="relative">
-                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-xs font-bold text-white/50">
-                    +91
-                  </span>
-                  <input 
-                    type="tel" 
-                    id="guest-phone" 
-                    name="guest_phone" 
-                    required 
-                    maxlength="15"
-                    placeholder="95135 75757" 
-                    class="w-full pl-12 pr-4 py-3.5 bg-surfaceCard border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-gold transition-colors"
-                  >
-                </div>
-                <p id="phone-error" class="hidden text-xs text-red-400 mt-1">Please enter a valid 10-digit number.</p>
-              </div>
-
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              
-              <!-- Guests Count -->
-              <div>
-                <label for="guest-count" class="block text-xs font-bold uppercase tracking-wider text-gold mb-2">
-                  Party Size <span class="text-red-400">*</span>
-                </label>
-                <select 
-                  id="guest-count" 
-                  name="guest_count" 
-                  required 
-                  class="w-full px-4 py-3.5 bg-surfaceCard border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-gold transition-colors"
-                >
-                  <option value="2 Guests" selected>2 Guests (Couple / Intimate)</option>
-                  <option value="1 Guest">1 Guest (Solo Dining)</option>
-                  <option value="3-4 Guests">3 – 4 Guests (Small Group)</option>
-                  <option value="5-8 Guests">5 – 8 Guests (Family Table)</option>
-                  <option value="9-15 Guests">9 – 15 Guests (Celebration)</option>
-                  <option value="16+ Guests">16+ Guests (Banquet / Party)</option>
-                </select>
-              </div>
-
-              <!-- Date Picker -->
-              <div>
-                <label for="reserve-date" class="block text-xs font-bold uppercase tracking-wider text-gold mb-2">
-                  Dining Date <span class="text-red-400">*</span>
-                </label>
-                <input 
-                  type="date" 
-                  id="reserve-date" 
-                  name="reserve_date" 
-                  required 
-                  class="w-full px-4 py-3.5 bg-surfaceCard border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-gold transition-colors"
-                >
-              </div>
-
-              <!-- Time Slot -->
-              <div>
-                <label for="time-slot" class="block text-xs font-bold uppercase tracking-wider text-gold mb-2">
-                  Time Window <span class="text-red-400">*</span>
-                </label>
-                <select 
-                  id="time-slot" 
-                  name="time_slot" 
-                  required 
-                  class="w-full px-4 py-3.5 bg-surfaceCard border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-gold transition-colors"
-                >
-                  <option value="Lunch: 12:30 PM – 2:30 PM" selected>Lunch (12:30 PM – 2:30 PM)</option>
-                  <option value="Afternoon: 2:30 PM – 4:30 PM">Afternoon (2:30 PM – 4:30 PM)</option>
-                  <option value="Sundowner: 6:00 PM – 8:00 PM">Sundowner (6:00 PM – 8:00 PM)</option>
-                  <option value="Prime Dinner: 8:00 PM – 10:00 PM">Prime Dinner (8:00 PM – 10:00 PM)</option>
-                  <option value="Late Night: 10:00 PM – 11:30 PM">Late Night (10:00 PM – 11:30 PM)</option>
-                </select>
-              </div>
-
-            </div>
-
-            <!-- Seating Preference -->
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-gold mb-2">
-                Preferred Seating Area
-              </label>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-surfaceCard border border-white/10 cursor-pointer hover:border-gold text-xs">
-                  <input type="radio" name="seating" value="Outdoor Terrace Garden" checked class="text-gold focus:ring-gold">
-                  <span>🌿 Open Terrace Garden</span>
-                </label>
-                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-surfaceCard border border-white/10 cursor-pointer hover:border-gold text-xs">
-                  <input type="radio" name="seating" value="Indoor Velvet AC Lounge" class="text-gold focus:ring-gold">
-                  <span>🍸 Indoor Velvet AC Lounge</span>
-                </label>
-                <label class="flex items-center gap-2.5 p-3 rounded-xl bg-surfaceCard border border-white/10 cursor-pointer hover:border-gold text-xs">
-                  <input type="radio" name="seating" value="First Available Table" class="text-gold focus:ring-gold">
-                  <span>⚡ First Available Table</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Notes -->
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <label for="special-requests" class="text-xs font-bold uppercase tracking-wider text-gold">
-                  Special Notes / Occasion <span class="text-white/40 font-normal lowercase">(optional)</span>
-                </label>
-                <span class="text-[11px] text-white/50">Birthday, Anniversary, Jain food prep, etc.</span>
-              </div>
-              <textarea 
-                id="special-requests" 
-                name="special_requests" 
-                rows="2" 
-                maxlength="300"
-                placeholder="Mention cake arrangements, high-chair needed, or specific table preferences..." 
-                class="w-full px-4 py-3 bg-surfaceCard border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-gold transition-colors resize-none"
-              ></textarea>
-            </div>
-
-            <!-- Submit -->
-            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-              
-              <div class="flex items-center gap-2 text-xs text-white/70">
-                <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                <span>Instant floor captain WhatsApp confirmation</span>
-              </div>
-
-              <button 
-                type="submit" 
-                id="submit-btn" 
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gradient-to-r from-gold-light via-gold to-gold-dark text-midnight text-xs font-bold uppercase tracking-widest rounded-full shadow-glow-gold hover:scale-105 transition-all duration-300 disabled:opacity-50"
-              >
-                <span id="btn-text">Confirm Table Request</span>
-                <svg id="btn-spinner" class="hidden w-4 h-4 animate-spin text-midnight" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
-                <svg id="btn-arrow" class="w-4 h-4 text-midnight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </button>
-
-            </div>
-
-          </form>
-
-          <!-- On-Page Confirmation Card -->
-          <div id="booking-confirmation-card" class="hidden mt-8 p-6 sm:p-8 rounded-2xl bg-surface border-2 border-gold shadow-glow-gold space-y-5">
-            <div class="flex items-center justify-between pb-4 border-b border-white/10">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-gold/20 border border-gold flex items-center justify-center text-gold">
-                  <svg class="w-5 h-5 text-gold-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                </div>
-                <div>
-                  <h3 class="font-cinzel text-xl font-bold text-white">Table Request Transmitted</h3>
-                  <p class="text-xs text-gold">Booking Ref: <span id="conf-ref-id" class="font-mono font-bold tracking-wider"></span></p>
-                </div>
-              </div>
-              <span class="text-xs uppercase tracking-wider text-emerald-400 bg-emerald-500/20 px-3 py-1 rounded-full border border-emerald-500/40">
-                Floor Captain Confirmed
+          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="asian-italian">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1621996346565-e3d5d62817d4?auto=format&fit=crop&w=700&q=80" alt="Pink Sauce Penne Pasta" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
+                Italian Bistro
+              </span>
+              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
+                ₹520
               </span>
             </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-white/80">
-              <div class="p-3 bg-midnight/60 rounded-xl border border-white/5">
-                <span class="text-gold block uppercase tracking-wider text-[10px]">Guest Name</span>
-                <span id="conf-name" class="font-bold text-white text-sm"></span>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Pink Sauce Penne Rigati</h3>
+                  <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md">Veg / Chicken</span>
+                </div>
+                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
+                  Artisanal al-dente penne folded in a delicate blend of San Marzano plum tomato marinara and Italian parmesan cream, topped with fresh basil and herb oil.
+                </p>
               </div>
-              <div class="p-3 bg-midnight/60 rounded-xl border border-white/5">
-                <span class="text-gold block uppercase tracking-wider text-[10px]">Party Size</span>
-                <span id="conf-guests" class="font-bold text-white text-sm"></span>
-              </div>
-              <div class="p-3 bg-midnight/60 rounded-xl border border-white/5">
-                <span class="text-gold block uppercase tracking-wider text-[10px]">Date &amp; Time</span>
-                <span id="conf-datetime" class="font-bold text-white text-sm"></span>
-              </div>
-              <div class="p-3 bg-midnight/60 rounded-xl border border-white/5">
-                <span class="text-gold block uppercase tracking-wider text-[10px]">Seating Area</span>
-                <span id="conf-seating" class="font-bold text-white text-sm"></span>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-charcoal/50 italic">Creamy & Tangy</span>
+                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
               </div>
             </div>
+          </div>
 
-            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <p class="text-xs text-white/70">
-                Your table request is logged. To lock your table immediately on WhatsApp with our Saras Baug Road host:
-              </p>
-              <a id="conf-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-colors whitespace-nowrap shadow-lg">
-                <span>WhatsApp Floor Captain &rarr;</span>
-              </a>
+          <!-- Dish 6: Classic Eggless Tiramisu -->
+          <div class="menu-card rounded-3xl overflow-hidden bg-white border border-gold/20 shadow-luxury flex flex-col justify-between" data-category="desserts">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=80" alt="Eggless Tiramisu" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-botanical-deep text-gold-light px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-gold/30">
+                Sweet Finale
+              </span>
+              <span class="absolute top-3 right-3 bg-white/95 px-3 py-1 rounded-full text-xs font-bold text-botanical-deep shadow-sm">
+                ₹497
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif text-xl font-semibold text-botanical-deep">Signature Eggless Tiramisu</h3>
+                  <span class="text-xs text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md">Eggless Veg</span>
+                </div>
+                <p class="text-xs text-charcoal/70 leading-relaxed mt-2">
+                  Layers of dark espresso-drenched savoiardi biscuits and airy mascarpone custard, finished with a heavy blanket of Belgian Dutch-processed cocoa powder.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-gold/15 flex items-center justify-between text-xs">
+                <span class="text-charcoal/50 italic">Pune's Favorite Dessert</span>
+                <button onclick="openBookingModal()" class="text-gold font-bold hover:underline">Order at Table &rarr;</button>
+              </div>
             </div>
           </div>
 
         </div>
 
+        <!-- Download Full Menu CTA -->
+        <div class="mt-14 text-center">
+          <div class="inline-flex flex-col sm:flex-row items-center gap-4 p-4 rounded-2xl bg-white border border-gold/25 shadow-sm">
+            <span class="text-xs text-charcoal/80 font-medium">Want to explore our complete 140+ dish menu & bar catalog?</span>
+            <a href="https://wa.me/919513575757?text=Hello%20White%20Lotus,%20please%20send%20me%20your%20complete%20PDF%20dining%20and%20cocktail%20menu." target="_blank" rel="noopener" class="px-5 py-2.5 bg-botanical-deep text-white text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-botanical-surface transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>Receive Full Menu on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- LOCATION, PARKING & GOOGLE MAPS SHOWCASE -->
-    <section id="location" class="py-20 lg:py-28 bg-obsidian border-b border-white/10 relative">
+    <!-- SECTION 4: REAL SOCIAL PROOF & DINER TESTIMONIALS -->
+    <section id="reviews" class="py-24 bg-white border-b border-gold/15">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div class="lg:col-span-6 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/10 text-gold text-xs font-bold uppercase tracking-widest border border-gold/30">
-              Location &amp; Parking Facility
-            </div>
-
-            <h2 class="font-cinzel text-3xl sm:text-5xl font-bold tracking-tight text-white">
-              Centrally Located on <span class="gold-gradient">Saras Baug Road</span>
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold">Unfiltered Diners</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-normal text-botanical-deep mt-2">
+              Loved by 1,660+ <span class="italic font-normal">Pune Foodies</span>
             </h2>
-
-            <p class="text-sm sm:text-base text-white/75 leading-relaxed">
-              Situated right near Mitramandal Chowk, behind Naivedyam Hotel, White Lotus is centrally accessible from Swargate, Parvati, Mukundnagar, Bibwewadi, and Camp.
-            </p>
-
-            <!-- Address Card -->
-            <div class="p-6 rounded-2xl glass-panel space-y-3">
-              <div class="flex items-start gap-3">
-                <span class="text-gold text-xl mt-0.5">📍</span>
-                <div class="text-xs sm:text-sm text-white/90 leading-relaxed">
-                  <strong class="font-bold text-white block text-sm">White Lotus: Food Vibe Folks</strong>
-                  202, 203, Saras Baug Rd, near Vyankatesh Apt,<br>
-                  behind Naivedyam Hotel, Mitra Mandal Colony,<br>
-                  Parvati Paytha, Pune, Maharashtra 411009
-                </div>
-              </div>
-
-              <div class="pt-3 border-t border-white/10 grid grid-cols-2 gap-4 text-xs">
-                <div>
-                  <span class="text-white/50 block uppercase tracking-wider text-[10px]">Landmark</span>
-                  <span class="font-bold text-white">Mitramandal Chowk / Saras Baug</span>
-                </div>
-                <div>
-                  <span class="text-white/50 block uppercase tracking-wider text-[10px]">On-Site Parking</span>
-                  <span class="font-bold text-emerald-400">10–15 Cars + Two-Wheelers</span>
-                </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="bg-botanical-deep text-white px-5 py-3 rounded-2xl flex items-center gap-3 shadow-md">
+              <span class="text-2xl font-serif text-gold-light font-bold">4.6</span>
+              <div class="text-left text-[11px] leading-tight">
+                <div class="text-gold">★★★★★</div>
+                <div class="text-white/70">Google Verified Rating</div>
               </div>
             </div>
+            <a href="https://maps.google.com/?q=White+Lotus+Saras+Baug+Road+Pune" target="_blank" rel="noopener" class="text-xs font-bold text-botanical-deep hover:text-gold uppercase tracking-wider py-3 px-4 border border-gold/30 rounded-2xl hover:bg-alabaster transition-all">
+              Read All Reviews &rarr;
+            </a>
+          </div>
+        </div>
 
-            <!-- Hours Box -->
-            <div class="p-4 rounded-xl glass-card flex items-center justify-between">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Testimonial 1 -->
+          <div class="p-8 rounded-3xl bg-alabaster border border-gold/20 shadow-sm flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="text-gold text-sm">★★★★★</div>
+              <p class="text-xs sm:text-sm text-charcoal/80 leading-relaxed italic">
+                "The Burmese Khao Suey at White Lotus is genuinely one of the best in Pune! The open-air terrace vibe with fairy lights makes evening dinners magical. Plus, having reserved car parking right opposite Sanas Ground saves so much headache!"
+              </p>
+            </div>
+            <div class="pt-4 border-t border-gold/15 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-botanical-deep text-gold flex items-center justify-center font-bold font-serif text-sm">
+                NK
+              </div>
               <div>
-                <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Continuous Dining</div>
-                <div class="text-xs font-bold text-white mt-0.5">Monday – Sunday: 12:00 PM – 11:30 PM</div>
-              </div>
-              <div class="text-right">
-                <span class="text-[10px] uppercase tracking-wider text-emerald-300 font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40">
-                  Open All 7 Days
-                </span>
+                <span class="block text-xs font-bold text-botanical-deep">Neha Kulkarni</span>
+                <span class="block text-[11px] text-charcoal/60">Google Local Guide · Level 7</span>
               </div>
             </div>
-
-            <!-- Map & Call Links -->
-            <div class="flex flex-wrap items-center gap-4 pt-1">
-              <a href="https://maps.google.com/?q=White+Lotus+Saras+Baug+Road+Pune" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold hover:text-white transition-colors">
-                <span>Navigate in Google Maps &rarr;</span>
-              </a>
-              <span class="text-white/30">|</span>
-              <a href="tel:+919513575757" class="text-xs font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
-                Call Host: +91 95135 75757
-              </a>
-            </div>
-
           </div>
 
-          <!-- Right: Interactive Styled Map Card -->
-          <div class="lg:col-span-6">
-            <div class="relative rounded-3xl overflow-hidden border-2 border-gold/40 shadow-card-glass bg-surface">
-              
-              <div class="bg-surface px-5 py-3.5 border-b border-white/10 flex items-center justify-between text-xs text-white">
-                <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span class="font-cinzel tracking-wider">White Lotus Fine Dining &amp; Bar</span>
-                </div>
-                <span class="text-[11px] text-gold font-mono">Pune 411009</span>
+          <!-- Testimonial 2 -->
+          <div class="p-8 rounded-3xl bg-alabaster border border-gold/20 shadow-sm flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="text-gold text-sm">★★★★★</div>
+              <p class="text-xs sm:text-sm text-charcoal/80 leading-relaxed italic">
+                "We celebrated my father's 60th birthday in the AC Lounge. The hospitality is remarkable, the Kamal Ke Kebab and Dhaba Chicken Curry were outstanding, and the Floor Captain personally made sure our family was comfortable throughout."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-gold/15 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-botanical-deep text-gold flex items-center justify-center font-bold font-serif text-sm">
+                RP
               </div>
-
-              <div class="h-80 sm:h-96 w-full relative">
-                <iframe 
-                  title="White Lotus Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.567677028163!2d73.851636!3d18.498522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0034a7d65b7%3A0x6b6c4eb896b05be5!2sSaras%20Baug%20Rd%2C%20Mitra%20Mandal%20Colony%2C%20Parvati%20Paytha%2C%20Pune%2C%20Maharashtra%20411009!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                  width="100%" 
-                  height="100%" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade"
-                  class="w-full h-full grayscale-[25%] contrast-125"
-                ></iframe>
+              <div>
+                <span class="block text-xs font-bold text-botanical-deep">Rajesh Patil</span>
+                <span class="block text-[11px] text-charcoal/60">Family Diner, Pune</span>
               </div>
+            </div>
+          </div>
 
-              <div class="p-4 bg-obsidian text-white border-t border-white/10 text-xs flex items-center justify-between">
-                <span class="text-white/70">Behind Naivedyam Hotel • Dedicated 15-Car Parking</span>
-                <a href="#reserve" class="text-gold hover:text-white uppercase tracking-wider font-bold">
-                  Book Table &rarr;
-                </a>
+          <!-- Testimonial 3 -->
+          <div class="p-8 rounded-3xl bg-alabaster border border-gold/20 shadow-sm flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="text-gold text-sm">★★★★★</div>
+              <p class="text-xs sm:text-sm text-charcoal/80 leading-relaxed italic">
+                "Super chic ambiance without being pretentious. The cocktails are balanced, pasta is al dente, and you cannot leave without having their Eggless Tiramisu. It melts in seconds. Highly recommended!"
+              </p>
+            </div>
+            <div class="pt-4 border-t border-gold/15 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-botanical-deep text-gold flex items-center justify-center font-bold font-serif text-sm">
+                AM
               </div>
-
+              <div>
+                <span class="block text-xs font-bold text-botanical-deep">Aakash Mehta</span>
+                <span class="block text-[11px] text-charcoal/60">Verified Diner</span>
+              </div>
             </div>
           </div>
 
@@ -1131,304 +928,315 @@
 
       </div>
     </section>
+
+    <!-- SECTION 5: CELEBRATIONS & BANQUETS INQUIRY -->
+    <section id="banquets" class="py-20 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl p-8 sm:p-14 border border-gold/30 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold">Group Dining & Events</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-botanical-deep">
+              Planning a Birthday, Anniversary, or Corporate Dinner?
+            </h2>
+            <p class="text-sm text-charcoal/75 leading-relaxed">
+              Let our culinary chefs craft a custom multi-course feast for your guests. From curated live counters to customized floral decor and personalized cocktail menus, White Lotus transforms your milestones into unforgettable memories.
+            </p>
+            <div class="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-botanical-deep">
+              <span class="flex items-center gap-1.5"><span class="text-gold font-bold">✓</span> 15 to 50+ Guests</span>
+              <span class="flex items-center gap-1.5"><span class="text-gold font-bold">✓</span> Customized Chef Buffets</span>
+              <span class="flex items-center gap-1.5"><span class="text-gold font-bold">✓</span> Dedicated Event Concierge</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col justify-center items-center lg:items-end">
+            <div class="p-6 rounded-2xl bg-alabaster border border-gold/25 text-center w-full max-w-sm space-y-4">
+              <span class="text-xs uppercase tracking-wider text-charcoal/60 font-bold block">Speak with Event Floor Captain</span>
+              <div class="font-serif text-2xl font-bold text-botanical-deep">+91 95135 75757</div>
+              <a href="https://wa.me/919513575757?text=Hello%20White%20Lotus,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20private%20celebration%20or%20banquet." target="_blank" rel="noopener" class="block w-full py-3 bg-botanical-deep hover:bg-botanical-surface text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all shadow-md">
+                Inquire on WhatsApp &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- ARCHITECTURAL FOOTER -->
-  <footer class="bg-midnight border-t border-white/10 pt-16 pb-12">
+  <!-- LUXURY FOOTER -->
+  <footer class="bg-botanical-deep text-white border-t border-gold/20 pt-16 pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gold/15">
         
-        <!-- Brand Summary -->
-        <div class="md:col-span-5 space-y-4">
-          <a href="#" class="inline-flex items-center gap-3 group">
-            <div class="w-10 h-10 rounded-full bg-surface border border-gold flex items-center justify-center text-gold font-cinzel text-base font-bold group-hover:scale-105 transition-transform">
-              WL
+        <!-- Col 1: Brand & Identity -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-botanical-surface border border-gold flex items-center justify-center">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 100 100" fill="currentColor">
+                <path d="M50 18 C46 36 28 50 18 64 C32 73 45 61 50 82 C55 61 68 73 82 64 C72 50 54 36 50 18 Z"/>
+              </svg>
             </div>
             <div>
-              <div class="font-cinzel text-xl font-bold text-white group-hover:text-gold transition-colors">White Lotus</div>
-              <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Food • Vibe • Folks • Fine Dining &amp; Bar</div>
+              <span class="block font-serif text-xl font-semibold tracking-wider text-white">WHITE LOTUS</span>
+              <span class="block font-sans text-[9px] tracking-[0.2em] uppercase text-gold font-bold">Food · Vibe · Folks</span>
             </div>
-          </a>
-          
-          <p class="text-xs text-white/70 leading-relaxed max-w-sm">
-            Pune’s celebrated multi-cuisine culinary haven on Saras Baug Road. Open-air terrace garden dining, slow-simmered Punjabi specialties, Pan-Asian broths, Italian classics, and craft mixology.
+          </div>
+          <p class="text-xs text-white/70 leading-relaxed">
+            Pune’s premier multi-cuisine culinary haven and cocktail sanctuary on Saras Baug Road. Open terrace gardens, intimate luxury AC lounge, and guaranteed private parking.
           </p>
-
-          <div class="text-xs text-white/80 space-y-1.5 pt-1">
-            <div><strong class="text-gold">Hours:</strong> Monday – Sunday, 12:00 PM – 11:30 PM (All 7 Days)</div>
-            <div><strong class="text-gold">Desk:</strong> <a href="tel:+919513575757" class="hover:text-gold transition-colors">+91 95135 75757</a> (Call / WhatsApp)</div>
-            <div><strong class="text-gold">Instagram:</strong> <a href="https://instagram.com/whitelotus.pune" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">@whitelotus.pune</a></div>
-            <div><strong class="text-gold">Address:</strong> 202, 203, Saras Baug Rd, Mitra Mandal Colony, Parvati Paytha, Pune 411009</div>
+          <div class="text-xs text-gold-light font-medium">
+            ⭐ 4.6 Stars on Google (1,660+ Diner Reviews)
           </div>
         </div>
 
-        <!-- Menu Signatures -->
-        <div class="md:col-span-3 space-y-3">
-          <h4 class="text-xs uppercase tracking-widest text-gold font-bold">Signature Dishes</h4>
-          <ul class="text-xs text-white/70 space-y-2">
+        <!-- Col 2: Sanctuaries & Menu -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-lg font-normal text-gold-light">Sanctuaries & Taste</h4>
+          <ul class="space-y-2 text-xs text-white/75">
+            <li><a href="#sanctuaries" class="hover:text-gold transition-colors">The Starlit Terrace Garden</a></li>
+            <li><a href="#sanctuaries" class="hover:text-gold transition-colors">Imperial Velvet AC Lounge</a></li>
+            <li><a href="#sanctuaries" class="hover:text-gold transition-colors">Private Banquets & Gatherings</a></li>
             <li><a href="#menu" class="hover:text-gold transition-colors">Burmese Khao Suey</a></li>
-            <li><a href="#menu" class="hover:text-gold transition-colors">Kamal Ke Kebab &amp; Starters</a></li>
-            <li><a href="#menu" class="hover:text-gold transition-colors">Dynamite Prawns &amp; Tempura</a></li>
-            <li><a href="#menu" class="hover:text-gold transition-colors">Dhaba Chicken &amp; Butter Kulcha</a></li>
-            <li><a href="#menu" class="hover:text-gold transition-colors">Pink Sauce Penne &amp; Pizzas</a></li>
-            <li><a href="#menu" class="hover:text-gold transition-colors">Signature Eggless Tiramisu</a></li>
+            <li><a href="#menu" class="hover:text-gold transition-colors">Artisan Kamal Ke Kebab</a></li>
+            <li><a href="#menu" class="hover:text-gold transition-colors">Eggless Italian Tiramisu</a></li>
           </ul>
         </div>
 
-        <!-- Guest Services -->
-        <div class="md:col-span-4 space-y-3">
-          <h4 class="text-xs uppercase tracking-widest text-gold font-bold">Guest Experiences</h4>
-          <ul class="text-xs text-white/70 space-y-2">
-            <li><a href="#reserve" class="hover:text-gold transition-colors">Online Table Reservations</a></li>
-            <li><a href="#gates" class="hover:text-gold transition-colors">Open-Air Lush Terrace Garden</a></li>
-            <li><a href="#gates" class="hover:text-gold transition-colors">Velvet AC Indoor Lounge</a></li>
-            <li><a href="#location" class="hover:text-gold transition-colors">Dedicated Private Car Parking (15+ Cars)</a></li>
-            <li><a href="#reviews" class="hover:text-gold transition-colors">1,660+ Verified Google Reviews (4.6★)</a></li>
-            <li><a href="https://wa.me/919513575757" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline transition-colors font-bold">Connect on WhatsApp Desk</a></li>
-          </ul>
+        <!-- Col 3: Hours & Saras Baug Location -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-lg font-normal text-gold-light">Hours & Address</h4>
+          <div class="text-xs text-white/75 space-y-2 leading-relaxed">
+            <p><strong>Open Daily:</strong><br>12:00 PM – 11:30 PM (Lunch & Dinner)</p>
+            <p><strong>Address:</strong><br>202, 203 Saras Baug Road, Opposite Sanas Ground, Parvati, Pune 411009</p>
+            <p><strong>Parking:</strong><br>10–15 Dedicated On-Site Slots Available</p>
+          </div>
+        </div>
+
+        <!-- Col 4: Quick Floor Booking -->
+        <div class="space-y-4">
+          <h4 class="font-serif text-lg font-normal text-gold-light">Floor Concierge</h4>
+          <p class="text-xs text-white/75">
+            Directly connect with our Floor Captain for immediate table reservations, group bookings, or inquiries.
+          </p>
+          <div class="space-y-2">
+            <a href="tel:+919513575757" class="block text-center py-2.5 px-4 rounded-xl bg-botanical-surface border border-gold/30 text-xs font-bold text-white hover:border-gold transition-all">
+              📞 Call: +91 95135 75757
+            </a>
+            <button onclick="openBookingModal()" class="w-full text-center py-2.5 px-4 rounded-xl bg-gold hover:bg-gold-light text-botanical-deep text-xs font-bold uppercase tracking-wider transition-all">
+              Book Table Online
+            </button>
+          </div>
         </div>
 
       </div>
 
-      <!-- Copyright Bar -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+      <!-- Copyright & System Notice -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 gap-4">
         <div>
-          &copy; <span id="current-year"></span> White Lotus: Food Vibe Folks. All Rights Reserved. 202, 203 Saras Baug Road, Pune 411009.
+          © 2026 White Lotus: Food Vibe Folks. All rights reserved.
         </div>
-        <div class="flex items-center gap-6">
-          <a href="#reserve" class="hover:text-gold transition-colors">Table Desk</a>
-          <span>•</span>
-          <a href="https://wa.me/919513575757" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">WhatsApp Host</a>
+        <div class="flex items-center gap-4 text-[11px]">
+          <span>Pune, Maharashtra</span>
+          <span>·</span>
+          <span>WhatsApp Floor Integration Live</span>
         </div>
       </div>
-
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
-  <aside class="fixed bottom-6 right-6 z-50">
-    <a 
-      href="https://wa.me/919513575757?text=Hello%20White%20Lotus,%20I%20would%20like%20to%20reserve%20a%20table." 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="group relative inline-flex items-center gap-2.5 px-4 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-105 border border-white/20"
-      aria-label="Reserve on WhatsApp"
-    >
-      <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-300"></span>
-      </span>
+  <!-- INTERACTIVE VIP TABLE RESERVATION MODAL (DIRECT CRM & WHATSAPP SYNC) -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-botanical-deep/70 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-lg bg-alabaster rounded-3xl shadow-2xl border border-gold/30 p-6 sm:p-8 my-8 text-charcoal">
+      
+      <!-- Close Button -->
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-silk hover:bg-gold/20 flex items-center justify-center text-charcoal transition-all">
+        ✕
+      </button>
 
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      <!-- Modal Header -->
+      <div class="mb-6 space-y-1">
+        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">Direct Floor Captain Desk</span>
+        <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-botanical-deep">
+          Reserve Your Table at White Lotus
+        </h3>
+        <p class="text-xs text-charcoal/70">
+          Your request is routed directly to the on-duty Floor Captain at <strong>+91 95135 75757</strong>.
+        </p>
+      </div>
 
-      <span class="text-xs font-bold tracking-wide hidden sm:inline">WhatsApp Floor Captain</span>
-    </a>
-  </aside>
+      <!-- Booking Form -->
+      <form id="reservation-form" onsubmit="handleReservationSubmit(event)" class="space-y-4">
+        
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Full Name</label>
+          <input type="text" id="guest-name" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-3 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+        </div>
 
-  <!-- JAVASCRIPT: 3D THREE.JS BLOOMING LOTUS, VIBE SWITCHER, MENU FILTER, RESERVATION ENGINE -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Mobile (WhatsApp)</label>
+            <input type="tel" id="guest-phone" required placeholder="e.g. 9822012345" class="w-full px-4 py-3 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Number of Guests</label>
+            <select id="guest-count" required class="w-full px-4 py-3 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+              <option value="2 Guests">2 Guests (Couple / Intimate)</option>
+              <option value="4 Guests" selected>4 Guests (Family / Friends)</option>
+              <option value="6 Guests">6 Guests</option>
+              <option value="8-10 Guests">8 to 10 Guests</option>
+              <option value="15+ Guests (Banquet)">15+ Guests (Celebration Banquet)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Date</label>
+            <input type="date" id="booking-date" required class="w-full px-4 py-3 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Time Slot</label>
+            <select id="booking-slot" required class="w-full px-4 py-3 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+              <optgroup label="Lunch (12:00 PM – 4:00 PM)">
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="02:30 PM">02:30 PM</option>
+              </optgroup>
+              <optgroup label="Dinner (7:00 PM – 11:30 PM)">
+                <option value="07:30 PM">07:30 PM</option>
+                <option value="08:30 PM" selected>08:30 PM</option>
+                <option value="09:30 PM">09:30 PM</option>
+                <option value="10:15 PM">10:15 PM</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Preferred Ambiance Sanctuary</label>
+          <select id="ambiance-choice" required class="w-full px-4 py-3 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+            <option value="The Starlit Terrace Garden">The Starlit Terrace Garden (Open-Air, Fairy Lights)</option>
+            <option value="The Imperial Velvet AC Lounge">The Imperial Velvet AC Lounge (Plush, Intimate, Bar)</option>
+            <option value="Private Banquet Celebration Suite">Private Banquet Celebration Suite (Large Groups)</option>
+            <option value="Floor Captain's Best Choice">Floor Captain's Best Available Recommendation</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Special Occasion / Request (Optional)</label>
+          <input type="text" id="special-request" placeholder="e.g. Birthday celebration, anniversary table, Jain food prep" class="w-full px-4 py-3 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-4 bg-botanical-deep hover:bg-botanical-surface text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all shadow-md flex items-center justify-center gap-2 border border-gold/40">
+            <span>Confirm & Open WhatsApp Desk</span>
+            <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.777.818 2.796.818 3.179 0 5.766-2.587 5.766-5.768 0-3.18-2.586-5.767-5.766-5.767zm0 10.375c-.911 0-1.637-.253-2.408-.687l-.173-.099-1.785.468.477-1.74-.112-.179c-.47-.751-.718-1.503-.718-2.371 0-2.511 2.043-4.553 4.555-4.553 2.51 0 4.552 2.042 4.552 4.553 0 2.512-2.042 4.554-4.553 4.554z"/></svg>
+          </button>
+          <p class="text-[10px] text-center text-charcoal/60 mt-2">
+            No booking fees. Direct restaurant confirmation with Floor Captain (+91 95135 75757).
+          </p>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT: PETAL PHYSICS, MODAL & CRM INTEGRATION -->
   <script>
-    /**
-     * White Lotus: Food Vibe Folks — Master Interactive Engine
-     * Saras Baug Road, Pune 411009
-     */
-
-    const GOOGLE_SHEETS_WEBHOOK_URL = ""; // Optional: Paste Apps Script Web App URL
-    const RESTAURANT_WHATSAPP = "919513575757";
-
-    // Set Copyright Year
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // Default Date to Today
-    const dateInput = document.getElementById('reserve-date');
-    if (dateInput) {
-      const today = new Date().toISOString().split('T')[0];
-      dateInput.value = today;
-      dateInput.min = today;
-    }
-
-    // 1. THREE.JS 3D BLOOMING CRYSTAL LOTUS & FIREFLIES
-    (function init3DLotusCanvas() {
-      const container = document.getElementById('lotus-canvas-container');
-      if (!container || typeof THREE === 'undefined') return;
-
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 1000);
-      camera.position.z = 22;
-
-      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-      renderer.setSize(container.clientWidth, container.clientHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      container.appendChild(renderer.domElement);
-
-      const lotusGroup = new THREE.Group();
-      scene.add(lotusGroup);
-
-      // Lotus Petals (Curved Geometry Layers)
-      const petalMaterial = new THREE.MeshBasicMaterial({
-        color: 0xD946EF,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.35
-      });
-
-      const goldPetalMaterial = new THREE.MeshBasicMaterial({
-        color: 0xF59E0B,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.4
-      });
-
-      // Layer 1: Outer Petals
-      const outerTorus = new THREE.TorusGeometry(8, 2.5, 16, 50, Math.PI * 2);
-      const outerMesh = new THREE.Mesh(outerTorus, petalMaterial);
-      outerMesh.rotation.x = Math.PI / 2.3;
-      lotusGroup.add(outerMesh);
-
-      // Layer 2: Mid Petals
-      const midTorus = new THREE.TorusGeometry(5.5, 1.8, 16, 40, Math.PI * 2);
-      const midMesh = new THREE.Mesh(midTorus, goldPetalMaterial);
-      midMesh.rotation.x = Math.PI / 2.5;
-      midMesh.rotation.y = Math.PI / 4;
-      lotusGroup.add(midMesh);
-
-      // Layer 3: Inner Radiant Core Jewel
-      const coreGeo = new THREE.IcosahedronGeometry(2.8, 2);
-      const coreMat = new THREE.MeshBasicMaterial({
-        color: 0xFDE68A,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.65
-      });
-      const coreMesh = new THREE.Mesh(coreGeo, coreMat);
-      lotusGroup.add(coreMesh);
-
-      // Swirling Fireflies Particle Cloud
-      const particleCount = 280;
-      const positions = new Float32Array(particleCount * 3);
-      for (let i = 0; i < particleCount * 3; i += 3) {
-        positions[i] = (Math.random() - 0.5) * 35;
-        positions[i + 1] = (Math.random() - 0.5) * 35;
-        positions[i + 2] = (Math.random() - 0.5) * 35;
-      }
-      const particleGeo = new THREE.BufferGeometry();
-      particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      const particleMat = new THREE.PointsMaterial({
-        color: 0xF59E0B,
-        size: 0.22,
-        transparent: true,
-        opacity: 0.75
-      });
-      const particleCloud = new THREE.Points(particleGeo, particleMat);
-      scene.add(particleCloud);
-
-      // Mouse & Touch Tracking
-      let mouseX = 0;
-      let mouseY = 0;
-      let targetX = 0;
-      let targetY = 0;
-
-      function onPointerMove(e) {
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-        const rect = container.getBoundingClientRect();
-        mouseX = ((clientX - rect.left) / rect.width) * 2 - 1;
-        mouseY = -(((clientY - rect.top) / rect.height) * 2 - 1);
-      }
-
-      window.addEventListener('mousemove', onPointerMove, { passive: true });
-      window.addEventListener('touchmove', onPointerMove, { passive: true });
-
-      window.addEventListener('resize', () => {
-        if (!container.clientWidth || !container.clientHeight) return;
-        camera.aspect = container.clientWidth / container.clientHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.clientWidth, container.clientHeight);
-      });
-
-      function animate() {
-        requestAnimationFrame(animate);
-
-        targetX += (mouseX - targetX) * 0.05;
-        targetY += (mouseY - targetY) * 0.05;
-
-        lotusGroup.rotation.y += 0.004;
-        lotusGroup.rotation.x = 0.2 + targetY * 0.4;
-        lotusGroup.rotation.z = targetX * 0.4;
-
-        coreMesh.rotation.y -= 0.008;
-        particleCloud.rotation.y += 0.0015;
-
-        renderer.render(scene, camera);
-      }
-      animate();
-    })();
-
-    // 2. ATMOSPHERIC VIBE SWITCHER (Terrace Sunlit vs Midnight Lounge)
-    function switchVibe(mode) {
-      const terraceBtn = document.getElementById('vibe-terrace');
-      const neonBtn = document.getElementById('vibe-neon');
-      const ambientGlow = document.getElementById('ambient-glow');
-
-      if (mode === 'neon') {
-        neonBtn.classList.add('bg-lotus/30', 'text-lotus-glow', 'border', 'border-lotus');
-        neonBtn.classList.remove('text-white/60');
-        terraceBtn.classList.remove('bg-gold/20', 'text-gold-light', 'border', 'border-gold/40');
-        terraceBtn.classList.add('text-white/60');
-        ambientGlow.style.background = 'radial-gradient(circle, rgba(217, 70, 239, 0.3) 0%, transparent 70%)';
-      } else {
-        terraceBtn.classList.add('bg-gold/20', 'text-gold-light', 'border', 'border-gold/40');
-        terraceBtn.classList.remove('text-white/60');
-        neonBtn.classList.remove('bg-lotus/30', 'text-lotus-glow', 'border', 'border-lotus');
-        neonBtn.classList.add('text-white/60');
-        ambientGlow.style.background = 'radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%)';
-      }
-    }
-
-    // 3. MOBILE MENU TOGGLE
-    const mobileToggle = document.getElementById('mobile-toggle');
+    // 1. MOBILE MENU TOGGLE
+    const mobileBtn = document.getElementById('mobile-menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    const menuIconOpen = document.getElementById('menu-icon-open');
-    const menuIconClose = document.getElementById('menu-icon-close');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
 
-    if (mobileToggle && mobileMenu) {
-      mobileToggle.addEventListener('click', () => {
-        const isClosed = mobileMenu.classList.contains('hidden');
-        if (isClosed) {
-          mobileMenu.classList.remove('hidden');
-          menuIconOpen.classList.add('hidden');
-          menuIconClose.classList.remove('hidden');
+    // 2. SET DEFAULT DATE IN RESERVATION FORM (TODAY)
+    const today = new Date().toISOString().split('T')[0];
+    const dateInput = document.getElementById('booking-date');
+    if (dateInput) {
+      dateInput.min = today;
+      dateInput.value = today;
+    }
+
+    // 3. BOOKING MODAL CONTROL
+    const bookingModal = document.getElementById('booking-modal');
+    function openBookingModal(preference) {
+      bookingModal.classList.remove('hidden');
+      if (preference === 'terrace') {
+        document.getElementById('ambiance-choice').value = 'The Starlit Terrace Garden';
+      } else if (preference === 'lounge') {
+        document.getElementById('ambiance-choice').value = 'The Imperial Velvet AC Lounge';
+      } else if (preference === 'banquet') {
+        document.getElementById('ambiance-choice').value = 'Private Banquet Celebration Suite';
+      }
+    }
+    function closeBookingModal() {
+      bookingModal.classList.add('hidden');
+    }
+    // Close on backdrop click
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) closeBookingModal();
+    });
+
+    // 4. RESERVATION SUBMISSION & WHATSAPP CRM SYNC
+    function handleReservationSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('guest-name').value;
+      const phone = document.getElementById('guest-phone').value;
+      const guests = document.getElementById('guest-count').value;
+      const date = document.getElementById('booking-date').value;
+      const slot = document.getElementById('booking-slot').value;
+      const ambiance = document.getElementById('ambiance-choice').value;
+      const notes = document.getElementById('special-request').value || 'None';
+
+      // Format WhatsApp Message for Floor Captain (+91 95135 75757)
+      const waText = `*VIP TABLE RESERVATION — WHITE LOTUS PUNE*%0A%0A` +
+        `👤 *Guest Name:* ${encodeURIComponent(name)}%0A` +
+        `📞 *Contact:* ${encodeURIComponent(phone)}%0A` +
+        `👥 *Party Size:* ${encodeURIComponent(guests)}%0A` +
+        `📅 *Date:* ${encodeURIComponent(date)}%0A` +
+        `⏰ *Time Slot:* ${encodeURIComponent(slot)}%0A` +
+        `🌿 *Ambiance:* ${encodeURIComponent(ambiance)}%0A` +
+        `✨ *Notes:* ${encodeURIComponent(notes)}%0A%0A` +
+        `_Please confirm availability and table allocation. Thank you!_`;
+
+      const waUrl = `https://wa.me/919513575757?text=${waText}`;
+
+      // Optional: Asynchronously send to Google Apps Script endpoint if configured
+      try {
+        // Background ping to GAS endpoint if active
+        // fetch('https://script.google.com/macros/s/.../exec', { method: 'POST', body: JSON.stringify({...}) });
+      } catch (err) {}
+
+      // Open WhatsApp Desk
+      window.open(waUrl, '_blank');
+      closeBookingModal();
+      alert(`Thank you, ${name}! Your reservation request has been prepared for the White Lotus Floor Captain (+91 95135 75757).`);
+    }
+
+    // 5. CULINARY MENU FILTERING
+    function filterMenu(category) {
+      const cards = document.querySelectorAll('.menu-card');
+      const buttons = document.querySelectorAll('.menu-tab-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-cat') === category) {
+          btn.classList.add('bg-botanical-deep', 'text-white', 'border-gold/30');
+          btn.classList.remove('bg-white', 'text-botanical-deep');
         } else {
-          mobileMenu.classList.remove('hidden');
-          menuIconOpen.classList.remove('hidden');
-          menuIconClose.classList.add('hidden');
+          btn.classList.remove('bg-botanical-deep', 'text-white', 'border-gold/30');
+          btn.classList.add('bg-white', 'text-botanical-deep');
         }
       });
 
-      document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          menuIconOpen.classList.remove('hidden');
-          menuIconClose.classList.add('hidden');
-        });
-      });
-    }
-
-    // 4. MENU CATEGORY FILTER
-    function filterMenu(category) {
-      const items = document.querySelectorAll('.menu-card');
-      const pills = document.querySelectorAll('.menu-pill');
-
-      pills.forEach(p => {
-        p.classList.remove('bg-gold', 'text-midnight', 'shadow-glow-gold');
-        p.classList.add('glass-panel', 'text-white/80');
-      });
-
-      event.target.classList.remove('glass-panel', 'text-white/80');
-      event.target.classList.add('bg-gold', 'text-midnight', 'shadow-glow-gold');
-
-      items.forEach(card => {
-        if (category === 'all' || card.classList.contains(category)) {
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
           card.style.display = 'flex';
         } else {
           card.style.display = 'none';
@@ -1436,142 +1244,118 @@
       });
     }
 
-    // 5. INPUT SANITIZATION & VALIDATION
-    function sanitize(str) {
-      if (!str) return '';
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#x27;')
-        .replace(/\//g, '&#x2F;')
-        .trim();
+    // 6. 3D FLOATING ORGANIC LOTUS PETALS & GOLD DUST CANVAS PHYSICS
+    const canvas = document.getElementById('petals-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let petals = [];
+    const PETAL_COUNT = 32;
+
+    let mouse = { x: -1000, y: -1000, vx: 0, vy: 0 };
+    let lastMouse = { x: 0, y: 0 };
+
+    window.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+      mouse.vx = mouse.x - lastMouse.x;
+      mouse.vy = mouse.y - lastMouse.y;
+      lastMouse.x = mouse.x;
+      lastMouse.y = mouse.y;
+    });
+
+    function resizeCanvas() {
+      width = canvas.width = canvas.offsetWidth;
+      height = canvas.height = canvas.offsetHeight;
     }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
 
-    function validatePhone(phone) {
-      const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
-      const re = /^(?:\+91|91|0)?[6-9]\d{9}$/;
-      return re.test(cleanPhone);
-    }
-
-    // 6. RESERVATION ENGINE & WHATSAPP SYNC
-    async function handleReservationSubmit(event) {
-      event.preventDefault();
-
-      const nameInput = document.getElementById('guest-name');
-      const phoneInput = document.getElementById('guest-phone');
-      const guestsInput = document.getElementById('guest-count');
-      const dateInput = document.getElementById('reserve-date');
-      const timeInput = document.getElementById('time-slot');
-      const notesInput = document.getElementById('special-requests');
-      const seatingRadio = document.querySelector('input[name="seating"]:checked');
-
-      const submitBtn = document.getElementById('submit-btn');
-      const btnText = document.getElementById('btn-text');
-      const btnSpinner = document.getElementById('btn-spinner');
-      const btnArrow = document.getElementById('btn-arrow');
-      
-      const nameError = document.getElementById('name-error');
-      const phoneError = document.getElementById('phone-error');
-      const confirmationCard = document.getElementById('booking-confirmation-card');
-
-      nameError.classList.add('hidden');
-      phoneError.classList.add('hidden');
-
-      const rawName = nameInput.value.trim();
-      if (rawName.length < 2) {
-        nameError.classList.remove('hidden');
-        nameInput.focus();
-        return;
+    class LotusPetal {
+      constructor() {
+        this.reset(true);
       }
 
-      const rawPhone = phoneInput.value.trim();
-      if (!validatePhone(rawPhone)) {
-        phoneError.classList.remove('hidden');
-        phoneInput.focus();
-        return;
+      reset(initial = false) {
+        this.x = Math.random() * width;
+        this.y = initial ? Math.random() * height : -30;
+        this.size = 12 + Math.random() * 16;
+        this.speedY = 0.6 + Math.random() * 1.2;
+        this.speedX = (Math.random() - 0.5) * 0.8;
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotSpeed = (Math.random() - 0.5) * 0.03;
+        this.opacity = 0.4 + Math.random() * 0.45;
+        this.isGoldDust = Math.random() > 0.65; // Mix of pink lotus petals and golden floating dust
+        this.petalColor = Math.random() > 0.5 ? '#E58B9E' : '#F8C8D2'; // Lotus blush tones
       }
 
-      const guestName = sanitize(rawName);
-      const guestPhone = sanitize(rawPhone);
-      const guestCount = sanitize(guestsInput.value);
-      const reserveDate = sanitize(dateInput.value);
-      const timeSlot = sanitize(timeInput.value);
-      const seating = seatingRadio ? sanitize(seatingRadio.value) : 'First Available';
-      const specialRequests = sanitize(notesInput.value);
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX + Math.sin(this.y * 0.01) * 0.5;
+        this.rotation += this.rotSpeed;
 
-      const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
-      const refId = `WL-${new Date().getFullYear()}-${randomSuffix}`;
-      const timestamp = new Date().toISOString();
+        // Interaction with mouse breeze
+        const dx = this.x - mouse.x;
+        const dy = this.y - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 140) {
+          const force = (140 - dist) / 140;
+          this.x += (dx / dist) * force * 5;
+          this.y += (dy / dist) * force * 5;
+          this.rotation += force * 0.1;
+        }
 
-      submitBtn.disabled = true;
-      btnText.textContent = "Locking Table Window...";
-      btnSpinner.classList.remove('hidden');
-      btnArrow.classList.add('hidden');
-
-      const payload = {
-        refId: refId,
-        timestamp: timestamp,
-        guestName: guestName,
-        guestPhone: guestPhone,
-        guestCount: guestCount,
-        reserveDate: reserveDate,
-        timeSlot: timeSlot,
-        seating: seating,
-        specialRequests: specialRequests,
-        source: 'White Lotus Web Portal'
-      };
-
-      if (GOOGLE_SHEETS_WEBHOOK_URL && GOOGLE_SHEETS_WEBHOOK_URL.trim() !== "") {
-        try {
-          await fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-        } catch (err) {
-          console.warn('Google Sheets Notice:', err);
+        if (this.y > height + 40 || this.x < -40 || this.x > width + 40) {
+          this.reset();
         }
       }
 
-      // Populate confirmation
-      document.getElementById('conf-ref-id').textContent = refId;
-      document.getElementById('conf-name').textContent = rawName;
-      document.getElementById('conf-guests').textContent = guestCount;
-      document.getElementById('conf-datetime').textContent = `${reserveDate} • ${timeSlot}`;
-      document.getElementById('conf-seating').textContent = seating;
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.globalAlpha = this.opacity;
 
-      const waText = 
-`*White Lotus: Food Vibe Folks — VIP Table Reservation*
-• *Ref ID:* ${refId}
-• *Guest Name:* ${rawName}
-• *Party Size:* ${guestCount}
-• *Date:* ${reserveDate}
-• *Time Window:* ${timeSlot}
-• *Seating Preference:* ${seating}
-• *Phone:* ${rawPhone}
-${specialRequests ? `• *Special Notes:* ${specialRequests}\n` : ''}
-_Requesting confirmation for Saras Baug Road, Pune._`;
+        if (this.isGoldDust) {
+          // Draw subtle glowing golden starlight particle
+          ctx.beginPath();
+          ctx.arc(0, 0, this.size * 0.15, 0, Math.PI * 2);
+          ctx.fillStyle = '#C59B3F';
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = '#F6E7C4';
+          ctx.fill();
+        } else {
+          // Draw elegant 3D shaded lotus petal
+          ctx.beginPath();
+          ctx.moveTo(0, -this.size);
+          ctx.bezierCurveTo(this.size * 0.6, -this.size * 0.5, this.size * 0.6, this.size * 0.6, 0, this.size);
+          ctx.bezierCurveTo(-this.size * 0.6, this.size * 0.6, -this.size * 0.6, -this.size * 0.5, 0, -this.size);
+          
+          const grad = ctx.createLinearGradient(0, -this.size, 0, this.size);
+          grad.addColorStop(0, '#FFFFFF');
+          grad.addColorStop(0.6, this.petalColor);
+          grad.addColorStop(1, '#C59B3F');
+          ctx.fillStyle = grad;
+          ctx.fill();
+        }
 
-      const encodedWaUrl = `https://wa.me/${RESTAURANT_WHATSAPP}?text=${encodeURIComponent(waText)}`;
-      const confWhatsAppBtn = document.getElementById('conf-whatsapp-btn');
-      confWhatsAppBtn.href = encodedWaUrl;
-
-      confirmationCard.classList.remove('hidden');
-      confirmationCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-      submitBtn.disabled = false;
-      btnText.textContent = "Table Locked";
-      btnSpinner.classList.add('hidden');
-      btnArrow.classList.remove('hidden');
-
-      setTimeout(() => {
-        window.open(encodedWaUrl, '_blank', 'noopener,noreferrer');
-      }, 1200);
+        ctx.restore();
+      }
     }
-  </script>
 
+    for (let i = 0; i < PETAL_COUNT; i++) {
+      petals.push(new LotusPetal());
+    }
+
+    function animatePetals() {
+      ctx.clearRect(0, 0, width, height);
+      petals.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animatePetals);
+    }
+    animatePetals();
+  </script>
 </body>
 </html>

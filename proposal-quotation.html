@@ -13,7 +13,7 @@
         content: "Page " counter(page) " of " counter(pages);
         font-family: 'Plus Jakarta Sans', sans-serif;
         font-size: 8pt;
-        color: #B45309;
+        color: #936D1B;
       }
     }
 
@@ -27,9 +27,9 @@
       margin: 0;
       padding: 0;
       font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      color: #111615;
+      color: #1A1E1C;
       background-color: #FFFFFF;
-      font-size: 9.5pt;
+      font-size: 9.2pt;
       line-height: 1.45;
     }
 
@@ -54,7 +54,7 @@
       justify-content: space-between;
       align-items: center;
       padding-bottom: 12px;
-      border-bottom: 2px solid #F59E0B;
+      border-bottom: 2px solid #C59B3F;
       margin-bottom: 18px;
     }
 
@@ -62,195 +62,222 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: #070A09;
-      border: 1.5px solid #F59E0B;
+      background: #0B281E;
+      border: 1.5px solid #C59B3F;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #FDE68A;
-      font-family: 'Cinzel', serif;
-      font-size: 15pt;
-      font-weight: bold;
+      color: #F6E7C4;
+      font-size: 18px;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 3px 10px;
+      background: #0B281E;
+      color: #F6E7C4;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 20px;
+      border: 1px solid #C59B3F;
     }
 
     .meta-box {
-      background: #F8F7F4;
-      border: 1px solid #E5E0D5;
-      border-radius: 6px;
+      background: #FAF7F2;
+      border: 1px solid rgba(197, 155, 63, 0.35);
+      border-radius: 10px;
       padding: 12px 16px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+    }
+
+    .meta-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       gap: 12px;
+    }
+
+    .meta-item .label {
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6B7280;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .meta-item .val {
       font-size: 8.5pt;
+      font-weight: 700;
+      color: #0B281E;
     }
 
     .section-title {
-      font-size: 14pt;
+      font-size: 13pt;
       font-weight: 700;
-      color: #070A09;
-      margin: 16px 0 8px 0;
-      padding-bottom: 4px;
-      border-bottom: 1px solid #F59E0B;
+      color: #0B281E;
+      margin: 16px 0 10px 0;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-    }
-
-    .section-title span.tag {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 7.5pt;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #D97706;
-      font-weight: 700;
+      gap: 8px;
+      border-left: 4px solid #C59B3F;
+      padding-left: 8px;
     }
 
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 12px;
+      gap: 14px;
     }
 
     .grid-3 {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 12px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
     }
 
-    .feature-card {
-      background: #FFFFFF;
-      border: 1px solid #E5E0D5;
-      border-radius: 6px;
-      padding: 10px 12px;
-      font-size: 8.5pt;
+    .card {
+      background: #FAF7F2;
+      border: 1px solid rgba(197, 155, 63, 0.3);
+      border-radius: 10px;
+      padding: 12px 14px;
     }
 
-    .feature-card.highlight {
-      background: #FDFCF9;
-      border: 1.5px solid #F59E0B;
-    }
-
-    .feature-card h4 {
-      font-size: 11pt;
-      margin: 0 0 4px 0;
-      color: #070A09;
-    }
-
-    .feature-card p {
-      margin: 0;
-      color: #555E5B;
-      line-height: 1.35;
-    }
-
-    .flow-step {
-      background: #FDFCF9;
-      border: 1px solid #F59E0B;
-      border-radius: 6px;
-      padding: 8px 10px;
-      font-size: 8pt;
-      text-align: center;
-    }
-    .flow-step .num {
-      background: #070A09;
-      color: #FDE68A;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 7pt;
-      font-weight: bold;
-      margin-bottom: 4px;
-    }
-    .flow-step h5 {
-      margin: 2px 0;
-      font-size: 8.5pt;
-      color: #070A09;
-    }
-    .flow-step p {
-      margin: 0;
-      color: #666;
-      font-size: 7.5pt;
-      line-height: 1.25;
-    }
-
-    .gift-banner {
-      background: linear-gradient(135deg, #070A09 0%, #171E1B 100%);
-      border: 1.5px solid #F59E0B;
-      border-radius: 8px;
-      padding: 14px 18px;
-      color: #FFFFFF;
-      margin: 14px 0;
+    .card-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0B281E;
+      margin-bottom: 5px;
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 6px;
     }
 
-    table.pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 8.5pt;
-      margin: 12px 0;
-    }
-    table.pricing-table th {
-      background: #070A09;
-      color: #FFFFFF;
-      font-family: 'Cinzel', serif;
-      font-size: 10pt;
-      font-weight: 700;
-      padding: 8px 10px;
-      text-align: left;
-      border: 1px solid #070A09;
-    }
-    table.pricing-table td {
-      padding: 8px 10px;
-      border: 1px solid #E5E0D5;
-      vertical-align: middle;
-    }
-    table.pricing-table tr:nth-child(even) {
-      background: #FDFCF9;
+    .card-body {
+      font-size: 8.2pt;
+      color: #374151;
+      line-height: 1.4;
     }
 
-    .pkg-badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 7.5pt;
-      font-weight: bold;
+    .feature-list {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 8.2pt;
+      color: #374151;
+    }
+
+    .feature-list li {
+      margin-bottom: 4px;
+    }
+
+    /* Pricing Tier Styles */
+    .pricing-card {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(197, 155, 63, 0.4);
+      border-radius: 12px;
+      padding: 14px 16px;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      background: #FAF7F2;
+      border: 2px solid #C59B3F;
+      box-shadow: 0 4px 14px rgba(197, 155, 63, 0.15);
+    }
+
+    .pricing-card .badge {
+      position: absolute;
+      top: -10px;
+      right: 14px;
+      background: #0B281E;
+      color: #F6E7C4;
+      font-size: 6.5pt;
+      font-weight: 800;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .pkg-badge.recommended {
-      background: #F59E0B;
-      color: #070A09;
-    }
-    .pkg-badge.starter {
-      background: #E5E0D5;
-      color: #070A09;
-    }
-    .pkg-badge.enterprise {
-      background: #070A09;
-      color: #FDE68A;
+      padding: 3px 8px;
+      border-radius: 10px;
+      border: 1px solid #C59B3F;
     }
 
-    .sig-table {
+    .tier-name {
+      font-family: 'Cinzel', serif;
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0B281E;
+    }
+
+    .tier-sub {
+      font-size: 7.5pt;
+      color: #6B7280;
+      margin-bottom: 8px;
+    }
+
+    .tier-price {
+      font-family: 'Cinzel', serif;
+      font-size: 18pt;
+      font-weight: 800;
+      color: #0B281E;
+      margin: 6px 0;
+    }
+
+    .tier-price span {
+      font-size: 8pt;
+      font-weight: 600;
+      color: #6B7280;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .table-custom {
       width: 100%;
-      margin-top: 24px;
       border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 8.2pt;
     }
-    .sig-table td {
-      width: 50%;
-      vertical-align: top;
-      padding-right: 20px;
+
+    .table-custom th {
+      background: #0B281E;
+      color: #F6E7C4;
+      text-align: left;
+      padding: 8px 10px;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
-    .sig-line {
-      border-bottom: 1px solid #111615;
-      height: 35px;
-      margin-bottom: 6px;
+
+    .table-custom td {
+      padding: 7px 10px;
+      border-bottom: 1px solid #E5E7EB;
+      color: #374151;
+    }
+
+    .table-custom tr:nth-child(even) td {
+      background: #FAF7F2;
+    }
+
+    .highlight-box {
+      background: #FAF7F2;
+      border-left: 4px solid #C59B3F;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      margin: 10px 0;
+      font-size: 8.2pt;
+    }
+
+    .footer-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid #E5E7EB;
+      font-size: 7pt;
+      color: #9CA3AF;
     }
   </style>
 </head>
@@ -259,105 +286,111 @@
   <!-- ================= PAGE 1 ================= -->
   <div class="page">
     
+    <!-- Top Header -->
     <div class="header-bar">
       <div style="display: flex; align-items: center; gap: 12px;">
-        <div class="crest">WL</div>
+        <div class="crest">🪷</div>
         <div>
-          <h1 style="margin: 0; font-size: 17pt; font-weight: 800; color: #070A09; line-height: 1.1;">
-            White Lotus: Food Vibe Folks
-          </h1>
-          <div style="font-size: 8pt; text-transform: uppercase; letter-spacing: 2px; color: #B45309; font-weight: 700;">
-            Multi-Cuisine Fine Dining &amp; Bar • Saras Baug Road, Pune
+          <div class="cinzel" style="font-size: 15pt; font-weight: 700; color: #0B281E; letter-spacing: 0.05em;">
+            WHITE LOTUS : FOOD VIBE FOLKS
+          </div>
+          <div style="font-size: 8pt; color: #C59B3F; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;">
+            Executive Digital Asset Proposal &amp; Investment Quotation
           </div>
         </div>
       </div>
-      <div style="text-align: right; font-size: 8pt; color: #555E5B;">
-        <div style="font-weight: 700; color: #070A09; font-size: 9pt;">COMMERCIAL PROPOSAL &amp; QUOTATION</div>
-        <div>Ref: <strong style="color: #B45309;">WL-QUOT-2026-PUNE</strong></div>
-        <div>Date: November 24, 2026</div>
+      <div>
+        <span class="badge-pill">Private &amp; Confidential</span>
       </div>
     </div>
 
-    <!-- Metadata Box -->
+    <!-- Metadata Grid -->
     <div class="meta-box">
-      <div>
-        <div style="text-transform: uppercase; letter-spacing: 1px; font-weight: bold; color: #B45309; margin-bottom: 4px;">Prepared Specifically For:</div>
-        <div style="font-size: 10pt; font-weight: bold; color: #070A09;">White Lotus: Food Vibe Folks</div>
-        <div>202, 203, Saras Baug Rd, near Vyankatesh Apt</div>
-        <div>Behind Naivedyam Hotel, Mitra Mandal Colony</div>
-        <div>Parvati Paytha, Pune, Maharashtra 411009</div>
-        <div>Table Desk / WhatsApp: +91 95135 75757</div>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="label">Prepared For</div>
+          <div class="val">Management &amp; Partners</div>
+          <div style="font-size: 7pt; color: #6B7280;">White Lotus, Saras Baug Rd</div>
+        </div>
+        <div class="meta-item">
+          <div class="label">Location &amp; Standing</div>
+          <div class="val">Saras Baug Rd, Pune</div>
+          <div style="font-size: 7pt; color: #059669; font-weight: 600;">4.6★ (1,660+ Google Diners)</div>
+        </div>
+        <div class="meta-item">
+          <div class="label">Target Digital Asset</div>
+          <div class="val">whitelotuspune.com</div>
+          <div style="font-size: 7pt; color: #6B7280;">Bespoke Luxury Portal</div>
+        </div>
+        <div class="meta-item">
+          <div class="label">Proposal Date</div>
+          <div class="val">November 2026</div>
+          <div style="font-size: 7pt; color: #6B7280;">Valid for 14 Days</div>
+        </div>
       </div>
-      <div>
-        <div style="text-transform: uppercase; letter-spacing: 1px; font-weight: bold; color: #B45309; margin-bottom: 4px;">Project Scope &amp; Assets:</div>
-        <div>• ₹1 Lakh Worth Midnight Obsidian &amp; Gold Luxury Hospitality Portal</div>
-        <div>• Interactive 3D Blooming Lotus Blossom (Three.js WebGL Engine)</div>
-        <div>• "Gate Layers" Architectural Walk-In Experience &amp; Vibe Switcher</div>
-        <div>• Instant Table Booking Engine (WhatsApp Floor Captain + Google Sheets)</div>
-        <div>• <strong>2x Complimentary Smart NFC Google Review Tap Cards</strong></div>
-      </div>
     </div>
 
-    <!-- Executive Overview -->
-    <div style="margin-bottom: 14px;">
-      <h2 style="font-size: 12.5pt; margin: 0 0 6px 0; color: #070A09;">Executive Summary &amp; Digital Opportunity</h2>
-      <p style="margin: 0; color: #333; line-height: 1.45; font-size: 9pt;">
-        With a phenomenal <strong>4.6 ★ rating from over 1,660+ verified diners on Google</strong>, White Lotus is an established hotspot in South Pune for Burmese Khao Suey, clay tandoor kebabs, cocktails, and open-air terrace garden dining. However, your Google Business profile currently lacks an official dedicated website, allowing third-party dining apps to take high commission cuts on table bookings and private parties. We have built an elite, high-energy ₹1 Lakh-caliber digital experience engineered to captivate diners and channel zero-commission direct reservations straight to your floor captain's WhatsApp desk.
-      </p>
+    <!-- Executive Summary -->
+    <div class="section-title">1. Executive Summary &amp; The Revenue Problem Solved</div>
+    <p style="font-size: 8.8pt; color: #374151; margin-top: 4px; line-height: 1.5;">
+      <strong>White Lotus: Food Vibe Folks</strong> is one of South Pune's most celebrated multi-cuisine dining destinations, boasting an exceptional <strong>4.6★ rating across 1,660+ Google reviews</strong>. However, there is a critical commercial leak: <em>White Lotus currently does not possess an official, modern web portal linked to its Google Business profile.</em>
+    </p>
+
+    <div class="highlight-box">
+      <strong style="color: #0B281E;">The Revenue Leakage Calculation:</strong> Thousands of diners search for <em>"White Lotus Saras Baug"</em> every month. In the absence of an official direct portal, diners are routed to third-party aggregators (Zomato/Swiggy/Dineout) charging <strong>15% to 22% commissions per table or delivery</strong>. A direct reservation platform immediately saves White Lotus an estimated <strong>₹45,000 to ₹1,20,000 monthly</strong> in commission avoidance, while securing customer data directly on WhatsApp and Google Sheets CRM.
     </div>
 
-    <!-- Features -->
-    <div class="section-title">
-      <span>1. Built Visual Features &amp; Motion Architecture</span>
-      <span class="tag">Production Ready</span>
-    </div>
-
+    <!-- Core Platform Architecture -->
+    <div class="section-title">2. Bespoke Platform Architecture (₹1,00,000+ Agency Caliber)</div>
     <div class="grid-2">
       
-      <div class="feature-card highlight">
-        <h4>Midnight Obsidian &amp; Gold Nightlife UI</h4>
-        <p>• <strong>Bespoke Color Palette:</strong> Midnight obsidian (#070A09), velvet surface (#121715), radiant champagne gold (#F59E0B), and lotus orchid glow (#D946EF).<br>
-        • <strong>Glassmorphism &amp; Depth:</strong> Frosted glass panels with ambient radial lighting glows.<br>
-        • <strong>Atmospheric Vibe Switcher:</strong> Dynamic toggle between "Daytime Terrace Sun" and "Midnight Neon Lounge".</p>
+      <div class="card">
+        <div class="card-title">🌿 Luminous Brand Aesthetic</div>
+        <div class="card-body">
+          Crafted with pristine pearl ivory, rich botanical lotus leaf emerald, and burnished champagne gold. No cookie-cutter templates or dark themes—strictly tailored to the airy, open-terrace elegance of White Lotus.
+        </div>
       </div>
 
-      <div class="feature-card highlight">
-        <h4>Interactive 3D Blooming Lotus (Three.js)</h4>
-        <p>• <strong>Custom 3D WebGL Scene:</strong> Rotating golden torus petals and crystalline radiant core that bloom in space.<br>
-        • <strong>Orbiting Firefly Field:</strong> Over 280+ floating starlight ember particles.<br>
-        • <strong>Mouse &amp; Touch Responsive:</strong> Dynamically tilts, orbits, and zooms with cursor movement and mobile touch gestures.</p>
+      <div class="card">
+        <div class="card-title">✨ Organic Motion &amp; 3D Petal Physics</div>
+        <div class="card-body">
+          Custom interactive Canvas engine rendering floating 3D lotus petals and golden starlight particles that react to diner cursor movements and screen scrolls with silky 60 FPS elegance.
+        </div>
       </div>
 
-      <div class="feature-card">
-        <h4>Gate Layers (Walk-In Experience)</h4>
-        <p>• <strong>Layer 01 — Lush Terrace Garden:</strong> Open-air dining surrounded by tropical greenery and fairy lights.<br>
-        • <strong>Layer 02 — Velvet Indoor Lounge:</strong> Temperature-controlled acoustic luxury with full mixology bar.<br>
-        • <strong>Layer 03 — Private Diners &amp; Banquets:</strong> Expansive seating for groups of 10 to 30+ with set menus.</p>
+      <div class="card">
+        <div class="card-title">🏛️ Three Curated Sanctuaries</div>
+        <div class="card-body">
+          Visual showcase of your core dining experiences: <strong>The Starlit Terrace Garden</strong> (open-air fairy lights), <strong>The Imperial Velvet AC Lounge &amp; Bar</strong> (plush mixology), and <strong>Private Banquets</strong>.
+        </div>
       </div>
 
-      <div class="feature-card">
-        <h4>Signature Menu Explorer</h4>
-        <p>• <strong>Categorized Tabs:</strong> Starters, Mains, Pizzas &amp; Pastas, Mixology &amp; Desserts.<br>
-        • <strong>Celebrated Dishes:</strong> Highlights your Burmese Khao Suey (₹671), Kamal Ke Kebab (₹481), Dynamite Prawns (₹644), Dhaba Chicken &amp; Butter Kulcha (₹642), and Pune's favorite Eggless Tiramisu (₹497).<br>
-        • Instant 1-tap "Reserve to Taste" routing.</p>
+      <div class="card">
+        <div class="card-title">🚗 Saras Baug Dedicated Parking Showcase</div>
+        <div class="card-body">
+          Highlights your <strong>10–15 on-site dedicated car parking slots</strong>—addressing the #1 hesitation for Parvati/Saras Baug diners and dramatically boosting weekend walk-ins.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">🍜 Interactive Culinary Menu Deck</div>
+        <div class="card-body">
+          Showcases your hero dishes (Burmese Khao Suey ₹671, Kamal Ke Kebab ₹481, Prawns Tempura ₹644, Dhaba Chicken ₹642, Eggless Tiramisu ₹497) with category filters and instant WhatsApp ordering.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">⚡ Instant Floor Captain WhatsApp CRM</div>
+        <div class="card-body">
+          Table bookings format pre-filled VIP guest details directly to the Floor Captain's WhatsApp (<strong>+91 95135 75757</strong>) and sync simultaneously to an automated Google Sheets database.
+        </div>
       </div>
 
     </div>
 
-    <div class="grid-2">
-      <div class="feature-card">
-        <h4>Local Pune Search Engine Optimization (SEO)</h4>
-        <p>• <strong>Schema.org JSON-LD:</strong> Full Restaurant, BarOrPub, and FAQPage rich snippets.<br>
-        • <strong>Google Search Dominance:</strong> Formatted to rank #1 when diners search for multi-cuisine dining near Saras Baug &amp; Swargate.<br>
-        • <strong>Geo-Coordinates:</strong> (18.498522, 73.854211) locked for local Pune search.</p>
-      </div>
-
-      <div class="feature-card">
-        <h4>Mobile First &amp; Private Parking Highlight</h4>
-        <p>• <strong>Zero Horizontal Overflow:</strong> Flawless rendering on iPhone, Samsung, and tablets.<br>
-        • <strong>15+ Car Private Parking:</strong> Prominently highlights your dedicated on-site parking bays, eliminating the #1 friction point for diners visiting Saras Baug Road.<br>
-        • <strong>Mobile Drawer:</strong> 1-tap call (+91 95135 75757) and WhatsApp concierge.</p>
-      </div>
+    <div class="footer-bar">
+      <span>White Lotus: Food Vibe Folks — Confidential Digital Asset Proposal</span>
+      <span>Page 1 of 3</span>
     </div>
 
   </div>
@@ -365,98 +398,125 @@
   <!-- ================= PAGE 2 ================= -->
   <div class="page">
     
-    <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid #E5E0D5; margin-bottom: 14px;">
-      <div style="font-size: 8pt; text-transform: uppercase; letter-spacing: 1.5px; color: #B45309; font-weight: bold;">
-        White Lotus: Food Vibe Folks — Commercial Proposal
+    <!-- Top Header -->
+    <div class="header-bar">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div class="crest">🪷</div>
+        <div>
+          <div class="cinzel" style="font-size: 15pt; font-weight: 700; color: #0B281E;">
+            OPERATIONAL PIPELINE &amp; FREE BONUS
+          </div>
+          <div style="font-size: 8pt; color: #C59B3F; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;">
+            Table Booking Automation &amp; Google Review Tap Cards
+          </div>
+        </div>
       </div>
-      <div style="font-size: 8pt; color: #888;">Ref: WL-QUOT-2026-PUNE</div>
+      <div>
+        <span class="badge-pill">Turnkey Solution</span>
+      </div>
     </div>
 
-    <!-- Booking Workflow Section -->
-    <div class="section-title">
-      <span>2. The Automated Table Reservation Pipeline (How It Works)</span>
-      <span class="tag">Zero Commission</span>
-    </div>
-
-    <p style="margin: 0 0 10px 0; font-size: 8.5pt; color: #444;">
-      Instead of giving up 15%–25% commission on aggregator dining apps, this portal channels high-margin diners directly to your floor captain in 5 seconds:
+    <!-- Booking Intake Pipeline -->
+    <div class="section-title">3. The Automated Table Reservation &amp; CRM Pipeline</div>
+    <p style="font-size: 8.5pt; color: #4B5563; margin-top: 2px;">
+      Zero complicated software logins for your floor team. Seamlessly bridges diners to WhatsApp and your CRM.
     </p>
 
-    <div class="grid-3" style="margin-bottom: 14px;">
-      
-      <div class="flow-step">
-        <div class="num">1</div>
-        <h5>Guest Selects Table</h5>
-        <p>Diner chooses party size (1–16+), date, dining window, and seating area (Terrace Garden vs Indoor Lounge).</p>
-      </div>
-
-      <div class="flow-step">
-        <div class="num">2</div>
-        <h5>Unique VIP Ref</h5>
-        <p>System generates unique reservation code (e.g. <code>WL-2026-X8F4</code>) and displays confirmation modal on-page.</p>
-      </div>
-
-      <div class="flow-step">
-        <div class="num">3</div>
-        <h5>1-Click WhatsApp Lock</h5>
-        <p>Diner is automatically transitioned to WhatsApp with a pre-filled booking summary to <strong>+91 95135 75757</strong>.</p>
-      </div>
-
-    </div>
-
-    <div class="grid-2" style="margin-bottom: 12px;">
-      
-      <div class="feature-card">
-        <h4>Live Google Sheets Table CRM</h4>
-        <p>Behind the scenes, the booking details (Ref ID, IST Timestamp, Guest Name, Phone, Party Size, Date, Time Window, Seating Preference, Notes, and Status: "Confirmed / Pending Floor") are automatically appended into your master Google Sheet via our included <code>google-apps-script.js</code> engine.</p>
-      </div>
-
-      <div class="feature-card">
-        <h4>Floor Captain Email Dispatcher</h4>
-        <p>Whenever a table is reserved online, an executive email notification is instantly dispatched to your manager's phone with guest details and one-click phone dialer, ensuring no table inquiry ever slips through the cracks during peak lunch and dinner rushes.</p>
-      </div>
-
-    </div>
-
-    <!-- FREE GIFT SECTION -->
-    <div class="gift-banner">
-      <div style="font-size: 28pt; line-height: 1;">🎁</div>
-      <div style="flex: 1;">
-        <div style="font-size: 11pt; font-weight: bold; color: #FDE68A; text-transform: uppercase; letter-spacing: 1px;">
-          Exclusive Complimentary Gift: Two (2) Smart NFC Google Review Tap Cards
+    <div style="background: #FAF7F2; border: 1px solid rgba(197, 155, 63, 0.35); border-radius: 10px; padding: 14px; margin: 10px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; font-size: 8pt;">
+        <div style="flex: 1;">
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: #0B281E; color: #F6E7C4; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: 700;">1</div>
+          <strong>Diner Selects</strong><br><span style="font-size: 7pt; color: #6B7280;">Date, Time &amp; Vibe (Terrace/Lounge)</span>
         </div>
-        <div style="font-size: 8.5pt; color: #FAF8F5; margin-top: 3px; line-height: 1.35;">
-          You already have 1,660+ reviews — let's cross 2,500+ reviews! We are including <strong>two physical, custom smart NFC tap cards branded with White Lotus</strong> absolutely free. Place one on your reception bill counter and one with your floor captain. When a happy customer finishes dining, they simply tap their phone on the card, and your Google Review page pops up instantly on their screen!
+        <div style="color: #C59B3F; font-size: 14pt;">&rarr;</div>
+        <div style="flex: 1;">
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: #0B281E; color: #F6E7C4; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: 700;">2</div>
+          <strong>WhatsApp Floor Desk</strong><br><span style="font-size: 7pt; color: #6B7280;">Pre-filled VIP message to Captain</span>
         </div>
-        <div style="font-size: 7.5pt; color: #FDE68A; margin-top: 4px; font-weight: 600;">
-          ✓ First 2 Smart NFC Cards: 100% FREE (Included) • Additional cards: ₹999 / card (optional)
+        <div style="color: #C59B3F; font-size: 14pt;">&rarr;</div>
+        <div style="flex: 1;">
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: #0B281E; color: #F6E7C4; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: 700;">3</div>
+          <strong>Google Sheets CRM</strong><br><span style="font-size: 7pt; color: #6B7280;">Zero commission database entry</span>
+        </div>
+        <div style="color: #C59B3F; font-size: 14pt;">&rarr;</div>
+        <div style="flex: 1;">
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: #0B281E; color: #F6E7C4; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-weight: 700;">4</div>
+          <strong>1-Tap Confirmation</strong><br><span style="font-size: 7pt; color: #6B7280;">Table allocated in 30 seconds</span>
         </div>
       </div>
     </div>
 
-    <!-- Post-Production Protocol -->
-    <div class="section-title">
-      <span>3. Post-Production Protocol (What We Do After Payment)</span>
-      <span class="tag">Turnkey Launch</span>
+    <!-- Exclusive Bonus: 2 Free Google Review NFC Cards -->
+    <div class="section-title">4. Exclusive Bonus: 2x Smart NFC Google Review Tap Cards (100% FREE)</div>
+    <div style="background: linear-gradient(135deg, #0B281E 0%, #164534 100%); border: 1.5px solid #C59B3F; border-radius: 12px; padding: 14px 18px; color: #FFFFFF; margin: 10px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span style="font-size: 7pt; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: #F6E7C4; background: rgba(197, 155, 63, 0.25); padding: 2px 8px; border-radius: 10px;">Complimentary Gift From Us</span>
+          <h3 class="cinzel" style="font-size: 13pt; margin: 6px 0 4px; color: #F6E7C4;">Two Smart NFC Google Review Counter Tap Cards</h3>
+          <p style="font-size: 8.2pt; color: #E5E7EB; line-height: 1.4; max-width: 500px; margin: 0;">
+            Place these elegant branded contactless cards at your billing counter or hostess desk. Diners simply tap their smartphone against the card, and White Lotus’s Google Review page opens instantly on their phone.
+          </p>
+        </div>
+        <div style="text-align: right; min-width: 110px;">
+          <div style="font-size: 8pt; color: #E5E7EB; text-decoration: line-through;">Worth ₹3,000</div>
+          <div style="font-size: 18pt; font-weight: 800; color: #F6E7C4; font-family: 'Cinzel', serif;">FREE</div>
+          <div style="font-size: 7pt; color: #9CA3AF;">Included in all tiers</div>
+        </div>
+      </div>
+      <div style="margin-top: 10px; padding-top: 8px; border-top: 1px solid rgba(197, 155, 63, 0.3); font-size: 7.5pt; color: #D1D5DB; display: flex; gap: 14px;">
+        <span>✓ Boost from 1,660 to 3,000+ reviews</span>
+        <span>✓ No QR scanner app required</span>
+        <span>✓ Unlimited lifetime taps</span>
+      </div>
     </div>
 
-    <div class="grid-2" style="font-size: 8.5pt;">
-      <div style="background: #FDFCF9; border: 1px solid #E5E0D5; padding: 10px; border-radius: 6px;">
-        <strong style="color: #070A09;">1. Domain Registration &amp; Official Linking:</strong>
-        <p style="margin: 3px 0 0; color: #555;">Securing <code>whitelotuspune.com</code>, configuring DNS servers, updating your official Google Business profile with your new website link, and activating lifetime SSL.</p>
-      </div>
-      <div style="background: #FDFCF9; border: 1px solid #E5E0D5; padding: 10px; border-radius: 6px;">
-        <strong style="color: #070A09;">2. Google Webmaster &amp; Sitemap Submission:</strong>
-        <p style="margin: 3px 0 0; color: #555;">Submitting XML sitemaps directly to Google Search Console to rank White Lotus #1 for Saras Baug Road and Parvati multi-cuisine searches.</p>
-      </div>
-      <div style="background: #FDFCF9; border: 1px solid #E5E0D5; padding: 10px; border-radius: 6px;">
-        <strong style="color: #070A09;">3. Google Sheets Webhook Activation:</strong>
-        <p style="margin: 3px 0 0; color: #555;">Setting up the restaurant's master Google Sheet, sending a live end-to-end test reservation, and verifying floor captain notifications.</p>
-      </div>
-      <div style="background: #FDFCF9; border: 1px solid #E5E0D5; padding: 10px; border-radius: 6px;">
-        <strong style="color: #070A09;">4. Full Handover &amp; 6 Months Priority Care:</strong>
-        <p style="margin: 3px 0 0; color: #555;">Complete handover of all source files, staff orientation for WhatsApp table desk, plus 6 months of complimentary menu, pricing, and timing updates.</p>
-      </div>
+    <!-- Agency Value Comparison Table -->
+    <div class="section-title">5. Commercial Value Comparison (Market Benchmark)</div>
+    <table class="table-custom">
+      <thead>
+        <tr>
+          <th>Deliverable Scope</th>
+          <th>Traditional Pune Agency</th>
+          <th>Our Turnkey Architecture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Custom UI/UX &amp; 3D Petal Physics</strong></td>
+          <td>₹65,000 – ₹90,000</td>
+          <td><strong style="color: #059669;">Included</strong> (Bespoke Artisan Build)</td>
+        </tr>
+        <tr>
+          <td><strong>WhatsApp Floor Booking &amp; Google CRM</strong></td>
+          <td>₹20,000 – ₹30,000</td>
+          <td><strong style="color: #059669;">Included</strong> (Direct sync, zero commission)</td>
+        </tr>
+        <tr>
+          <td><strong>Monthly Maintenance &amp; Retainer Fees</strong></td>
+          <td>₹4,000 – ₹8,000 / month</td>
+          <td><strong style="color: #059669;">₹0 / Month</strong> (Zero recurring retainer)</td>
+        </tr>
+        <tr>
+          <td><strong>Domain Registration &amp; DNS Management</strong></td>
+          <td>Billed separately annually</td>
+          <td><strong style="color: #059669;">First 3 Years 100% on us</strong></td>
+        </tr>
+        <tr>
+          <td><strong>2x Smart NFC Google Review Tap Cards</strong></td>
+          <td>₹2,500 – ₹3,500 extra</td>
+          <td><strong style="color: #059669;">100% FREE Complimentary Gift</strong></td>
+        </tr>
+        <tr style="background: #FAF7F2; font-weight: 700;">
+          <td><strong>Total 3-Year Equivalent Cost</strong></td>
+          <td><span style="color: #DC2626; text-decoration: line-through;">₹1,60,000 – ₹2,40,000+</span></td>
+          <td><strong style="color: #0B281E; font-size: 9.5pt;">₹31,999 All-Inclusive</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer-bar">
+      <span>White Lotus: Food Vibe Folks — Confidential Digital Asset Proposal</span>
+      <span>Page 2 of 3</span>
     </div>
 
   </div>
@@ -464,137 +524,142 @@
   <!-- ================= PAGE 3 ================= -->
   <div class="page">
     
-    <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid #E5E0D5; margin-bottom: 14px;">
-      <div style="font-size: 8pt; text-transform: uppercase; letter-spacing: 1.5px; color: #B45309; font-weight: bold;">
-        White Lotus: Food Vibe Folks — Commercial Quotation
+    <!-- Top Header -->
+    <div class="header-bar">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div class="crest">🪷</div>
+        <div>
+          <div class="cinzel" style="font-size: 15pt; font-weight: 700; color: #0B281E;">
+            INVESTMENT QUOTATION &amp; HANDOVER
+          </div>
+          <div style="font-size: 8pt; color: #C59B3F; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;">
+            Contract Tiers &amp; Post-Production Guarantee
+          </div>
+        </div>
       </div>
-      <div style="font-size: 8pt; color: #888;">Ref: WL-QUOT-2026-PUNE</div>
-    </div>
-
-    <!-- Commercial Quotation Matrix -->
-    <div class="section-title">
-      <span>4. Commercial Investment Quotation</span>
-      <span class="tag">Transparent Pricing</span>
-    </div>
-
-    <p style="margin: 0 0 10px 0; font-size: 8.5pt; color: #444;">
-      We believe in 100% transparent pricing with zero recurring monthly platform fees. To provide you maximum value, <strong>the first 3 years of domain registration are 100% complimentary (on us)</strong> in all packages. Choose the duration that best fits your long-term vision:
-    </p>
-
-    <table class="pricing-table">
-      <thead>
-        <tr>
-          <th style="width: 25%;">Package Option</th>
-          <th style="width: 45%;">Scope &amp; Included Assets</th>
-          <th style="width: 15%;">Domain Term</th>
-          <th style="width: 15%; text-align: right;">Total Investment</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <span class="pkg-badge starter">Option 01</span><br>
-            <strong style="font-size: 9.5pt; color: #070A09;">3-Year Turnkey Starter</strong>
-          </td>
-          <td>
-            • Complete Luxury Portal Design &amp; Digital Menu<br>
-            • Interactive 3D Blooming Lotus (Three.js WebGL)<br>
-            • Automated Table Reservations (WhatsApp + Google Sheets CRM)<br>
-            • Full Pune Local SEO &amp; Schema.org Structured Data<br>
-            • <strong>First 3 Years Domain: ₹0 (Complimentary On Us)</strong><br>
-            • Lifetime Free High-Speed Cloud Hosting &amp; SSL<br>
-            • <strong>2x Smart NFC Google Review Tap Cards (FREE Gift)</strong>
-          </td>
-          <td><strong>3 Years</strong><br><span style="color: #2E7D32; font-size: 7.5pt; font-weight: bold;">ON US (FREE)</span></td>
-          <td style="text-align: right; font-size: 11pt; font-weight: bold; color: #070A09;">₹31,999</td>
-        </tr>
-
-        <tr style="background: #FDFCF9; border-left: 3px solid #F59E0B;">
-          <td>
-            <span class="pkg-badge recommended">Option 02 • Recommended</span><br>
-            <strong style="font-size: 9.5pt; color: #070A09;">5-Year Executive Contract</strong>
-          </td>
-          <td>
-            • Everything in Option 01 included<br>
-            • <strong>First 3 Years Domain: ₹0 (Complimentary On Us)</strong><br>
-            • Additional 2 Years Domain Extension (+₹2,000)<br>
-            • Full 5 Years of Domain Ownership Locked (Until 2031)<br>
-            • Zero technical renewal hassle for half a decade<br>
-            • <strong>2x Smart NFC Google Review Tap Cards (FREE Gift)</strong>
-          </td>
-          <td><strong>5 Years</strong><br><span style="color: #B45309; font-size: 7.5pt; font-weight: bold;">3 Yrs Free + 2 Yrs</span></td>
-          <td style="text-align: right; font-size: 11pt; font-weight: bold; color: #B45309;">
-            <div style="font-size: 8pt; color: #888; text-decoration: line-through;">₹37,500</div>
-            ₹33,999
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <span class="pkg-badge enterprise">Option 03</span><br>
-            <strong style="font-size: 9.5pt; color: #070A09;">10-Year Decennial Asset</strong>
-          </td>
-          <td>
-            • Everything in Option 01 included<br>
-            • <strong>First 3 Years Domain: ₹0 (Complimentary On Us)</strong><br>
-            • Additional 7 Years Domain Extension (+₹6,300)<br>
-            • Full 10 Years of Domain Ownership Locked (Until 2036)<br>
-            • Maximum brand protection &amp; absolute digital peace of mind<br>
-            • <strong>2x Smart NFC Google Review Tap Cards (FREE Gift)</strong>
-          </td>
-          <td><strong>10 Years</strong><br><span style="color: #070A09; font-size: 7.5pt; font-weight: bold;">3 Yrs Free + 7 Yrs</span></td>
-          <td style="text-align: right; font-size: 11pt; font-weight: bold; color: #070A09;">
-            <div style="font-size: 8pt; color: #888; text-decoration: line-through;">₹45,000</div>
-            ₹38,299
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Competitive Advantages Section -->
-    <div class="section-title" style="margin-top: 14px;">
-      <span>5. Why Partner With Us (The White Lotus Advantage)</span>
-      <span class="tag">Direct ROI</span>
-    </div>
-
-    <div class="grid-3" style="font-size: 8pt;">
-      <div style="background: #FDFCF9; border: 1px solid #E5E0D5; padding: 8px 10px; border-radius: 6px;">
-        <strong style="color: #070A09; display: block; margin-bottom: 2px;">Zero Table Commissions</strong>
-        Third-party aggregators charge high commission cuts on dining bookings. Direct web &amp; WhatsApp reservations put 100% of profit into your pocket.
-      </div>
-      <div style="background: #FDFCF9; border: 1px solid #E5E0D5; padding: 8px 10px; border-radius: 6px;">
-        <strong style="color: #070A09; display: block; margin-bottom: 2px;">Zero Recurring Hosting Bills</strong>
-        WordPress and Shopify charge ₹1,500–₹3,000/month for hosting, plugins, and templates. Our custom architecture saves you ₹20,000+ every single year.
-      </div>
-      <div style="background: #FDFCF9; border: 1px solid #E5E0D5; padding: 8px 10px; border-radius: 6px;">
-        <strong style="color: #070A09; display: block; margin-bottom: 2px;">100% Direct Asset Ownership</strong>
-        You own all code, domain credentials, and customer booking data directly. Zero lock-in, zero hostage fees.
+      <div>
+        <span class="badge-pill">Final Quotation</span>
       </div>
     </div>
 
-    <!-- Commercial Terms & Acceptance -->
-    <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid #E5E0D5; font-size: 8pt; color: #555;">
-      <div><strong>Payment Terms:</strong> 50% advance to initiate official domain registration &amp; DNS routing; 50% balance upon final live verification on <code>whitelotuspune.com</code>.</div>
-      <div style="margin-top: 3px;"><strong>Mode of Payment:</strong> Bank NEFT/IMPS Transfer or UPI (GPay / PhonePe / Paytm). Invoices provided with full tax compliance.</div>
+    <!-- 3 Pricing Tiers -->
+    <div class="section-title">6. Contract Options &amp; Domain Investment Breakdown</div>
+    <div class="grid-3" style="margin-top: 10px;">
+      
+      <!-- Tier 1: 3-Year Turnkey -->
+      <div class="pricing-card">
+        <div class="tier-name">OPTION 1</div>
+        <div class="tier-sub">3-Year Turnkey Launch</div>
+        <div class="tier-price">₹31,999 <span>/ one-time</span></div>
+        <p style="font-size: 7.5pt; color: #059669; font-weight: 700; margin-bottom: 8px;">
+          ★ First 3 Years Domain ON US
+        </p>
+        <ul class="feature-list">
+          <li><strong>whitelotuspune.com</strong> registered</li>
+          <li>First 3 years domain paid by us</li>
+          <li>High-speed global cloud hosting</li>
+          <li>WhatsApp table booking engine</li>
+          <li>Google Sheets floor CRM</li>
+          <li>Local SEO &amp; Rich Snippets</li>
+          <li><strong>2x Smart NFC Review Cards FREE</strong></li>
+          <li>Zero monthly maintenance fees</li>
+        </ul>
+      </div>
+
+      <!-- Tier 2: 5-Year Contract -->
+      <div class="pricing-card">
+        <div class="tier-name">OPTION 2</div>
+        <div class="tier-sub">5-Year Growth Contract</div>
+        <div class="tier-price">₹33,999 <span>/ one-time</span></div>
+        <p style="font-size: 7.5pt; color: #059669; font-weight: 700; margin-bottom: 8px;">
+          ★ 3 Yrs On Us + 2 Yrs (+₹2,000)
+        </p>
+        <ul class="feature-list">
+          <li>Everything in Option 1 included</li>
+          <li><strong>5 Years Total Domain Lock</strong></li>
+          <li>First 3 years domain on us</li>
+          <li>Next 2 years domain locked (+₹2,000)</li>
+          <li>No domain renewal worry till 2031</li>
+          <li>Annual menu update guarantee</li>
+          <li><strong>2x Smart NFC Review Cards FREE</strong></li>
+          <li>Zero monthly maintenance fees</li>
+        </ul>
+      </div>
+
+      <!-- Tier 3: 10-Year Asset (RECOMMENDED) -->
+      <div class="pricing-card featured">
+        <div class="badge">BEST ENTERPRISE VALUE</div>
+        <div class="tier-name">OPTION 3</div>
+        <div class="tier-sub">10-Year Master Digital Asset</div>
+        <div class="tier-price">₹38,299 <span>/ one-time</span></div>
+        <p style="font-size: 7.5pt; color: #059669; font-weight: 700; margin-bottom: 8px;">
+          ★ 3 Yrs On Us + 7 Yrs (+₹6,300)
+        </p>
+        <ul class="feature-list">
+          <li>Everything in Option 1 &amp; 2 included</li>
+          <li><strong>10 Full Years Domain Ownership</strong></li>
+          <li>First 3 years domain on us</li>
+          <li>Next 7 years domain locked (+₹6,300)</li>
+          <li>Immunity against domain hijackers</li>
+          <li>Permanent digital asset for restaurant</li>
+          <li>VIP priority floor captain support</li>
+          <li><strong>2x Smart NFC Review Cards FREE</strong></li>
+        </ul>
+      </div>
+
     </div>
 
-    <!-- Signatures Table -->
-    <table class="sig-table">
-      <tr>
-        <td>
-          <div style="font-size: 8pt; font-weight: bold; color: #070A09;">PROPOSAL ACCEPTED FOR WHITE LOTUS:</div>
-          <div class="sig-line"></div>
-          <div style="font-size: 8pt; color: #666;">Authorized Signatory / Date</div>
-          <div style="font-size: 7.5pt; color: #888; margin-top: 2px;">Selected Option: [ &nbsp; ] Option 1 &nbsp; [ &nbsp; ] Option 2 &nbsp; [ &nbsp; ] Option 3</div>
-        </td>
-        <td>
-          <div style="font-size: 8pt; font-weight: bold; color: #070A09;">ISSUED BY DIGITAL ARCHITECTURE DESK:</div>
-          <div class="sig-line"></div>
-          <div style="font-size: 8pt; color: #666;">Lead Digital Consultant &amp; System Architect</div>
-          <div style="font-size: 7.5pt; color: #888; margin-top: 2px;">Contact: +91 91566 32846 • github.com/qusaitailor992006</div>
-        </td>
-      </tr>
-    </table>
+    <!-- Post-Production & Go-Live Protocol -->
+    <div class="section-title">7. Post-Production Protocol &amp; 24-Hour Go-Live Handover</div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">🚀 24-Hour Domain Pointing</div>
+        <div class="card-body">
+          Upon approval, <em>whitelotuspune.com</em> is connected to our high-speed global edge network with automated SSL HTTPS encryption. The site goes live worldwide within 24 hours.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">📍 Google Maps Link Integration</div>
+        <div class="card-body">
+          We update White Lotus's official Google Business Profile to point directly to your new portal, ensuring all 1,660+ reviewers and new searchers book directly without commission.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">📲 Floor Captain WhatsApp Handover</div>
+        <div class="card-body">
+          We configure the notification triggers directly to your floor captain's phone (+91 95135 75757) and test live reservation simulations with your staff.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">🏷️ Delivery of 2x NFC Review Cards</div>
+        <div class="card-body">
+          The 2 pre-programmed White Lotus Smart NFC Google Review Tap Cards are encoded, tested, and handed over to your reception desk ready for immediate guest tapping.
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign-off & Closing Box -->
+    <div style="background: #FAF7F2; border: 1.5px solid #C59B3F; border-radius: 12px; padding: 12px 18px; margin-top: 14px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div style="font-size: 8pt; font-weight: 700; text-transform: uppercase; color: #0B281E; letter-spacing: 0.1em;">
+            Ready to Lock Your Digital Sanctuary?
+          </div>
+          <div style="font-size: 7.5pt; color: #4B5563; margin-top: 2px;">
+            Reach out directly to finalize the domain configuration and commence immediate go-live deployment.
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 8pt; font-weight: 700; color: #0B281E;">Digital Asset Team</div>
+          <div style="font-size: 7.5pt; color: #C59B3F;">Quotation Code: WL-PUN-2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>White Lotus: Food Vibe Folks — Confidential Digital Asset Proposal</span>
+      <span>Page 3 of 3</span>
+    </div>
 
   </div>
 

@@ -1,64 +1,61 @@
-# White Lotus: Food Vibe Folks — Multi-Cuisine Fine Dining & Bar Portal
+# White Lotus: Food Vibe Folks — Luxury Fine Dining & Bar Digital Asset
 
-[![Restaurant](https://img.shields.io/badge/Restaurant-White%20Lotus%20Pune-0F241D?style=for-the-badge)](https://wa.me/919513575757)
-[![Rating](https://img.shields.io/badge/Google%20Rating-4.6%20%E2%98%85%20(1%2C660%2B)-C5A059?style=for-the-badge)](#)
-[![Location](https://img.shields.io/badge/Location-Saras%20Baug%20Rd%2C%20Pune-111615?style=for-the-badge)](#verified-restaurant-identity)
+[![Restaurant](https://img.shields.io/badge/Restaurant-White%20Lotus%20Pune-0B281E?style=for-the-badge)](https://wa.me/919513575757)
+[![Rating](https://img.shields.io/badge/Google%20Rating-4.6%20%E2%98%85%20(1%2C660%2B)-C59B3F?style=for-the-badge)](#)
+[![Location](https://img.shields.io/badge/Location-Saras%20Baug%20Rd%2C%20Pune-0B281E?style=for-the-badge)](#verified-restaurant-identity)
 
-> **"Where Culinary Artistry Meets Botanical Serenity & Vibrant Folks."**  
-> An editorial, ₹50,000+ luxury hospitality website engineered for **White Lotus: Food Vibe Folks** (202, 203 Saras Baug Road, near Vyankatesh Apt, behind Naivedyam Hotel, Mitramandal Chowk, Parvati Paytha, Pune).
+> **"Where Flavours Bloom & Evenings Turn Magical."**  
+> An ultra-luxury, bespoke ₹1,00,000-caliber web portal engineered for **White Lotus: Food Vibe Folks** (202, 203 Saras Baug Road, Pune). Built to convert 1,660+ Google reviews into direct, commission-free table bookings and eliminate 15–20% third-party aggregator losses.
 
 ---
 
-## 1. Verified Restaurant Identity & Location
+## 1. Verified Restaurant Identity & Details
 
-| Specification | Official Details |
+| Parameter | Official Details |
 |---|---|
 | **Business Name** | **White Lotus: Food Vibe Folks** (व्हाइट लोटस) |
-| **Slogan / Tagline** | *Food • Vibe • Folks* |
-| **Category** | Fine Dining Restaurant & Bar (Multi-Cuisine) |
-| **Address** | 202, 203, Saras Baug Rd, near Vyankatesh Apt, behind Naivedyam Hotel, Mitra Mandal Colony, Parvati Paytha, Pune, Maharashtra 411009 |
-| **Landmarks** | Mitramandal Chowk, Saras Baug, behind Naivedyam Hotel |
-| **Table Desk (Call/WhatsApp)** | **+91 95135 75757** ([https://wa.me/919513575757](https://wa.me/919513575757)) |
-| **Instagram** | **@whitelotus.pune** |
-| **Dining Hours** | **Monday – Sunday: 12:00 PM – 11:30 PM (Open All 7 Days)** |
-| **Social Proof** | **4.6 ★ Rating based on 1,660+ Verified Google Reviews** |
-| **Parking Facility** | **Dedicated On-Site Parking for 10–15 Cars + Two-Wheelers** |
+| **Category** | Luxury Multi-Cuisine Fine Dining & Cocktail Bar |
+| **Address** | 202, 203 Saras Baug Road, Opposite Sanas Ground, Parvati, Pune 411009 |
+| **Hours** | **12:00 PM – 11:30 PM (Open All 7 Days)** |
+| **Google Standing** | **4.6 ★ Rating based on 1,660+ Verified Reviews** |
+| **Floor Desk / WhatsApp** | **+91 95135 75757** |
+| **Parking Facility** | **10–15 Dedicated On-Site Car Parking Slots + Valet Attendant** |
+| **Target Domain** | **whitelotuspune.com** |
 
 ---
 
-## 2. Key Features Built Into the Portal
+## 2. Platform Architecture & Features Built
 
-1. **Top Rating Banner:** Highlights 4.6★ Google rating with direct 1-tap call button.
-2. **Gastronomic Hero Section:** Authority positioning, dual CTAs (Online Table Booking + WhatsApp Concierge), and trust metrics.
-3. **Interactive Signature Menu Showcase:** Filterable menu tabs covering Burmese Khao Suey, Kamal Ke Kebab, Prawns Tempura, Dhaba Chicken, Pink Sauce Pasta, Cocktails, and Pune's favorite Eggless Tiramisu.
-4. **Three Dining Atmospheres:** Lush Terrace Garden, Air-Conditioned Indoor Lounge, and Celebration Banquet seating.
-5. **Verified 4.6★ Social Proof Section:** Real diner testimonials praising food quality, courteous staff, and rare on-site private parking.
-6. **Automated Table Reservation System:**
-   - Guest count selector (1 to 16+ guests).
-   - Date and time window picker (Lunch / Afternoon / Evening / Late Night).
-   - Seating preference selection (Terrace Garden / Indoor Lounge / First Available).
-   - Instant unique Booking Reference ID (e.g. `WL-2026-X8F4`).
-   - Automated 1-click WhatsApp table confirmation to `+91 95135 75757`.
-   - Automated Google Sheets CRM logging.
-7. **Location & Parking Showcase:** Detailed landmark directions, on-site parking assurance, and interactive Google Map iframe.
-8. **Technical & Local Pune SEO:** Schema.org JSON-LD `Restaurant`, `FoodEstablishment`, and `FAQPage` rich snippets.
-9. **Zero Horizontal Overflow & Mobile Optimization:** Clean mobile drawer navigation and touch-friendly controls.
+1. **Luminous Brand Aesthetics:** Pristine pearl alabaster (`#FAF7F2`), deep botanical lotus leaf emerald (`#0B281E`), and burnished champagne gold (`#C59B3F`).
+2. **Interactive 3D / Canvas Organic Lotus Petals:** Custom-rendered canvas with drifting 3D-shaded lotus petals and golden starlight particles that react to cursor breeze.
+3. **The 3 Dining Sanctuaries (Client-Centric):**
+   - **The Starlit Terrace Garden:** Open-air breezy dining under fairy lights and palms.
+   - **The Imperial Velvet AC Lounge & Bar:** Plush emerald velvet booths, artisan mixology, intimate dining.
+   - **Private Group Banquets:** 15 to 50+ guests celebration enclaves.
+4. **Saras Baug Dedicated Parking Showcase:** Highlights the 10–15 on-site car slots—solving the #1 diner hesitation in the Parvati/Swargate area.
+5. **Interactive Culinary Menu Deck:** Filterable menu showcase with exact pricing (Burmese Khao Suey ₹671, Kamal Ke Kebab ₹481, Prawns Tempura ₹644, Dhaba Chicken ₹642, Eggless Tiramisu ₹497).
+6. **Instant VIP Table Booking & CRM:** Form submits pre-filled booking to Floor Captain on WhatsApp (`+91 95135 75757`) and simultaneously syncs to Google Sheets CRM.
+7. **2x Smart NFC Google Review Counter Tap Cards:** Pre-programmed contactless review cards placed at billing counter. Diners tap to leave a review in 3 seconds.
 
 ---
 
-## 3. Project File Inventory
+## 3. Commercial Quotation & Contract Options
 
-```
-white-lotus-pune/
-├── index.html                           # Luxury multi-cuisine dining web portal
-├── 404.html                             # Custom branded 404 error page
-├── google-apps-script.js                # Google Sheets table reservations webhook
-├── proposal-quotation.html              # Printable commercial proposal template
-├── White_Lotus_Executive_Quotation.pdf  # Vector PDF proposal for the client
-├── .gitignore                           # Git hygiene
-└── README.md                            # Documentation & walkthrough
-```
+| Option | Contract Duration | Investment | Domain Inclusions | Free Bonus |
+|---|---|---|---|---|
+| **Option 1: Turnkey Launch** | **3-Year Digital Asset** | **₹31,999** | First 3 Years Domain **ON US** | 2x Smart NFC Review Cards FREE |
+| **Option 2: Growth Contract** | **5-Year Digital Contract** | **₹33,999** | First 3 Yrs on us + 2 Yrs (+₹2,000) | 2x Smart NFC Review Cards FREE |
+| **Option 3: Master Asset** | **10-Year Enterprise Lock** | **₹38,299** | First 3 Yrs on us + 7 Yrs (+₹6,300) | 2x Smart NFC Review Cards FREE |
+
+*Zero monthly retainer fees. Lifetime global high-speed edge hosting included.*
 
 ---
 
-&copy; 2026 White Lotus: Food Vibe Folks. 202, 203 Saras Baug Road, Pune 411009.
+## 4. Deliverables in this Directory
+
+- `index.html`: Production-ready luxury restaurant portal.
+- `proposal-quotation.html`: 3-page executive proposal and investment document.
+- `White_Lotus_Executive_Quotation.pdf`: Pixel-perfect executive PDF quotation generated via Edge headless (~933 KB).
+- `google-apps-script.js`: Automated Google Sheets table booking CRM backend.
+- `404.html`: Custom branded error page.
+- `README.md`: System manual and client presentation guide.
