@@ -1,7 +1,6 @@
 import json
 import re
 
-# Comprehensive dataset extracted directly from the 15 official White Lotus menu photos
 menu_data = [
     # --- APPETIZERS NON-VEG ---
     {
@@ -172,7 +171,6 @@ menu_data = [
         "desc": "A fiery Kolhapuri delicacy of tender boneless mutton, slow-cooked with aromatic spices, roasted sesame, and dry coconut. Rustic taste of Maharashtra.",
         "badge": "Kolhapuri Heritage"
     },
-    # MEAT ON STICK
     {
         "category": "appetizers",
         "name": "Thai Stick (Meat on Stick)",
@@ -187,6 +185,22 @@ menu_data = [
         "type": "nonveg",
         "price": "₹708 / ₹515",
         "desc": "Lebanese char-grilled skewers served on wooden sticks with toum garlic dip and pickled vegetables.",
+        "badge": "Meat On Stick"
+    },
+    {
+        "category": "appetizers",
+        "name": "Teriyaki Stick (Meat on Stick)",
+        "type": "nonveg",
+        "price": "₹482 / ₹608 / ₹508",
+        "desc": "Sweet soy mirin glazed chicken or seafood skewers grilled over open embers.",
+        "badge": "Meat On Stick"
+    },
+    {
+        "category": "appetizers",
+        "name": "Herbed Stick (Meat on Stick)",
+        "type": "nonveg",
+        "price": "₹608 / ₹508",
+        "desc": "Mediterranean herb marinated skewers with rosemary, thyme, garlic and olive oil.",
         "badge": "Meat On Stick"
     },
 
@@ -1053,10 +1067,161 @@ menu_data = [
         "badge": "Dark Chocolate"
     },
 
-    # --- THE BAR & MIXOLOGY DECK ---
+    # --- THE BAR & MIXOLOGY DECK (INDIVIDUAL SHOTS, BREEZERS, WINES & SPIRITS) ---
+    # SHOTS
     {
         "category": "bar-mixology",
-        "name": "Classic Mojito (Alcoholic)",
+        "name": "Duck Fat Shot",
+        "type": "bar",
+        "price": "₹680",
+        "desc": "Artisanal washed spirit shot crafted with savory aromatic botanical richness.",
+        "badge": "Signature Shot"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Jäger Bomb",
+        "type": "bar",
+        "price": "₹680",
+        "desc": "Classic Jägermeister herbal digestif dropped into energy infusion.",
+        "badge": "High Energy Shot"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Mexican Samurai Shot",
+        "type": "bar",
+        "price": "₹450",
+        "desc": "Tequila infusion balanced with exotic oriental citrus and chili.",
+        "badge": "Tequila Shot"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Kamikaze Blue Shot",
+        "type": "bar",
+        "price": "₹450",
+        "desc": "Vodka, blue curaçao, and tart freshly squeezed Persian lime juice.",
+        "badge": "Classic Shooter"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Tiramisu Shot",
+        "type": "bar",
+        "price": "₹680",
+        "desc": "Dessert cocktail shot layered with coffee liqueur, cream, and Belgian cocoa dust.",
+        "badge": "Dessert Shot"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Coconut Shot",
+        "type": "bar",
+        "price": "₹480",
+        "desc": "Tropical coconut cream liqueur with white rum and toasted coconut flakes.",
+        "badge": "Tropical Shot"
+    },
+
+    # BREEZERS
+    {
+        "category": "bar-mixology",
+        "name": "Cranberry Breezer",
+        "type": "bar",
+        "price": "₹310",
+        "desc": "Crisp and refreshing sparkling rum-based alcoholic cooler with tart cranberry (Bottle).",
+        "badge": "Bacardi Breezer"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Jamaican Passion Breezer",
+        "type": "bar",
+        "price": "₹310",
+        "desc": "Exotic Caribbean tropical fruits blended with sparkling rum cooler (Bottle).",
+        "badge": "Bacardi Breezer"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Blueberry Breezer",
+        "type": "bar",
+        "price": "₹310",
+        "desc": "Sweet and tangy wild mountain blueberry sparkling alcoholic cooler (Bottle).",
+        "badge": "Bacardi Breezer"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Blackberry Breezer",
+        "type": "bar",
+        "price": "₹310",
+        "desc": "Deep ripe blackberry flavor with sparkling spirit effervescence (Bottle).",
+        "badge": "Bacardi Breezer"
+    },
+
+    # WINES
+    {
+        "category": "bar-mixology",
+        "name": "Sula Brut Sparkling Wine",
+        "type": "bar",
+        "price": "₹3,950 / Bottle",
+        "desc": "Méthode Traditionnelle sparkling wine with crisp acidity, green apple notes and celebratory bubbles.",
+        "badge": "Sparkling Wine"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Yellow Tail Chardonnay",
+        "type": "bar",
+        "price": "₹730 / Glass · ₹3,600 / Bottle",
+        "desc": "Australian white wine bursting with ripe peach, melon, and subtle vanilla oak finish.",
+        "badge": "Imported White"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Yellow Tail Shiraz",
+        "type": "bar",
+        "price": "₹730 / Glass · ₹3,600 / Bottle",
+        "desc": "Australian full-bodied red wine with vibrant red berry fruit, licorice and warm spice.",
+        "badge": "Imported Red"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "The Source Rosé",
+        "type": "bar",
+        "price": "₹570 / Glass · ₹2,800 / Bottle",
+        "desc": "Grenache-based elegant pale coral rosé with fresh strawberries and floral honeysuckle notes.",
+        "badge": "Fine Rosé"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Sula Zinfandel",
+        "type": "bar",
+        "price": "₹520 / Glass · ₹2,550 / Bottle",
+        "desc": "Luscious red wine packed with aromas of crushed blackberries, plums, and soft cinnamon.",
+        "badge": "Red Wine"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Sula Cabernet Shiraz",
+        "type": "bar",
+        "price": "₹540 / Glass · ₹2,650 / Bottle",
+        "desc": "Smooth medium-bodied red wine blend with dark cherries, black pepper, and silky tannins.",
+        "badge": "Red Blend"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Sula Chenin Blanc",
+        "type": "bar",
+        "price": "₹510 / Glass · ₹2,500 / Bottle",
+        "desc": "Semi-dry light white wine with aromas of ripe pineapple, pear, and crisp citrus acidity.",
+        "badge": "White Wine"
+    },
+    {
+        "category": "bar-mixology",
+        "name": "Sula Satori Merlot Malbec",
+        "type": "bar",
+        "price": "₹440 / Glass · ₹2,100 / Bottle",
+        "desc": "Approachable medium-bodied red blend with ripe red fruit and velvety mouthfeel.",
+        "badge": "Merlot Malbec"
+    },
+
+    # MOJITOS & COCKTAILS
+    {
+        "category": "bar-mixology",
+        "name": "Classic Mojito (Rum)",
         "type": "bar",
         "price": "₹589",
         "desc": "White rum, muddled fresh lime wedges, garden mint, cane syrup topped with effervescent soda.",
@@ -1078,6 +1243,16 @@ menu_data = [
         "desc": "White rum, fresh lime, garden mint, Italian sweet basil, and cooling cucumber syrup.",
         "badge": "Refreshing Herb"
     },
+    {
+        "category": "bar-mixology",
+        "name": "Orange & Cranberry Mojito",
+        "type": "bar",
+        "price": "₹589",
+        "desc": "White rum, fresh lime, mint, valencia orange and tart cranberry reduction topped with club soda.",
+        "badge": "Citrus Twist"
+    },
+
+    # MOCKTAILS & SHAKES
     {
         "category": "bar-mixology",
         "name": "Virgin Mojito (Mocktail)",
@@ -1126,28 +1301,30 @@ menu_data = [
         "desc": "Sweet apples, California roasted almonds, cinnamon powder, vanilla bean, milk and ice cream.",
         "badge": "Almond Cinnamon"
     },
+
+    # SINGLE MALTS, SCOTCH & VODKAS
     {
         "category": "bar-mixology",
         "name": "Glenfiddich 12 Yr (Single Malt)",
         "type": "bar",
         "price": "₹830 / ₹1,650 / ₹19,700",
-        "desc": "Distinctive Speyside single malt scotch, matured in American bourbon and Spanish sherry oak casks (30ml / 60ml / Bottle).",
-        "badge": "Speyside Single Malt"
+        "desc": "Distinctive Speyside single malt scotch, matured in American bourbon and Spanish sherry oak casks (Small / Large / Bottle).",
+        "badge": "Speyside Malt"
     },
     {
         "category": "bar-mixology",
         "name": "Indri Trini (Indian Single Malt)",
         "type": "bar",
         "price": "₹650 / ₹1,290 / ₹15,400",
-        "desc": "Award-winning Indian single malt matured in three wooden barrels: ex-bourbon, ex-wine, and Pedro Ximenez sherry (30ml / 60ml / Bottle).",
-        "badge": "Award Winning Malt"
+        "desc": "Award-winning Indian single malt matured in ex-bourbon, ex-wine, and Pedro Ximenez sherry barrels (Small / Large / Bottle).",
+        "badge": "Indian Single Malt"
     },
     {
         "category": "bar-mixology",
         "name": "Johnnie Walker Blue Label",
         "type": "bar",
         "price": "₹2,800 / ₹5,400 / ₹59,000",
-        "desc": "The pinnacle of blended Scotch whisky crafted from rare hand-selected casks across Scotland (30ml / 60ml / Bottle).",
+        "desc": "The pinnacle of blended Scotch whisky crafted from rare hand-selected casks across Scotland (Small / Large / Bottle).",
         "badge": "Ultra Luxury Scotch"
     },
     {
@@ -1155,7 +1332,7 @@ menu_data = [
         "name": "Johnnie Walker Black Label",
         "type": "bar",
         "price": "₹520 / ₹1,010 / ₹12,100",
-        "desc": "12-year-old icon of master blending featuring rich smoky embers and sweet dark fruits (30ml / 60ml / Bottle).",
+        "desc": "12-year-old icon of master blending featuring rich smoky embers and sweet dark fruits (Small / Large / Bottle).",
         "badge": "12 Yr Scotch"
     },
     {
@@ -1163,15 +1340,15 @@ menu_data = [
         "name": "Chivas Regal 12 Yr",
         "type": "bar",
         "price": "₹520 / ₹1,010 / ₹12,100",
-        "desc": "Smooth blended Scotch whisky with notes of wild herbs, heather, honey, and orchard fruits (30ml / 60ml / Bottle).",
+        "desc": "Smooth blended Scotch whisky with notes of wild herbs, heather, honey, and orchard fruits (Small / Large / Bottle).",
         "badge": "12 Yr Scotch"
     },
     {
         "category": "bar-mixology",
-        "name": "Grey Goose Vodka",
+        "name": "Grey Goose French Vodka",
         "type": "bar",
         "price": "₹640 / ₹1,260 / ₹15,120",
-        "desc": "French master-crafted wheat vodka distilled from single-origin Picardie wheat and spring water (30ml / 60ml / Bottle).",
+        "desc": "French master-crafted wheat vodka distilled from single-origin Picardie wheat and spring water (Small / Large / Bottle).",
         "badge": "French Vodka"
     },
     {
@@ -1179,24 +1356,8 @@ menu_data = [
         "name": "Beluga Gold Line Vodka",
         "type": "bar",
         "price": "₹2,500 / ₹4,800 / ₹57,000",
-        "desc": "Limited edition Siberian luxury vodka rested for 90 days with notes of rice and floral extracts (30ml / 60ml / Bottle).",
+        "desc": "Limited edition Siberian luxury vodka rested for 90 days with notes of rice and floral extracts (Small / Large / Bottle).",
         "badge": "Ultra Premium Vodka"
-    },
-    {
-        "category": "bar-mixology",
-        "name": "Craft Shots (Jägerbomb / Duck Fat)",
-        "type": "bar",
-        "price": "₹450 – ₹680",
-        "desc": "Duck Fat Shot (₹680), Jäger Bomb (₹680), Kamikaze Blue (₹450), Mexican Samurai (₹450), Tiramisu Shot (₹680), Coconut Shot (₹480).",
-        "badge": "Party Shots"
-    },
-    {
-        "category": "bar-mixology",
-        "name": "Fine Domestic & Imported Wines",
-        "type": "bar",
-        "price": "₹440 – ₹730 / Glass",
-        "desc": "Sula Brut (₹3,950/btl), Yellow Tail Shiraz (₹730/3600), Yellow Tail Chardonnay (₹730/3600), The Source Rosé (₹570/2800), Sula Zinfandel (₹520/2550).",
-        "badge": "Curated Wine Cellar"
     }
 ]
 
@@ -1219,7 +1380,7 @@ for item in menu_data:
         badge_type_html = '<span class="diet-badge-bar">🍸</span>'
 
     card = f'''          <!-- ITEM: {name} -->
-          <div class="menu-item-row p-5 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="{cat}">
+          <div class="menu-item-row p-5 rounded-2xl bg-white shadow-sm flex flex-col justify-between" data-category="{cat}" data-type="{itype}">
             <div>
               <div class="flex items-start justify-between gap-3">
                 <div class="flex items-center gap-2">
@@ -1241,35 +1402,56 @@ for item in menu_data:
 
 menu_deck_html = "\n\n".join(cards_html)
 
-# Navigation tabs HTML
-tabs_html = '''        <!-- CATEGORY NAVIGATION TABS -->
+# Master Dietary Selector + Category Navigation tabs HTML
+selector_html = '''        <!-- MASTER DIETARY SELECT BUTTONS (PURE VEG / NON-VEG / BAR) -->
+        <div class="max-w-2xl mx-auto mb-8">
+          <div class="p-1.5 rounded-full bg-silk/70 border border-gold/30 shadow-sm flex items-center justify-center gap-1.5 sm:gap-2">
+            <button onclick="setDietaryFilter('all')" id="diet-btn-all" class="dietary-filter-btn active flex-1 py-2.5 px-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-botanical-deep text-white shadow-sm">
+              All Menus
+            </button>
+            <button onclick="setDietaryFilter('veg')" id="diet-btn-veg" class="dietary-filter-btn flex-1 py-2.5 px-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all text-botanical-deep hover:bg-white flex items-center justify-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+              Pure Veg
+            </button>
+            <button onclick="setDietaryFilter('nonveg')" id="diet-btn-nonveg" class="dietary-filter-btn flex-1 py-2.5 px-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all text-botanical-deep hover:bg-white flex items-center justify-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-600"></span>
+              Non-Veg
+            </button>
+            <button onclick="setDietaryFilter('bar')" id="diet-btn-bar" class="dietary-filter-btn flex-1 py-2.5 px-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all text-botanical-deep hover:bg-white flex items-center justify-center gap-1.5">
+              <span>🍸</span>
+              The Bar
+            </button>
+          </div>
+        </div>
+
+        <!-- CATEGORY NAVIGATION TABS -->
         <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
-          <button onclick="filterMenu('all')" class="menu-tab-btn active px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-botanical-deep text-white shadow-sm border border-gold/30" data-cat="all">
+          <button onclick="filterCategory('all')" class="menu-tab-btn active px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-botanical-deep text-white shadow-sm border border-gold/30" data-cat="all">
             All Curations
           </button>
-          <button onclick="filterMenu('appetizers')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="appetizers">
+          <button onclick="filterCategory('appetizers')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="appetizers">
             Appetizers & Meat on Stick
           </button>
-          <button onclick="filterMenu('soups-salads-bao')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="soups-salads-bao">
+          <button onclick="filterCategory('soups-salads-bao')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="soups-salads-bao">
             Soups, Salads, Munchies & Bao
           </button>
-          <button onclick="filterMenu('pizza-pasta-risotto')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="pizza-pasta-risotto">
+          <button onclick="filterCategory('pizza-pasta-risotto')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="pizza-pasta-risotto">
             Pizzas, Pasta & Risotto
           </button>
-          <button onclick="filterMenu('bowls-continental')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="bowls-continental">
+          <button onclick="filterCategory('bowls-continental')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="bowls-continental">
             Khao Suey, Bowls & Steaks
           </button>
-          <button onclick="filterMenu('mains')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="mains">
+          <button onclick="filterCategory('mains')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="mains">
             Main Course (Veg & Non-Veg)
           </button>
-          <button onclick="filterMenu('breads-rice-noodles')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="breads-rice-noodles">
+          <button onclick="filterCategory('breads-rice-noodles')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="breads-rice-noodles">
             Breads, Biryanis & Wok
           </button>
-          <button onclick="filterMenu('desserts-icecream')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="desserts-icecream">
+          <button onclick="filterCategory('desserts-icecream')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="desserts-icecream">
             Desserts & Natural Ice Cream
           </button>
-          <button onclick="filterMenu('bar-mixology')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="bar-mixology">
-            The Bar, Malts & Cocktails
+          <button onclick="filterCategory('bar-mixology')" class="menu-tab-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-white text-botanical-deep hover:bg-silk shadow-sm border border-gold/20" data-cat="bar-mixology">
+            Shots, Wines & The Bar
           </button>
         </div>'''
 
@@ -1285,22 +1467,20 @@ new_menu_section = f'''    <!-- SECTION 3: THE OFFICIAL WHITE LOTUS CULINARY & B
             The White Lotus <span class="italic font-normal">Dining & Bar Deck</span>
           </h2>
           <p class="text-sm sm:text-base text-charcoal/75 leading-relaxed">
-            Directly from our floor kitchen on Saras Baug Road. Zero stock imagery. Explore our complete authentic culinary repertoire across 8 specialized sections.
+            Directly from our floor kitchen and cocktail bar on Saras Baug Road. Zero stock imagery. Use the selector below to view Pure Veg, Non-Veg, or The Bar.
           </p>
         </div>
 
-{tabs_html}
+{selector_html}
 
-        <!-- SEARCH & DIETARY FILTER BAR -->
+        <!-- SEARCH & DIETARY STATUS BAR -->
         <div class="max-w-xl mx-auto mb-10 flex flex-col sm:flex-row items-center gap-3">
           <div class="relative w-full">
-            <input type="text" id="menu-search-input" onkeyup="searchMenuItems()" placeholder="Instant search (e.g. Indri, Khao Suey, Loncha, Tiramisu, Pomfret, Steak, Blue Label...)" class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white border border-gold/30 text-xs focus:outline-none focus:border-gold shadow-sm">
+            <input type="text" id="menu-search-input" onkeyup="searchMenuItems()" placeholder="Instant search (e.g. Indri, Jäger, Duck Fat, Sula, Tiramisu, Loncha, Pomfret...)" class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white border border-gold/30 text-xs focus:outline-none focus:border-gold shadow-sm">
             <svg class="w-4 h-4 text-gold absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </div>
-          <div class="flex items-center gap-3 text-xs font-semibold shrink-0">
-            <span class="flex items-center gap-1.5"><span class="diet-badge-veg"></span> Pure Veg</span>
-            <span class="flex items-center gap-1.5"><span class="diet-badge-nonveg"></span> Non-Veg</span>
-            <span class="flex items-center gap-1.5"><span class="diet-badge-bar">🍸</span> Bar</span>
+          <div id="active-filter-indicator" class="text-xs font-bold text-botanical-deep shrink-0 px-3 py-1.5 rounded-full bg-white border border-gold/25 shadow-sm">
+            Showing All Items
           </div>
         </div>
 
@@ -1327,13 +1507,94 @@ new_menu_section = f'''    <!-- SECTION 3: THE OFFICIAL WHITE LOTUS CULINARY & B
 with open("C:/Users/Admin/.gemini/antigravity/scratch/white-lotus-pune/index.html", "r", encoding="utf-8") as f:
     content = f.read()
 
-# Pattern to replace from <!-- SECTION 3: to <!-- SECTION 4:
 pattern = r'<!-- SECTION 3:.*?<!-- SECTION 4:'
 replacement = new_menu_section + "\n\n    <!-- SECTION 4:"
 
 new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
 
+# Also update the JavaScript functions in index.html for combined filtering (dietary + category + search)
+js_pattern = r'// 5\. CULINARY MENU FILTERING.*?// 7\. 3D FLOATING'
+new_js = '''// 5. COMBINED CULINARY & DIETARY FILTERING ENGINE
+    let currentCategory = 'all';
+    let currentDietary = 'all';
+
+    function setDietaryFilter(diet) {
+      currentDietary = diet;
+      const dietButtons = document.querySelectorAll('.dietary-filter-btn');
+      dietButtons.forEach(btn => {
+        btn.classList.remove('bg-botanical-deep', 'text-white', 'shadow-sm');
+        btn.classList.add('text-botanical-deep');
+      });
+
+      const activeBtn = document.getElementById('diet-btn-' + diet);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-botanical-deep', 'text-white', 'shadow-sm');
+        activeBtn.classList.remove('text-botanical-deep');
+      }
+
+      const indicator = document.getElementById('active-filter-indicator');
+      if (indicator) {
+        if (diet === 'all') indicator.innerText = 'Showing All Items';
+        else if (diet === 'veg') indicator.innerText = '🟢 Showing Pure Veg Only';
+        else if (diet === 'nonveg') indicator.innerText = '🔴 Showing Non-Veg Only';
+        else if (diet === 'bar') indicator.innerText = '🍸 Showing The Bar Only';
+      }
+
+      applyCombinedMenuFilter();
+    }
+
+    function filterCategory(cat) {
+      currentCategory = cat;
+      const catButtons = document.querySelectorAll('.menu-tab-btn');
+      catButtons.forEach(btn => {
+        if (btn.getAttribute('data-cat') === cat) {
+          btn.classList.add('bg-botanical-deep', 'text-white', 'border-gold/30');
+          btn.classList.remove('bg-white', 'text-botanical-deep');
+        } else {
+          btn.classList.remove('bg-botanical-deep', 'text-white', 'border-gold/30');
+          btn.classList.add('bg-white', 'text-botanical-deep');
+        }
+      });
+
+      applyCombinedMenuFilter();
+    }
+
+    function applyCombinedMenuFilter() {
+      const cards = document.querySelectorAll('.menu-item-row');
+      const searchInput = document.getElementById('menu-search-input');
+      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+      cards.forEach(card => {
+        const itemCat = card.getAttribute('data-category');
+        const itemType = card.getAttribute('data-type');
+        const itemText = card.innerText.toLowerCase();
+
+        // Check category match
+        const matchesCat = (currentCategory === 'all' || itemCat === currentCategory);
+        
+        // Check dietary match
+        const matchesDiet = (currentDietary === 'all' || itemType === currentDietary);
+
+        // Check search match
+        const matchesSearch = (!query || itemText.includes(query));
+
+        if (matchesCat && matchesDiet && matchesSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function searchMenuItems() {
+      applyCombinedMenuFilter();
+    }
+
+    // 7. 3D FLOATING'''
+
+new_content = re.sub(js_pattern, new_js, new_content, flags=re.DOTALL)
+
 with open("C:/Users/Admin/.gemini/antigravity/scratch/white-lotus-pune/index.html", "w", encoding="utf-8") as f:
     f.write(new_content)
 
-print(f"Successfully injected {len(menu_data)} authentic dishes into index.html!")
+print(f"Successfully injected {len(menu_data)} items with Master Dietary Selector (Pure Veg / Non-Veg / Bar)!")
