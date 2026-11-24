@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff &amp; Management Portal — White Lotus Pune</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              900: '#0B281E',
+              800: '#13382C',
+              700: '#1C4D3D'
+            },
+            gold: {
+              300: '#E6CF8B',
+              400: '#D4AF37',
+              500: '#C59B47',
+              600: '#A47D2E'
+            },
+            pearl: '#FAF8F5'
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-emerald-900 text-pearl font-sans min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+  
+  <!-- Subtle decorative ambient circles -->
+  <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-gold-500/10 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-emerald-700/30 blur-3xl pointer-events-none"></div>
+
+  <div class="w-full max-w-md bg-emerald-800/80 backdrop-blur-md border border-gold-500/30 rounded-2xl p-8 shadow-2xl relative z-10">
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-900 border-2 border-gold-500 text-gold-400 text-3xl mb-4 shadow-lg shadow-gold-500/10">
+        🪷
+      </div>
+      <h1 class="font-cinzel text-2xl font-bold tracking-wider text-pearl">WHITE LOTUS</h1>
+      <p class="text-xs uppercase tracking-widest text-gold-400 font-semibold mt-1">Management &amp; Floor Captain Portal</p>
+      <p class="text-xs text-gray-400 mt-2">Saras Baug Road, Pune</p>
+    </div>
+
+    <!-- Feedback Message Box -->
+    <div id="msgBox" class="hidden mb-6 p-3.5 rounded-lg text-xs font-medium border transition-all"></div>
+
+    <form id="loginForm" class="space-y-5">
+      <div>
+        <label for="username" class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-2">Staff Username</label>
+        <input 
+          type="text" 
+          id="username" 
+          name="username" 
+          required 
+          autocomplete="username"
+          placeholder="e.g. lotus_admin"
+          class="w-full px-4 py-3 bg-emerald-900/90 border border-gold-500/30 rounded-lg text-pearl placeholder-gray-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-sm transition"
+        >
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <label for="password" class="block text-xs font-semibold uppercase tracking-wider text-gold-300">Password</label>
+          <span class="text-[10px] text-gray-400">Encrypted bcrypt auth</span>
+        </div>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          required 
+          autocomplete="current-password"
+          placeholder="••••••••••••"
+          class="w-full px-4 py-3 bg-emerald-900/90 border border-gold-500/30 rounded-lg text-pearl placeholder-gray-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-sm transition"
+        >
+      </div>
+
+      <button 
+        type="submit" 
+        id="submitBtn"
+        class="w-full py-3.5 px-6 rounded-lg bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-emerald-900 font-cinzel font-bold text-sm tracking-wider uppercase transition shadow-lg shadow-gold-500/20 active:scale-[0.99] flex items-center justify-center gap-2"
+      >
+        <span>Enter Command Dashboard</span>
+        <span id="spinner" class="hidden animate-spin">⟳</span>
+      </button>
+    </form>
+
+    <div class="mt-8 pt-6 border-t border-gold-500/20 text-center">
+      <a href="/" class="text-xs text-gold-400 hover:text-gold-300 transition flex items-center justify-center gap-1.5">
+        <span>← Return to Public Dining Portal</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const msgBox = document.getElementById('msgBox');
+    const submitBtn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('spinner');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msgBox.classList.add('hidden');
+      submitBtn.disabled = true;
+      spinner.classList.remove('hidden');
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+
+      try {
+        const res = await fetch('/api/admin/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          msgBox.className = 'mb-6 p-3.5 rounded-lg text-xs font-medium border bg-emerald-700/60 border-emerald-500 text-emerald-200 block';
+          msgBox.innerText = data.message || 'Authenticated successfully. Redirecting...';
+          setTimeout(() => {
+            window.location.href = data.redirect || '/admin';
+          }, 400);
+        } else {
+          msgBox.className = 'mb-6 p-3.5 rounded-lg text-xs font-medium border bg-rose-950/60 border-rose-500/50 text-rose-200 block';
+          msgBox.innerText = data.detail || 'Authentication failed. Please verify credentials.';
+          submitBtn.disabled = false;
+          spinner.classList.add('hidden');
+        }
+      } catch (err) {
+        msgBox.className = 'mb-6 p-3.5 rounded-lg text-xs font-medium border bg-rose-950/60 border-rose-500/50 text-rose-200 block';
+        msgBox.innerText = 'Network connection error. Please try again.';
+        submitBtn.disabled = false;
+        spinner.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

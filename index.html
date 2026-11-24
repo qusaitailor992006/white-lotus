@@ -670,7 +670,7 @@
       </div>
     </section>
 
-            <!-- SECTION 3: THE OFFICIAL WHITE LOTUS CULINARY & BAR DECK -->
+                        <!-- SECTION 3: THE OFFICIAL WHITE LOTUS CULINARY & BAR DECK -->
     <section id="menu" class="py-24 bg-cream relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -4210,6 +4210,76 @@
 
   </main>
 
+  
+    <!-- INTERACTIVE GOOGLE MAPS & LOCATION SHOWCASE -->
+    <section id="location-map" class="py-16 bg-cream text-charcoal border-b border-gold/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-gold">Prime South Pune Destination</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-botanical-deep mt-1">
+            Find Us on Saras Baug Road
+          </h2>
+          <p class="text-xs sm:text-sm text-charcoal/70 mt-2">
+            202, 203 Saras Baug Road, Opposite Sanas Ground, Parvati, Pune 411009.<br>
+            Featuring 10–15 dedicated on-site car parking slots with attendant assistance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-6 sm:p-8 border border-gold/30 shadow-xl">
+          <!-- Interactive Map Embed -->
+          <div class="lg:col-span-8 rounded-2xl overflow-hidden border border-gold/20 shadow-inner h-80 sm:h-96 w-full">
+            <iframe 
+              title="White Lotus Google Maps Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.567156942006!2d73.85078177587784!3d18.50325496970425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c06927a7c293%3A0xc3ce1a5420d436cf!2sWhite%20Lotus!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Directions & Review CTA -->
+          <div class="lg:col-span-4 space-y-6">
+            <div class="p-5 rounded-2xl bg-cream/70 border border-gold/20 space-y-3">
+              <div class="flex items-center gap-2 text-gold font-bold text-xs uppercase tracking-wider">
+                <span>📍 Exact Landmark</span>
+              </div>
+              <p class="text-xs text-charcoal/80 leading-relaxed">
+                Directly opposite <strong>Sanas Ground</strong> on Saras Baug Road. Easily accessible from Swargate, Parvati, Deccan, and Camp.
+              </p>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=White+Lotus+Food+Vibe+Folks+Saras+Baug+Road+Pune" 
+                target="_blank" 
+                class="w-full py-3 px-4 rounded-xl bg-botanical-deep hover:bg-botanical-surface text-white text-xs font-bold uppercase tracking-wider transition shadow flex items-center justify-center gap-2 border border-gold/30">
+                <span>🧭 Get Live Directions</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+            <!-- Review CTA Box -->
+            <div class="p-5 rounded-2xl bg-botanical-deep text-white border border-gold/30 shadow space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase tracking-wider text-gold-light">Diner Goodwill</span>
+                <span class="text-xs font-bold text-amber-300">4.6 ★★★★★</span>
+              </div>
+              <p class="text-xs text-white/80 leading-relaxed">
+                Over <strong>1,660+ verified diners</strong> have shared their memories. Dined with us recently? We would love your feedback.
+              </p>
+              <a 
+                href="https://search.google.com/local/writereview?placeid=ChIJk8KnJ2nAwjsRzzbUIFTQzsM" 
+                target="_blank" 
+                class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-gold to-gold-dark hover:brightness-110 text-botanical-deep text-xs font-bold uppercase tracking-wider transition shadow flex items-center justify-center gap-2">
+                <span>⭐ Leave a Google Review</span>
+                <span>★</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   <!-- LUXURY FOOTER -->
   <footer class="bg-botanical-deep text-white border-t border-gold/20 pt-16 pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -4412,13 +4482,15 @@
     // 3. BOOKING MODAL CONTROL
     const bookingModal = document.getElementById('booking-modal');
     function openBookingModal(preference) {
+      if (preference === 'banquet') {
+        openBanquetModal();
+        return;
+      }
       bookingModal.classList.remove('hidden');
       if (preference === 'terrace') {
         document.getElementById('ambiance-choice').value = 'The Starlit Terrace Garden';
       } else if (preference === 'lounge') {
         document.getElementById('ambiance-choice').value = 'The Imperial Velvet AC Lounge';
-      } else if (preference === 'banquet') {
-        document.getElementById('ambiance-choice').value = 'Private Banquet Celebration Suite';
       }
     }
     function closeBookingModal() {
@@ -4429,7 +4501,127 @@
     });
 
     // 4. RESERVATION SUBMISSION & WHATSAPP CRM SYNC
-    function handleReservationSubmit(e) {
+    async function handleReservationSubmit(e) {
+      e.preventDefault();
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Registering with Floor Captain...</span>';
+      }
+
+      const name = document.getElementById('guest-name').value.trim();
+      const phone = document.getElementById('guest-phone').value.trim();
+      const guestCountVal = document.getElementById('guest-count').value;
+      let partySize = 4;
+      const matchGuests = guestCountVal.match(/\d+/);
+      if (matchGuests) partySize = parseInt(matchGuests[0]);
+
+      const date = document.getElementById('booking-date').value;
+      const slot = document.getElementById('booking-slot').value;
+      const ambiance = document.getElementById('ambiance-choice').value;
+      const notes = document.getElementById('special-request').value || '';
+
+      try {
+        const res = await fetch('/api/reservations', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            guest_name: name,
+            guest_phone: phone,
+            party_size: partySize,
+            reservation_date: date,
+            time_slot: slot,
+            dining_zone: ambiance,
+            special_request: notes
+          })
+        });
+
+        const data = await res.json();
+        if (res.ok && data.success) {
+          const formEl = document.getElementById('reservation-form');
+          formEl.innerHTML = `
+            <div class="py-6 text-center space-y-4">
+              <div class="w-16 h-16 mx-auto rounded-full bg-emerald-100 text-emerald-800 text-3xl flex items-center justify-center border-2 border-emerald-600 shadow-md">
+                ✓
+              </div>
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-gold">Table Request Registered</span>
+                <h4 class="font-serif text-2xl font-bold text-botanical-deep mt-1">${data.booking_ref}</h4>
+                <p class="text-xs text-charcoal/80 mt-2 max-w-sm mx-auto">
+                  Namaste ${name}! Your table reservation has been recorded in the White Lotus private database.
+                </p>
+              </div>
+              <div class="p-3.5 bg-cream rounded-xl text-xs text-left max-w-sm mx-auto space-y-1.5 border border-gold/30">
+                <div><strong>Reservation Ref:</strong> <span class="font-mono text-botanical-deep font-bold">${data.booking_ref}</span></div>
+                <div><strong>Date &amp; Slot:</strong> ${date} (${slot})</div>
+                <div><strong>Sanctuary:</strong> ${ambiance}</div>
+                <div><strong>Guests:</strong> ${partySize} Diners</div>
+                <div class="text-emerald-700 font-semibold pt-1 border-t border-gold/20">✓ Dedicated Saras Baug Car Parking Allocated</div>
+              </div>
+              <div class="pt-2">
+                <a href="${data.whatsapp_url}" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-botanical-deep hover:bg-botanical-surface text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg border border-gold/40 transition">
+                  <span>Open WhatsApp Alert to Floor Captain</span>
+                  <span class="text-emerald-400">💬</span>
+                </a>
+              </div>
+              <p class="text-[10px] text-charcoal/60">Floor Captain Direct Line: +91 95135 75757</p>
+            </div>
+          `;
+          if (data.whatsapp_url) {
+            setTimeout(() => window.open(data.whatsapp_url, '_blank'), 400);
+          }
+        } else {
+          alert(data.detail || 'Reservation error. Routing to WhatsApp...');
+          window.open(`https://wa.me/919513575757?text=Namaste%20White%20Lotus,%20table%20for%20${encodeURIComponent(name)}`, '_blank');
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = originalText; }
+        }
+      } catch (err) {
+        window.open(`https://wa.me/919513575757?text=Namaste%20White%20Lotus,%20table%20for%20${encodeURIComponent(name)}`, '_blank');
+        closeBookingModal();
+      }
+    }
+
+    // Dynamic Live Menu Sync from SQLite
+    async function syncLiveMenuFromDB() {
+      try {
+        const res = await fetch('/api/menu?dietary=all');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data.items || data.items.length === 0) return;
+
+        const liveMap = new Map();
+        data.items.forEach(it => liveMap.set(it.name.toLowerCase().trim(), it));
+
+        document.querySelectorAll('.menu-item-card').forEach(card => {
+          const nameEl = card.querySelector('.dish-name');
+          if (nameEl) {
+            const rawName = nameEl.innerText.split('Sold Out')[0].trim().toLowerCase();
+            const liveItem = liveMap.get(rawName);
+            if (liveItem) {
+              const priceEl = card.querySelector('.dish-price');
+              if (priceEl && liveItem.price) priceEl.innerText = liveItem.price;
+              if (liveItem.is_available === false) {
+                card.classList.add('opacity-45', 'grayscale-[30%]');
+                if (!card.querySelector('.sold-out-badge')) {
+                  const badge = document.createElement('span');
+                  badge.className = 'sold-out-badge text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-rose-900/80 text-rose-200 border border-rose-500/40 ml-2 inline-block';
+                  badge.innerText = 'Sold Out';
+                  nameEl.appendChild(badge);
+                }
+              } else {
+                card.classList.remove('opacity-45', 'grayscale-[30%]');
+                const b = card.querySelector('.sold-out-badge');
+                if (b) b.remove();
+              }
+            }
+          }
+        });
+      } catch (e) {}
+    }
+    window.addEventListener('DOMContentLoaded', syncLiveMenuFromDB);
+
+    function legacySubmitIgnored(e) {
       e.preventDefault();
       const name = document.getElementById('guest-name').value;
       const phone = document.getElementById('guest-phone').value;
@@ -4640,6 +4832,170 @@
       requestAnimationFrame(animatePetals);
     }
     animatePetals();
+  </script>
+
+  <!-- BANQUET & PRIVATE EVENT MODAL -->
+  <div id="banquet-modal" class="fixed inset-0 z-50 hidden bg-botanical-deep/70 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-lg bg-alabaster rounded-3xl shadow-2xl border border-gold/30 p-6 sm:p-8 my-8 text-charcoal">
+      <button onclick="closeBanquetModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-silk hover:bg-gold/20 flex items-center justify-center text-charcoal transition-all">✕</button>
+
+      <div class="mb-5 space-y-1">
+        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">20 to 150 Guests Banquets</span>
+        <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-botanical-deep">
+          Private Events &amp; Celebrations
+        </h3>
+        <p class="text-xs text-charcoal/70">
+          Birthdays, Anniversaries, Corporate Dinners &amp; Cocktail Soirées on our Starlit Terrace.
+        </p>
+      </div>
+
+      <form id="banquet-form" onsubmit="handleBanquetSubmit(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Host / Contact Name *</label>
+          <input type="text" id="banquet-name" required placeholder="e.g. Vikramaditya Shinde" class="w-full px-4 py-2.5 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Mobile (WhatsApp) *</label>
+            <input type="tel" id="banquet-phone" required placeholder="e.g. 9822012345" class="w-full px-4 py-2.5 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Email Address</label>
+            <input type="email" id="banquet-email" placeholder="e.g. name@company.com" class="w-full px-4 py-2.5 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Event Type *</label>
+            <select id="banquet-type" required class="w-full px-3 py-2.5 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+              <option value="Birthday Party">🎂 Birthday Celebration</option>
+              <option value="Anniversary">💍 Wedding Anniversary</option>
+              <option value="Corporate Dinner">🏢 Corporate Dinner / Gathering</option>
+              <option value="Family Get-Together">👨‍👩‍👧‍👦 Family Celebration</option>
+              <option value="Cocktail Soiree">🍸 Cocktail &amp; Bar Soirée</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Estimated Guests *</label>
+            <select id="banquet-guests" required class="w-full px-3 py-2.5 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+              <option value="25">20 to 30 Guests</option>
+              <option value="45" selected>30 to 50 Guests</option>
+              <option value="75">50 to 80 Guests</option>
+              <option value="120">80 to 150 Guests (Full Buyout)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Preferred Date *</label>
+            <input type="date" id="banquet-date" required class="w-full px-3 py-2.5 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Cuisine / Bar Package *</label>
+            <select id="banquet-cuisine" required class="w-full px-3 py-2.5 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+              <option value="Pure Veg Royal Feast">Pure Veg Royal Feast</option>
+              <option value="Veg + Non-Veg Grand Buffet" selected>Veg + Non-Veg Grand Buffet</option>
+              <option value="Premium Bar & Cocktail Package">Premium Bar &amp; Cocktail Package</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-botanical-deep mb-1">Special Requirements</label>
+          <input type="text" id="banquet-notes" placeholder="e.g. Projector needed, custom anniversary cake, live music" class="w-full px-4 py-2.5 rounded-xl bg-white border border-gold/20 focus:border-gold focus:outline-none text-xs">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 bg-botanical-deep hover:bg-botanical-surface text-white text-xs font-bold uppercase tracking-widest rounded-xl transition shadow flex items-center justify-center gap-2 border border-gold/40">
+            <span>Request Bespoke Proposal &amp; Open WhatsApp</span>
+            <span>💬</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+
+    // BANQUET MODAL SCRIPT
+    const banquetModal = document.getElementById('banquet-modal');
+    function openBanquetModal() {
+      if (banquetModal) banquetModal.classList.remove('hidden');
+      const bDate = document.getElementById('banquet-date');
+      if (bDate && !bDate.value) bDate.value = new Date().toISOString().split('T')[0];
+    }
+    function closeBanquetModal() {
+      if (banquetModal) banquetModal.classList.add('hidden');
+    }
+    if (banquetModal) {
+      banquetModal.addEventListener('click', (e) => {
+        if (e.target === banquetModal) closeBanquetModal();
+      });
+    }
+
+    async function handleBanquetSubmit(e) {
+      e.preventDefault();
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Submitting Enquiry...</span>';
+
+      const payload = {
+        contact_name: document.getElementById('banquet-name').value.trim(),
+        contact_phone: document.getElementById('banquet-phone').value.trim(),
+        contact_email: document.getElementById('banquet-email').value.trim(),
+        event_type: document.getElementById('banquet-type').value,
+        estimated_guests: parseInt(document.getElementById('banquet-guests').value) || 30,
+        event_date: document.getElementById('banquet-date').value,
+        cuisine_preference: document.getElementById('banquet-cuisine').value,
+        special_requests: document.getElementById('banquet-notes').value || ''
+      };
+
+      try {
+        const res = await fetch('/api/banquets', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          const formEl = document.getElementById('banquet-form');
+          formEl.innerHTML = `
+            <div class="py-6 text-center space-y-4">
+              <div class="w-16 h-16 mx-auto rounded-full bg-emerald-100 text-emerald-800 text-3xl flex items-center justify-center border-2 border-emerald-600 shadow-md">✓</div>
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-gold">Banquet Lead Logged</span>
+                <h4 class="font-serif text-2xl font-bold text-botanical-deep mt-1">${data.enquiry_ref}</h4>
+                <p class="text-xs text-charcoal/80 mt-2 max-w-sm mx-auto">
+                  Namaste ${payload.contact_name}! Your private banquet request for ${payload.estimated_guests} guests on ${payload.event_date} has been registered.
+                </p>
+              </div>
+              <div class="pt-2">
+                <a href="${data.whatsapp_url}" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-botanical-deep hover:bg-botanical-surface text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow border border-gold/40 transition">
+                  <span>Open WhatsApp Alert to Events Coordinator</span>
+                  <span class="text-emerald-400">💬</span>
+                </a>
+              </div>
+            </div>
+          `;
+          if (data.whatsapp_url) {
+            setTimeout(() => window.open(data.whatsapp_url, '_blank'), 400);
+          }
+        } else {
+          alert(data.detail || 'Error submitting banquet inquiry');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      } catch (err) {
+        alert('Network connection error. Please try again.');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    }
+
   </script>
 </body>
 </html>

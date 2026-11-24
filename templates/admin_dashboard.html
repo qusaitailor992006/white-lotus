@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Command Dashboard — White Lotus Pune</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              950: '#071812',
+              900: '#0B281E',
+              850: '#0E2F24',
+              800: '#13382C',
+              700: '#1C4D3D'
+            },
+            gold: {
+              300: '#E6CF8B',
+              400: '#D4AF37',
+              500: '#C59B47',
+              600: '#A47D2E'
+            },
+            pearl: '#FAF8F5'
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom luxury scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0B281E; }
+    ::-webkit-scrollbar-thumb { background: #C59B47; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-emerald-950 text-pearl font-sans min-h-screen flex flex-col md:flex-row antialiased">
+
+  <!-- Mobile Top Bar -->
+  <div class="md:hidden bg-emerald-900 border-b border-gold-500/30 p-4 flex justify-between items-center sticky top-0 z-40">
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">🪷</span>
+      <div>
+        <h1 class="font-cinzel text-sm font-bold tracking-wider text-pearl">WHITE LOTUS</h1>
+        <p class="text-[10px] text-gold-400 font-semibold uppercase tracking-wider">Floor Captain Dashboard</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button onclick="handleLogout()" class="px-3 py-1.5 rounded bg-emerald-800 border border-gold-500/30 text-xs text-gold-300 font-medium hover:bg-emerald-700">
+        Exit
+      </button>
+    </div>
+  </div>
+
+  <!-- Sidebar (Desktop) -->
+  <aside class="w-full md:w-64 bg-emerald-900 border-r border-gold-500/20 flex-shrink-0 flex flex-col justify-between hidden md:flex min-h-screen p-5 sticky top-0 h-screen">
+    <div>
+      <!-- Brand -->
+      <div class="flex items-center gap-3 pb-6 border-b border-gold-500/20">
+        <div class="w-10 h-10 rounded-full bg-emerald-800 border border-gold-500 flex items-center justify-center text-xl text-gold-400">
+          🪷
+        </div>
+        <div>
+          <div class="font-cinzel text-base font-bold tracking-wider text-pearl">WHITE LOTUS</div>
+          <div class="text-[10px] text-gold-400 font-semibold tracking-widest uppercase">Pune Fine Dining</div>
+        </div>
+      </div>
+
+      <!-- Staff info -->
+      <div class="my-4 p-3 bg-emerald-850 rounded-lg border border-gold-500/10 flex items-center justify-between">
+        <div>
+          <div class="text-xs font-semibold text-pearl" id="sidebarStaffName">Floor Captain</div>
+          <div class="text-[10px] text-emerald-400 flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Live Floor Shift</span>
+          </div>
+        </div>
+        <span class="text-xs px-2 py-0.5 rounded bg-gold-500/20 text-gold-300 font-medium uppercase text-[9px]">Admin</span>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="space-y-1.5 mt-6">
+        <button onclick="switchTab('reservations')" id="nav-reservations" class="tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-medium transition text-emerald-950 bg-gold-400 font-semibold shadow-md">
+          <span class="flex items-center gap-2.5">
+            <span>📅</span>
+            <span>Table Reservations</span>
+          </span>
+          <span id="badgePendingRes" class="px-1.5 py-0.5 rounded-full bg-emerald-900 text-gold-300 text-[10px] font-bold">...</span>
+        </button>
+
+        <button onclick="switchTab('menu')" id="nav-menu" class="tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-medium transition text-gray-300 hover:text-pearl hover:bg-emerald-800/60">
+          <span class="flex items-center gap-2.5">
+            <span>📖</span>
+            <span>Menu Manager</span>
+          </span>
+          <span id="badgeMenuCount" class="text-[10px] text-gray-400">166+</span>
+        </button>
+
+        <button onclick="switchTab('customers')" id="nav-customers" class="tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-medium transition text-gray-300 hover:text-pearl hover:bg-emerald-800/60">
+          <span class="flex items-center gap-2.5">
+            <span>👥</span>
+            <span>Customer CRM</span>
+          </span>
+          <span id="badgeCustCount" class="text-[10px] text-gray-400">...</span>
+        </button>
+
+        <button onclick="switchTab('banquets')" id="nav-banquets" class="tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-medium transition text-gray-300 hover:text-pearl hover:bg-emerald-800/60">
+          <span class="flex items-center gap-2.5">
+            <span>🥂</span>
+            <span>Banquets &amp; Events</span>
+          </span>
+          <span id="badgeBanquetCount" class="text-[10px] text-gold-400 font-bold">New</span>
+        </button>
+
+        <button onclick="switchTab('analytics')" id="nav-analytics" class="tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-medium transition text-gray-300 hover:text-pearl hover:bg-emerald-800/60">
+          <span class="flex items-center gap-2.5">
+            <span>📊</span>
+            <span>Live Analytics</span>
+          </span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Bottom Actions -->
+    <div class="pt-4 border-t border-gold-500/20 space-y-2">
+      <a href="/" target="_blank" class="w-full flex items-center justify-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-800/80 hover:bg-emerald-700/80 text-xs text-gold-300 transition border border-gold-500/20">
+        <span>🌐</span>
+        <span>View Public Website</span>
+      </a>
+      <button onclick="handleLogout()" class="w-full flex items-center justify-center gap-2 px-3.5 py-2 rounded-lg bg-rose-950/40 hover:bg-rose-900/50 text-xs text-rose-300 transition border border-rose-500/30">
+        <span>🚪</span>
+        <span>Sign Out</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Mobile Tab Navigation Bar -->
+  <div class="md:hidden bg-emerald-900 border-b border-gold-500/20 px-3 py-2 flex items-center gap-1 overflow-x-auto whitespace-nowrap z-30">
+    <button onclick="switchTab('reservations')" id="mob-reservations" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-gold-400 text-emerald-950">Reservations</button>
+    <button onclick="switchTab('menu')" id="mob-menu" class="px-3 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-emerald-800">Menu</button>
+    <button onclick="switchTab('customers')" id="mob-customers" class="px-3 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-emerald-800">Customers</button>
+    <button onclick="switchTab('banquets')" id="mob-banquets" class="px-3 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-emerald-800">Banquets</button>
+    <button onclick="switchTab('analytics')" id="mob-analytics" class="px-3 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-emerald-800">Analytics</button>
+  </div>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 p-4 md:p-8 overflow-y-auto max-w-7xl w-full">
+
+    <!-- Flash notification toast -->
+    <div id="toast" class="hidden fixed bottom-5 right-5 z-50 px-4 py-3 rounded-lg shadow-xl text-xs font-semibold flex items-center gap-2 border transition-all"></div>
+
+    <!-- ================= TAB 1: RESERVATIONS ================= -->
+    <section id="tab-reservations" class="space-y-6">
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gold-500/20">
+        <div>
+          <h2 class="font-cinzel text-xl md:text-2xl font-bold text-pearl">Table Reservations</h2>
+          <p class="text-xs text-gold-300/80 mt-0.5">Manage live floor bookings, confirm covers, and send instant WhatsApp alerts.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="loadReservations()" class="px-3 py-2 rounded-lg bg-emerald-800 hover:bg-emerald-700 text-gold-300 text-xs border border-gold-500/20 flex items-center gap-1.5 transition">
+            <span>⟳</span>
+            <span>Refresh</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters & Search Bar -->
+      <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+        <!-- Status filter buttons -->
+        <div class="flex flex-wrap gap-1.5" id="resFilterGroup">
+          <button onclick="setResFilter('All')" class="res-filter-btn px-3 py-1.5 rounded-md text-xs font-semibold bg-gold-400 text-emerald-950">All</button>
+          <button onclick="setResFilter('Pending')" class="res-filter-btn px-3 py-1.5 rounded-md text-xs font-medium text-gray-300 bg-emerald-900 border border-gold-500/20 hover:text-pearl">Pending</button>
+          <button onclick="setResFilter('Confirmed')" class="res-filter-btn px-3 py-1.5 rounded-md text-xs font-medium text-gray-300 bg-emerald-900 border border-gold-500/20 hover:text-pearl">Confirmed</button>
+          <button onclick="setResFilter('Rescheduled')" class="res-filter-btn px-3 py-1.5 rounded-md text-xs font-medium text-gray-300 bg-emerald-900 border border-gold-500/20 hover:text-pearl">Rescheduled</button>
+          <button onclick="setResFilter('Rejected')" class="res-filter-btn px-3 py-1.5 rounded-md text-xs font-medium text-gray-300 bg-emerald-900 border border-gold-500/20 hover:text-pearl">Rejected</button>
+        </div>
+
+        <!-- Search input -->
+        <div class="relative w-full md:w-72">
+          <input 
+            type="text" 
+            id="resSearchInput" 
+            placeholder="Search guest, phone, or ref..." 
+            oninput="handleResSearch()"
+            class="w-full pl-9 pr-3 py-2 bg-emerald-900/90 border border-gold-500/30 rounded-lg text-xs text-pearl placeholder-gray-400 focus:outline-none focus:border-gold-400"
+          >
+          <span class="absolute left-3 top-2.5 text-xs text-gray-400">🔍</span>
+        </div>
+      </div>
+
+      <!-- Reservations List Cards / Container -->
+      <div id="reservationsContainer" class="space-y-3">
+        <div class="p-8 text-center text-xs text-gray-400">Loading live reservations...</div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 2: MENU MANAGER ================= -->
+    <section id="tab-menu" class="space-y-6 hidden">
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gold-500/20">
+        <div>
+          <h2 class="font-cinzel text-xl md:text-2xl font-bold text-pearl">Menu Manager (166+ Items)</h2>
+          <p class="text-xs text-gold-300/80 mt-0.5">Live CRUD: toggle Availability, edit pricing, or add new dishes/mixology.</p>
+        </div>
+        <button onclick="openAddMenuModal()" class="px-4 py-2 rounded-lg bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-emerald-950 font-cinzel font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-1.5">
+          <span>+</span>
+          <span>Add New Dish/Drink</span>
+        </button>
+      </div>
+
+      <!-- Controls: Category & Search -->
+      <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
+        <div class="flex items-center gap-2">
+          <select id="menuCategoryFilter" onchange="loadAdminMenu()" class="px-3 py-2 bg-emerald-900 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+            <option value="all">All Categories (166+)</option>
+            <option value="appetizers">Small Plates &amp; Appetizers</option>
+            <option value="soups-salads-bao">Soups, Salads &amp; Bao</option>
+            <option value="pizza-pasta-risotto">Pizza, Pasta &amp; Risotto</option>
+            <option value="bowls-continental">Global Bowls &amp; Steaks</option>
+            <option value="breads-rice-noodles">Breads, Rice &amp; Noodles</option>
+            <option value="mains">Imperial Mains &amp; Curries</option>
+            <option value="desserts-icecream">Desserts &amp; Natural Ice Creams</option>
+            <option value="bar-mixology">The Lotus Bar &amp; Cellar</option>
+          </select>
+          <span id="menuItemCountBadge" class="text-xs text-gold-400 font-semibold px-2 py-1 rounded bg-emerald-900 border border-gold-500/20">-- items</span>
+        </div>
+
+        <div class="relative w-full sm:w-72">
+          <input 
+            type="text" 
+            id="menuSearchInput" 
+            placeholder="Search dish or drink name..." 
+            oninput="handleMenuSearch()"
+            class="w-full pl-9 pr-3 py-2 bg-emerald-900/90 border border-gold-500/30 rounded-lg text-xs text-pearl placeholder-gray-400 focus:outline-none focus:border-gold-400"
+          >
+          <span class="absolute left-3 top-2.5 text-xs text-gray-400">🔍</span>
+        </div>
+      </div>
+
+      <!-- Menu Items Table -->
+      <div class="bg-emerald-900/70 border border-gold-500/20 rounded-xl overflow-hidden shadow-xl">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-emerald-950 text-gold-400 uppercase text-[10px] tracking-wider border-b border-gold-500/20">
+              <tr>
+                <th class="py-3 px-4">Item Name &amp; Description</th>
+                <th class="py-3 px-3">Dietary</th>
+                <th class="py-3 px-3">Category</th>
+                <th class="py-3 px-3">Price</th>
+                <th class="py-3 px-3 text-center">Status</th>
+                <th class="py-3 px-4 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="menuTableBody" class="divide-y divide-emerald-800/40 text-gray-200">
+              <tr><td colspan="6" class="p-8 text-center text-gray-400">Loading catalog items...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 3: CUSTOMER CRM ================= -->
+    <section id="tab-customers" class="space-y-6 hidden">
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gold-500/20">
+        <div>
+          <h2 class="font-cinzel text-xl md:text-2xl font-bold text-pearl">Customer CRM &amp; Guest Directory</h2>
+          <p class="text-xs text-gold-300/80 mt-0.5">Automated guest profiling from table reservations and banquet leads.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="/api/admin/customers/export-csv" class="px-3.5 py-2 rounded-lg bg-emerald-800 hover:bg-emerald-700 text-gold-300 text-xs border border-gold-500/30 flex items-center gap-1.5 transition">
+            <span>📥</span>
+            <span>Export CSV</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Filters & Search -->
+      <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
+        <div class="flex items-center gap-2">
+          <select id="custTagFilter" onchange="loadCustomers()" class="px-3 py-2 bg-emerald-900 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+            <option value="All">All Guest Tags</option>
+            <option value="VIP">VIP Diners Only</option>
+            <option value="Regular">Regular Diners</option>
+          </select>
+          <span id="custCountBadge" class="text-xs text-gold-400 font-semibold px-2 py-1 rounded bg-emerald-900 border border-gold-500/20">-- guests</span>
+        </div>
+
+        <div class="relative w-full sm:w-72">
+          <input 
+            type="text" 
+            id="custSearchInput" 
+            placeholder="Search name, phone, or email..." 
+            oninput="handleCustSearch()"
+            class="w-full pl-9 pr-3 py-2 bg-emerald-900/90 border border-gold-500/30 rounded-lg text-xs text-pearl placeholder-gray-400 focus:outline-none focus:border-gold-400"
+          >
+          <span class="absolute left-3 top-2.5 text-xs text-gray-400">🔍</span>
+        </div>
+      </div>
+
+      <!-- Customers Table -->
+      <div class="bg-emerald-900/70 border border-gold-500/20 rounded-xl overflow-hidden shadow-xl">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-emerald-950 text-gold-400 uppercase text-[10px] tracking-wider border-b border-gold-500/20">
+              <tr>
+                <th class="py-3 px-4">Guest Name</th>
+                <th class="py-3 px-3">Contact</th>
+                <th class="py-3 px-3">Bookings</th>
+                <th class="py-3 px-3">Last Visit</th>
+                <th class="py-3 px-3">Preferred Zone</th>
+                <th class="py-3 px-3">Tier</th>
+                <th class="py-3 px-4">Staff Notes</th>
+                <th class="py-3 px-3 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="customersTableBody" class="divide-y divide-emerald-800/40 text-gray-200">
+              <tr><td colspan="8" class="p-8 text-center text-gray-400">Loading customer CRM profiles...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 4: BANQUETS (PHASE 2 READY) ================= -->
+    <section id="tab-banquets" class="space-y-6 hidden">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gold-500/20">
+        <div>
+          <h2 class="font-cinzel text-xl md:text-2xl font-bold text-pearl">Private Events &amp; Banquets (20–150 Guests)</h2>
+          <p class="text-xs text-gold-300/80 mt-0.5">Manage large corporate dinners, birthdays, anniversaries, and family celebrations.</p>
+        </div>
+      </div>
+      <div id="banquetCardsContainer" class="space-y-3">
+        <div class="p-8 text-center text-xs text-gray-400">Loading banquet enquiries...</div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 5: ANALYTICS (PHASE 2 READY) ================= -->
+    <section id="tab-analytics" class="space-y-6 hidden">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gold-500/20">
+        <div>
+          <h2 class="font-cinzel text-xl md:text-2xl font-bold text-pearl">Executive Analytics &amp; KPIs</h2>
+          <p class="text-xs text-gold-300/80 mt-0.5">Privacy-safe first-party traffic, conversion ratios, and culinary demand.</p>
+        </div>
+      </div>
+      <div id="analyticsContent" class="space-y-6">
+        <div class="p-8 text-center text-xs text-gray-400">Loading analytics KPIs...</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= RESCHEDULE MODAL ================= -->
+  <div id="rescheduleModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-emerald-900 border border-gold-500/40 rounded-xl p-6 w-full max-w-md shadow-2xl">
+      <h3 class="font-cinzel text-lg font-bold text-pearl mb-1">Reschedule Table Booking</h3>
+      <p class="text-xs text-gold-300/80 mb-4" id="rescheduleSubtitle">Select new date &amp; time slot for guest</p>
+
+      <input type="hidden" id="modalResId">
+      
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">New Date</label>
+          <input type="date" id="modalResDate" class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">New Time Slot</label>
+          <select id="modalResTime" class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+            <option value="Lunch (12:30 PM)">Lunch (12:30 PM)</option>
+            <option value="Lunch (1:30 PM)">Lunch (1:30 PM)</option>
+            <option value="Sunset / Evening (5:00 PM)">Sunset / Evening (5:00 PM)</option>
+            <option value="Dinner (7:30 PM)">Dinner (7:30 PM)</option>
+            <option value="Dinner (8:30 PM)">Dinner (8:30 PM)</option>
+            <option value="Late Night (9:45 PM)">Late Night (9:45 PM)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end gap-2">
+        <button onclick="closeRescheduleModal()" class="px-4 py-2 rounded-lg bg-emerald-800 text-xs text-gray-300 hover:bg-emerald-700">Cancel</button>
+        <button onclick="submitReschedule()" class="px-4 py-2 rounded-lg bg-gold-400 text-emerald-950 font-bold text-xs hover:bg-gold-300">Save &amp; Update</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ADD / EDIT MENU MODAL ================= -->
+  <div id="menuModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-emerald-900 border border-gold-500/40 rounded-xl p-6 w-full max-w-lg shadow-2xl max-h-[90vh] overflow-y-auto">
+      <h3 class="font-cinzel text-lg font-bold text-pearl mb-1" id="menuModalTitle">Add New Dish or Drink</h3>
+      <p class="text-xs text-gold-300/80 mb-4">Item will immediately reflect live on the public menu deck.</p>
+
+      <input type="hidden" id="menuModalId">
+
+      <div class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">Item Name *</label>
+          <input type="text" id="menuFormName" placeholder="e.g. Saffron Infused Burrata" required class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">Category *</label>
+            <select id="menuFormCategory" class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+              <option value="appetizers">Small Plates &amp; Appetizers</option>
+              <option value="soups-salads-bao">Soups, Salads &amp; Bao</option>
+              <option value="pizza-pasta-risotto">Pizza, Pasta &amp; Risotto</option>
+              <option value="bowls-continental">Global Bowls &amp; Steaks</option>
+              <option value="breads-rice-noodles">Breads, Rice &amp; Noodles</option>
+              <option value="mains">Imperial Mains &amp; Curries</option>
+              <option value="desserts-icecream">Desserts &amp; Natural Ice Creams</option>
+              <option value="bar-mixology">The Lotus Bar &amp; Cellar</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">Dietary Type *</label>
+            <select id="menuFormDietary" class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+              <option value="veg">🟢 Pure Veg</option>
+              <option value="nonveg">🔴 Non-Veg</option>
+              <option value="bar">🍸 The Bar (Cocktail / Wine / Spirits)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">Price *</label>
+            <input type="text" id="menuFormPrice" placeholder="e.g. ₹480 or ₹730 / ₹3,600" required class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">Badge (Optional)</label>
+            <input type="text" id="menuFormBadge" placeholder="e.g. House Signature, Clay Oven" class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">Description</label>
+          <textarea id="menuFormDesc" rows="2" placeholder="Ingredients, preparation technique, herbs..." class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400"></textarea>
+        </div>
+
+        <div class="flex items-center gap-2 pt-1">
+          <input type="checkbox" id="menuFormAvailable" checked class="w-4 h-4 rounded text-gold-400 focus:ring-gold-400">
+          <label for="menuFormAvailable" class="text-xs text-pearl font-medium">Currently Available (Uncheck to mark as Sold Out)</label>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end gap-2">
+        <button onclick="closeMenuModal()" class="px-4 py-2 rounded-lg bg-emerald-800 text-xs text-gray-300 hover:bg-emerald-700">Cancel</button>
+        <button onclick="submitMenuForm()" class="px-4 py-2 rounded-lg bg-gold-400 text-emerald-950 font-bold text-xs hover:bg-gold-300">Save Item</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= EDIT CUSTOMER NOTES MODAL ================= -->
+  <div id="custNotesModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-emerald-900 border border-gold-500/40 rounded-xl p-6 w-full max-w-md shadow-2xl">
+      <h3 class="font-cinzel text-lg font-bold text-pearl mb-1">Staff Notes &amp; Guest Tag</h3>
+      <p class="text-xs text-gold-300/80 mb-4" id="custModalSubtitle">Update preferences for guest</p>
+
+      <input type="hidden" id="custModalId">
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">Guest Tier</label>
+          <select id="custModalTag" class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400">
+            <option value="Regular">Regular Guest</option>
+            <option value="VIP">⭐ VIP High-Spender</option>
+            <option value="Corporate">🏢 Corporate Executive</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1">Floor Staff Private Notes</label>
+          <textarea id="custModalNotes" rows="3" placeholder="e.g. Loves corner terrace table, allergic to peanuts, celebrates anniversary in Nov..." class="w-full px-3 py-2 bg-emerald-950 border border-gold-500/30 rounded-lg text-xs text-pearl focus:outline-none focus:border-gold-400"></textarea>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end gap-2">
+        <button onclick="closeCustModal()" class="px-4 py-2 rounded-lg bg-emerald-800 text-xs text-gray-300 hover:bg-emerald-700">Cancel</button>
+        <button onclick="submitCustUpdate()" class="px-4 py-2 rounded-lg bg-gold-400 text-emerald-950 font-bold text-xs hover:bg-gold-300">Save Profile</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD SCRIPT -->
+  <script>
+    let activeTab = 'reservations';
+    let currentResFilter = 'All';
+    let allReservations = [];
+    let allMenuItems = [];
+    let allCustomers = [];
+
+    // Toast helper
+    function showToast(message, isError = false) {
+      const toast = document.getElementById('toast');
+      toast.className = `fixed bottom-5 right-5 z-50 px-4 py-3 rounded-lg shadow-xl text-xs font-semibold flex items-center gap-2 border transition-all ${
+        isError ? 'bg-rose-950 border-rose-500 text-rose-200' : 'bg-emerald-800 border-gold-400 text-gold-300'
+      }`;
+      toast.innerHTML = `<span>${isError ? '⚠️' : '✓'}</span><span>${message}</span>`;
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 3500);
+    }
+
+    // Tab Switching
+    function switchTab(tab) {
+      activeTab = tab;
+      ['reservations', 'menu', 'customers', 'banquets', 'analytics'].forEach(t => {
+        const sec = document.getElementById(`tab-${t}`);
+        const navBtn = document.getElementById(`nav-${t}`);
+        const mobBtn = document.getElementById(`mob-${t}`);
+        if (t === tab) {
+          if (sec) sec.classList.remove('hidden');
+          if (navBtn) {
+            navBtn.className = "tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-medium transition text-emerald-950 bg-gold-400 font-semibold shadow-md";
+          }
+          if (mobBtn) mobBtn.className = "px-3 py-1.5 rounded-full text-xs font-semibold bg-gold-400 text-emerald-950";
+        } else {
+          if (sec) sec.classList.add('hidden');
+          if (navBtn) {
+            navBtn.className = "tab-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-medium transition text-gray-300 hover:text-pearl hover:bg-emerald-800/60";
+          }
+          if (mobBtn) mobBtn.className = "px-3 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-emerald-800";
+        }
+      });
+
+      if (tab === 'reservations') loadReservations();
+      if (tab === 'menu') loadAdminMenu();
+      if (tab === 'customers') loadCustomers();
+      if (tab === 'banquets') loadBanquets();
+      if (tab === 'analytics') loadAnalytics();
+    }
+
+    // ================= RESERVATIONS LOGIC =================
+    async function loadReservations() {
+      const container = document.getElementById('reservationsContainer');
+      try {
+        const res = await fetch(`/api/admin/reservations?status_filter=${encodeURIComponent(currentResFilter)}`);
+        if (res.status === 401) {
+          window.location.href = '/admin/login';
+          return;
+        }
+        const data = await res.json();
+        allReservations = data.reservations || [];
+
+        // Update pending badge
+        const pendingCount = allReservations.filter(r => r.status === 'Pending').length;
+        document.getElementById('badgePendingRes').innerText = pendingCount;
+
+        renderReservations(allReservations);
+      } catch (e) {
+        container.innerHTML = `<div class="p-6 text-center text-xs text-rose-300">Error loading reservations: ${e.message}</div>`;
+      }
+    }
+
+    function setResFilter(filter) {
+      currentResFilter = filter;
+      document.querySelectorAll('.res-filter-btn').forEach(btn => {
+        if (btn.innerText === filter) {
+          btn.className = "res-filter-btn px-3 py-1.5 rounded-md text-xs font-semibold bg-gold-400 text-emerald-950";
+        } else {
+          btn.className = "res-filter-btn px-3 py-1.5 rounded-md text-xs font-medium text-gray-300 bg-emerald-900 border border-gold-500/20 hover:text-pearl";
+        }
+      });
+      loadReservations();
+    }
+
+    function handleResSearch() {
+      const q = document.getElementById('resSearchInput').value.toLowerCase().trim();
+      if (!q) {
+        renderReservations(allReservations);
+        return;
+      }
+      const filtered = allReservations.filter(r => 
+        r.guest_name.toLowerCase().includes(q) ||
+        r.guest_phone.toLowerCase().includes(q) ||
+        r.booking_ref.toLowerCase().includes(q)
+      );
+      renderReservations(filtered);
+    }
+
+    function renderReservations(list) {
+      const container = document.getElementById('reservationsContainer');
+      if (!list || list.length === 0) {
+        container.innerHTML = `
+          <div class="bg-emerald-900/40 border border-gold-500/20 rounded-xl p-8 text-center text-xs text-gray-400">
+            No reservations found for current filter.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map(r => {
+        let statusBadge = '';
+        if (r.status === 'Pending') {
+          statusBadge = '<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40">⏳ Pending</span>';
+        } else if (r.status === 'Confirmed') {
+          statusBadge = '<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">✓ Confirmed</span>';
+        } else if (r.status === 'Rescheduled') {
+          statusBadge = '<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sky-500/20 text-sky-300 border border-sky-500/40">⟳ Rescheduled</span>';
+        } else if (r.status === 'Rejected') {
+          statusBadge = '<span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-rose-500/20 text-rose-300 border border-rose-500/40">✕ Rejected</span>';
+        }
+
+        const isVip = r.customer_tag === 'VIP';
+        const vipBadge = isVip ? '<span class="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-gold-400 text-emerald-950">⭐ VIP Guest</span>' : '';
+
+        return `
+          <div class="bg-emerald-900/80 border border-gold-500/25 rounded-xl p-4 md:p-5 shadow-lg transition hover:border-gold-400/50">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-gold-500/15">
+              <div class="flex items-center gap-3">
+                <span class="w-9 h-9 rounded-full bg-emerald-800 border border-gold-500/30 flex items-center justify-center text-sm font-bold text-gold-400">
+                  ${r.guest_name.charAt(0)}
+                </span>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-cinzel text-sm font-bold text-pearl">${r.guest_name}</span>
+                    ${vipBadge}
+                    <span class="text-[10px] text-gray-400 font-mono">(${r.booking_ref})</span>
+                  </div>
+                  <div class="text-xs text-gray-300 flex items-center gap-2 mt-0.5">
+                    <span>📞 ${r.guest_phone}</span>
+                    <span>•</span>
+                    <span class="text-gold-300">${r.customer_total_bookings} Total Visits</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2">
+                ${statusBadge}
+                <span class="text-[10px] text-gray-400">${r.created_at}</span>
+              </div>
+            </div>
+
+            <!-- Booking Details Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-3.5 text-xs">
+              <div class="p-2.5 rounded-lg bg-emerald-950/60 border border-gold-500/10">
+                <div class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Date &amp; Time</div>
+                <div class="font-semibold text-pearl mt-0.5">${r.rescheduled_date || r.reservation_date}</div>
+                <div class="text-[11px] text-gold-300 font-medium">${r.rescheduled_time || r.time_slot}</div>
+              </div>
+
+              <div class="p-2.5 rounded-lg bg-emerald-950/60 border border-gold-500/10">
+                <div class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Party Size</div>
+                <div class="font-semibold text-pearl mt-0.5">${r.party_size} Diners</div>
+                <div class="text-[10px] text-gray-400">Reserved Table</div>
+              </div>
+
+              <div class="p-2.5 rounded-lg bg-emerald-950/60 border border-gold-500/10">
+                <div class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Dining Zone</div>
+                <div class="font-semibold text-pearl mt-0.5 truncate">${r.dining_zone}</div>
+                <div class="text-[10px] text-emerald-400">Dedicated Parking</div>
+              </div>
+
+              <div class="p-2.5 rounded-lg bg-emerald-950/60 border border-gold-500/10">
+                <div class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Special Request</div>
+                <div class="text-[11px] text-gray-300 mt-0.5 truncate" title="${r.special_request || 'None'}">
+                  ${r.special_request || '—'}
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions Bar -->
+            <div class="pt-2 flex flex-wrap items-center justify-between gap-2">
+              <!-- Fast Status Actions -->
+              <div class="flex items-center gap-1.5">
+                ${r.status !== 'Confirmed' ? `
+                  <button onclick="updateResStatus(${r.id}, 'Confirmed')" class="px-3 py-1.5 rounded-md bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition flex items-center gap-1 shadow">
+                    <span>✓</span> Accept Table
+                  </button>
+                ` : ''}
+
+                <button onclick="openRescheduleModal(${r.id}, '${r.guest_name}', '${r.reservation_date}', '${r.time_slot}')" class="px-3 py-1.5 rounded-md bg-emerald-800 hover:bg-emerald-700 text-gold-300 text-xs border border-gold-500/20 transition">
+                  ⟳ Reschedule
+                </button>
+
+                ${r.status !== 'Rejected' ? `
+                  <button onclick="updateResStatus(${r.id}, 'Rejected')" class="px-2.5 py-1.5 rounded-md bg-rose-950/50 hover:bg-rose-900/60 text-rose-300 text-xs border border-rose-500/30 transition">
+                    ✕ Reject
+                  </button>
+                ` : ''}
+              </div>
+
+              <!-- One-Click WhatsApp Actions -->
+              <div class="flex items-center gap-2">
+                <a href="${r.confirm_wa_url}" target="_blank" class="px-3 py-1.5 rounded-md bg-emerald-800 hover:bg-emerald-700 text-[#25D366] text-xs font-semibold border border-emerald-500/30 transition flex items-center gap-1.5">
+                  <span>💬</span> Send WhatsApp Confirmation
+                </a>
+                ${r.status === 'Rescheduled' ? `
+                  <a href="${r.reschedule_wa_url}" target="_blank" class="px-3 py-1.5 rounded-md bg-sky-950/60 hover:bg-sky-900/70 text-sky-300 text-xs font-semibold border border-sky-500/30 transition flex items-center gap-1.5">
+                    <span>💬</span> Send Reschedule Note
+                  </a>
+                ` : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function updateResStatus(id, newStatus) {
+      try {
+        const res = await fetch(`/api/admin/reservations/${id}/status`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ status: newStatus })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          showToast(data.message || `Updated reservation to ${newStatus}`);
+          loadReservations();
+        } else {
+          showToast(data.detail || 'Failed to update reservation', true);
+        }
+      } catch (err) {
+        showToast(err.message, true);
+      }
+    }
+
+    function openRescheduleModal(id, name, currentDate, currentTime) {
+      document.getElementById('modalResId').value = id;
+      document.getElementById('rescheduleSubtitle').innerText = `Rescheduling for guest: ${name}`;
+      document.getElementById('modalResDate').value = currentDate || '';
+      document.getElementById('modalResTime').value = currentTime || 'Dinner (8:00 PM)';
+      document.getElementById('rescheduleModal').classList.remove('hidden');
+    }
+
+    function closeRescheduleModal() {
+      document.getElementById('rescheduleModal').classList.add('hidden');
+    }
+
+    async function submitReschedule() {
+      const id = document.getElementById('modalResId').value;
+      const rescheduled_date = document.getElementById('modalResDate').value;
+      const rescheduled_time = document.getElementById('modalResTime').value;
+
+      if (!rescheduled_date) {
+        showToast('Please select a valid new date', true);
+        return;
+      }
+
+      try {
+        const res = await fetch(`/api/admin/reservations/${id}/status`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            status: 'Rescheduled',
+            rescheduled_date,
+            rescheduled_time
+          })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          showToast('Reservation rescheduled successfully');
+          closeRescheduleModal();
+          loadReservations();
+        } else {
+          showToast(data.detail || 'Failed to reschedule', true);
+        }
+      } catch (err) {
+        showToast(err.message, true);
+      }
+    }
+
+    // ================= MENU MANAGER LOGIC =================
+    async function loadAdminMenu() {
+      const category = document.getElementById('menuCategoryFilter').value;
+      const tbody = document.getElementById('menuTableBody');
+      try {
+        const res = await fetch(`/api/admin/menu?category=${encodeURIComponent(category)}`);
+        const data = await res.json();
+        allMenuItems = data.items || [];
+        document.getElementById('menuItemCountBadge').innerText = `${allMenuItems.length} dishes/drinks`;
+        document.getElementById('badgeMenuCount').innerText = allMenuItems.length;
+        renderMenuTable(allMenuItems);
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="6" class="p-6 text-center text-rose-300">Error: ${err.message}</td></tr>`;
+      }
+    }
+
+    function handleMenuSearch() {
+      const q = document.getElementById('menuSearchInput').value.toLowerCase().trim();
+      if (!q) {
+        renderMenuTable(allMenuItems);
+        return;
+      }
+      const filtered = allMenuItems.filter(it => 
+        it.name.toLowerCase().includes(q) ||
+        (it.desc && it.desc.toLowerCase().includes(q)) ||
+        (it.badge && it.badge.toLowerCase().includes(q))
+      );
+      renderMenuTable(filtered);
+    }
+
+    function renderMenuTable(items) {
+      const tbody = document.getElementById('menuTableBody');
+      if (!items || items.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="p-8 text-center text-gray-400">No dishes match criteria.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = items.map(it => {
+        let dietBadge = '';
+        if (it.dietary_type === 'veg') dietBadge = '<span class="text-emerald-400 font-semibold">🟢 Veg</span>';
+        else if (it.dietary_type === 'nonveg') dietBadge = '<span class="text-rose-400 font-semibold">🔴 Non-Veg</span>';
+        else dietBadge = '<span class="text-amber-400 font-semibold">🍸 The Bar</span>';
+
+        const availSwitch = `
+          <button onclick="toggleMenuAvail(${it.id})" class="px-2.5 py-1 rounded text-[10px] font-bold uppercase transition ${
+            it.is_available ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-rose-950/40 hover:text-rose-300' : 'bg-rose-500/20 text-rose-300 border border-rose-500/40 hover:bg-emerald-950/40 hover:text-emerald-300'
+          }">
+            ${it.is_available ? '✓ Available' : 'Sold Out'}
+          </button>
+        `;
+
+        return `
+          <tr class="hover:bg-emerald-800/20 transition ${!it.is_available ? 'opacity-60 bg-black/20' : ''}">
+            <td class="py-3 px-4">
+              <div class="font-semibold text-pearl text-sm flex items-center gap-2">
+                <span>${it.name}</span>
+                ${it.badge ? `<span class="text-[9px] px-1.5 py-0.5 rounded bg-gold-500/20 text-gold-300 uppercase">${it.badge}</span>` : ''}
+              </div>
+              <div class="text-[11px] text-gray-400 line-clamp-1 mt-0.5">${it.desc || '—'}</div>
+            </td>
+            <td class="py-3 px-3 whitespace-nowrap">${dietBadge}</td>
+            <td class="py-3 px-3 text-gray-300 text-[11px]">${it.category}</td>
+            <td class="py-3 px-3 font-semibold text-gold-300 whitespace-nowrap">${it.price}</td>
+            <td class="py-3 px-3 text-center whitespace-nowrap">${availSwitch}</td>
+            <td class="py-3 px-4 text-right whitespace-nowrap">
+              <button onclick="openEditMenuModal(${it.id})" class="px-2 py-1 rounded text-gold-300 hover:text-pearl hover:bg-emerald-800 text-xs transition">Edit</button>
+              <button onclick="deleteMenuItem(${it.id}, '${it.name.replace(/'/g, "\\'")}')" class="px-2 py-1 rounded text-rose-400 hover:text-rose-200 hover:bg-rose-950/40 text-xs transition ml-1">Del</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    async function toggleMenuAvail(id) {
+      try {
+        const res = await fetch(`/api/admin/menu/${id}/toggle-availability`, { method: 'PATCH' });
+        const data = await res.json();
+        if (res.ok) {
+          showToast(data.message);
+          loadAdminMenu();
+        }
+      } catch (e) {
+        showToast(e.message, true);
+      }
+    }
+
+    function openAddMenuModal() {
+      document.getElementById('menuModalTitle').innerText = 'Add New Dish or Drink';
+      document.getElementById('menuModalId').value = '';
+      document.getElementById('menuFormName').value = '';
+      document.getElementById('menuFormCategory').value = 'appetizers';
+      document.getElementById('menuFormDietary').value = 'veg';
+      document.getElementById('menuFormPrice').value = '';
+      document.getElementById('menuFormBadge').value = '';
+      document.getElementById('menuFormDesc').value = '';
+      document.getElementById('menuFormAvailable').checked = true;
+      document.getElementById('menuModal').classList.remove('hidden');
+    }
+
+    function openEditMenuModal(id) {
+      const it = allMenuItems.find(x => x.id === id);
+      if (!it) return;
+      document.getElementById('menuModalTitle').innerText = `Edit: ${it.name}`;
+      document.getElementById('menuModalId').value = it.id;
+      document.getElementById('menuFormName').value = it.name;
+      document.getElementById('menuFormCategory').value = it.category;
+      document.getElementById('menuFormDietary').value = it.dietary_type;
+      document.getElementById('menuFormPrice').value = it.price;
+      document.getElementById('menuFormBadge').value = it.badge || '';
+      document.getElementById('menuFormDesc').value = it.desc || '';
+      document.getElementById('menuFormAvailable').checked = it.is_available;
+      document.getElementById('menuModal').classList.remove('hidden');
+    }
+
+    function closeMenuModal() {
+      document.getElementById('menuModal').classList.add('hidden');
+    }
+
+    async function submitMenuForm() {
+      const id = document.getElementById('menuModalId').value;
+      const payload = {
+        name: document.getElementById('menuFormName').value.trim(),
+        category: document.getElementById('menuFormCategory').value,
+        dietary_type: document.getElementById('menuFormDietary').value,
+        price: document.getElementById('menuFormPrice').value.trim(),
+        badge: document.getElementById('menuFormBadge').value.trim(),
+        desc: document.getElementById('menuFormDesc').value.trim(),
+        is_available: document.getElementById('menuFormAvailable').checked
+      };
+
+      if (!payload.name || !payload.price) {
+        showToast('Name and price are required', true);
+        return;
+      }
+
+      try {
+        let url = '/api/admin/menu';
+        let method = 'POST';
+        if (id) {
+          url = `/api/admin/menu/${id}`;
+          method = 'PUT';
+        }
+
+        const res = await fetch(url, {
+          method,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (res.ok) {
+          showToast(data.message || 'Menu updated successfully');
+          closeMenuModal();
+          loadAdminMenu();
+        } else {
+          showToast(data.detail || 'Error saving menu item', true);
+        }
+      } catch (err) {
+        showToast(err.message, true);
+      }
+    }
+
+    async function deleteMenuItem(id, name) {
+      if (!confirm(`Are you sure you want to permanently delete "${name}" from the menu?`)) return;
+      try {
+        const res = await fetch(`/api/admin/menu/${id}`, { method: 'DELETE' });
+        const data = await res.json();
+        if (res.ok) {
+          showToast(data.message || 'Item deleted');
+          loadAdminMenu();
+        }
+      } catch (err) {
+        showToast(err.message, true);
+      }
+    }
+
+    // ================= CUSTOMERS CRM LOGIC =================
+    async function loadCustomers() {
+      const tag = document.getElementById('custTagFilter').value;
+      const tbody = document.getElementById('customersTableBody');
+      try {
+        const res = await fetch(`/api/admin/customers?tag=${encodeURIComponent(tag)}`);
+        const data = await res.json();
+        allCustomers = data.customers || [];
+        document.getElementById('custCountBadge').innerText = `${allCustomers.length} guests`;
+        document.getElementById('badgeCustCount').innerText = allCustomers.length;
+        renderCustomersTable(allCustomers);
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="8" class="p-6 text-center text-rose-300">Error: ${err.message}</td></tr>`;
+      }
+    }
+
+    function handleCustSearch() {
+      const q = document.getElementById('custSearchInput').value.toLowerCase().trim();
+      if (!q) {
+        renderCustomersTable(allCustomers);
+        return;
+      }
+      const filtered = allCustomers.filter(c =>
+        c.name.toLowerCase().includes(q) ||
+        c.phone.toLowerCase().includes(q) ||
+        (c.email && c.email.toLowerCase().includes(q))
+      );
+      renderCustomersTable(filtered);
+    }
+
+    function renderCustomersTable(customers) {
+      const tbody = document.getElementById('customersTableBody');
+      if (!customers || customers.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" class="p-8 text-center text-gray-400">No customer profiles match criteria.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = customers.map(c => {
+        const isVip = c.tag === 'VIP';
+        const tagBadge = isVip
+          ? '<span class="px-2 py-0.5 rounded bg-gold-400 text-emerald-950 font-bold text-[9px] uppercase">⭐ VIP</span>'
+          : '<span class="px-2 py-0.5 rounded bg-emerald-800 text-gray-300 text-[9px] uppercase">Regular</span>';
+
+        return `
+          <tr class="hover:bg-emerald-800/20 transition">
+            <td class="py-3 px-4">
+              <div class="font-semibold text-pearl text-sm">${c.name}</div>
+              <div class="text-[10px] text-gray-400">Created: ${c.created_at}</div>
+            </td>
+            <td class="py-3 px-3">
+              <div class="text-pearl font-mono">${c.phone}</div>
+              <div class="text-[10px] text-gray-400">${c.email || '—'}</div>
+            </td>
+            <td class="py-3 px-3 font-semibold text-gold-300">${c.total_bookings} covers</td>
+            <td class="py-3 px-3 text-gray-300 text-[11px]">${c.last_visit_date || '—'}</td>
+            <td class="py-3 px-3 text-gray-300 text-[11px] truncate max-w-[140px]">${c.preferred_zone || 'Terrace'}</td>
+            <td class="py-3 px-3">${tagBadge}</td>
+            <td class="py-3 px-4 text-gray-400 text-[11px] max-w-xs truncate" title="${c.notes || ''}">
+              ${c.notes || '—'}
+            </td>
+            <td class="py-3 px-3 text-right whitespace-nowrap">
+              <button onclick="openCustModal(${c.id})" class="px-2.5 py-1 rounded bg-emerald-800 hover:bg-emerald-700 text-gold-300 text-xs transition">Notes &amp; Tag</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function openCustModal(id) {
+      const c = allCustomers.find(x => x.id === id);
+      if (!c) return;
+      document.getElementById('custModalId').value = c.id;
+      document.getElementById('custModalSubtitle').innerText = `Preferences for ${c.name} (${c.phone})`;
+      document.getElementById('custModalTag').value = c.tag || 'Regular';
+      document.getElementById('custModalNotes').value = c.notes || '';
+      document.getElementById('custNotesModal').classList.remove('hidden');
+    }
+
+    function closeCustModal() {
+      document.getElementById('custNotesModal').classList.add('hidden');
+    }
+
+    async function submitCustUpdate() {
+      const id = document.getElementById('custModalId').value;
+      const tag = document.getElementById('custModalTag').value;
+      const notes = document.getElementById('custModalNotes').value.trim();
+
+      try {
+        const res = await fetch(`/api/admin/customers/${id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ tag, notes })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          showToast(data.message || 'Profile saved');
+          closeCustModal();
+          loadCustomers();
+        } else {
+          showToast(data.detail || 'Error saving profile', true);
+        }
+      } catch (err) {
+        showToast(err.message, true);
+      }
+    }
+
+    // ================= BANQUETS & ANALYTICS (PLACEHOLDERS READY FOR PHASE 2) =================
+    async function loadBanquets() {
+      const container = document.getElementById('banquetCardsContainer');
+      try {
+        const res = await fetch('/api/admin/banquets');
+        if (res.ok) {
+          const data = await res.json();
+          renderBanquets(data.enquiries || []);
+        } else {
+          container.innerHTML = `<div class="p-6 text-center text-xs text-gray-400">Banquet leads engine ready for Phase 2.</div>`;
+        }
+      } catch (err) {
+        container.innerHTML = `<div class="p-6 text-center text-xs text-gray-400">Banquet leads engine ready for Phase 2.</div>`;
+      }
+    }
+
+    function renderBanquets(list) {
+      const container = document.getElementById('banquetCardsContainer');
+      if (!list || list.length === 0) {
+        container.innerHTML = `<div class="bg-emerald-900/40 border border-gold-500/20 rounded-xl p-8 text-center text-xs text-gray-400">No banquet enquiries yet. Public inquiries submitted via the banquet form will appear here.</div>`;
+        return;
+      }
+      container.innerHTML = list.map(b => `
+        <div class="bg-emerald-900/80 border border-gold-500/25 rounded-xl p-4 md:p-5 shadow-lg transition hover:border-gold-400/50">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-gold-500/20">
+            <div class="flex items-center gap-3">
+              <span class="w-9 h-9 rounded-full bg-emerald-800 border border-gold-500/30 flex items-center justify-center text-sm font-bold text-gold-400">🥂</span>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-cinzel text-sm font-bold text-pearl">${b.contact_name}</span>
+                  <span class="text-xs text-gray-400 font-mono">(${b.enquiry_ref})</span>
+                </div>
+                <div class="text-xs text-gray-300 mt-0.5">📞 ${b.contact_phone} ${b.contact_email ? '• ✉️ ' + b.contact_email : ''}</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <select onchange="updateBanquetStatus(${b.id}, this.value)" class="px-2.5 py-1 rounded bg-emerald-950 border border-gold-500/30 text-xs text-gold-300 focus:outline-none focus:border-gold-400 font-semibold">
+                <option value="New" ${b.status === 'New' ? 'selected' : ''}>⏳ New Lead</option>
+                <option value="Quoted" ${b.status === 'Quoted' ? 'selected' : ''}>📝 Quoted</option>
+                <option value="Confirmed" ${b.status === 'Confirmed' ? 'selected' : ''}>✓ Confirmed</option>
+                <option value="Closed" ${b.status === 'Closed' ? 'selected' : ''}>✕ Closed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-3 text-xs">
+            <div class="p-2.5 rounded-lg bg-emerald-950/60 border border-gold-500/10">
+              <div class="text-[10px] text-gray-400 uppercase font-semibold">Event Type</div>
+              <div class="font-semibold text-pearl mt-0.5">${b.event_type}</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-emerald-950/60 border border-gold-500/10">
+              <div class="text-[10px] text-gray-400 uppercase font-semibold">Date &amp; Capacity</div>
+              <div class="font-semibold text-pearl mt-0.5">${b.event_date}</div>
+              <div class="text-[11px] text-gold-300">${b.estimated_guests} Guests</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-emerald-950/60 border border-gold-500/10">
+              <div class="text-[10px] text-gray-400 uppercase font-semibold">Package Choice</div>
+              <div class="font-semibold text-pearl mt-0.5">${b.cuisine_preference}</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-emerald-950/60 border border-gold-500/10">
+              <div class="text-[10px] text-gray-400 uppercase font-semibold">Special Notes</div>
+              <div class="text-[11px] text-gray-300 mt-0.5 truncate" title="${b.special_requests || 'None'}">${b.special_requests || '—'}</div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex justify-end">
+            <a href="${b.quote_wa_url}" target="_blank" class="px-3 py-1.5 rounded-md bg-emerald-800 hover:bg-emerald-700 text-[#25D366] text-xs font-semibold border border-emerald-500/30 transition flex items-center gap-1.5 shadow">
+              <span>💬</span> Send Custom Banquet Proposal via WhatsApp
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function updateBanquetStatus(id, newStatus) {
+      try {
+        const res = await fetch(`/api/admin/banquets/${id}/status`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ status: newStatus })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          showToast(data.message || 'Status updated');
+          loadBanquets();
+        }
+      } catch (e) {
+        showToast(e.message, true);
+      }
+    }
+
+    async function loadAnalytics() {
+      const container = document.getElementById('analyticsContent');
+      try {
+        const res = await fetch('/api/admin/analytics');
+        if (res.ok) {
+          const data = await res.json();
+          renderAnalytics(data);
+        } else {
+          container.innerHTML = `<div class="p-6 text-center text-xs text-gray-400">Failed to load analytics.</div>`;
+        }
+      } catch (err) {
+        container.innerHTML = `<div class="p-6 text-center text-xs text-gray-400">Failed to load analytics: ${err.message}</div>`;
+      }
+    }
+
+    function renderAnalytics(data) {
+      const container = document.getElementById('analyticsContent');
+      const trendBars = (data.daily_trend || []).map(d => `
+        <div class="flex-1 flex flex-col items-center gap-1.5">
+          <div class="text-[10px] text-gold-300 font-semibold">${d.views}</div>
+          <div class="w-full bg-emerald-800/60 rounded-t h-28 flex items-end">
+            <div class="w-full bg-gradient-to-t from-emerald-600 to-gold-400 rounded-t transition-all hover:brightness-110" style="height: ${Math.min(100, Math.max(15, (d.views / 250) * 100))}%;"></div>
+          </div>
+          <div class="text-[9px] text-gray-400 uppercase font-medium">${d.date}</div>
+        </div>
+      `).join('');
+
+      container.innerHTML = `
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-5 rounded-xl bg-emerald-900 border border-gold-500/30 shadow-lg">
+            <div class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Total Page Views</div>
+            <div class="text-2xl font-bold font-cinzel text-pearl mt-1">${data.total_page_views}</div>
+            <div class="text-[10px] text-emerald-400 mt-1 font-medium">Direct First-Party Traffic</div>
+          </div>
+          <div class="p-5 rounded-xl bg-emerald-900 border border-gold-500/30 shadow-lg">
+            <div class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Total Reservations</div>
+            <div class="text-2xl font-bold font-cinzel text-gold-300 mt-1">${data.total_reservations}</div>
+            <div class="text-[10px] text-gold-400 mt-1 font-medium">Commission-Free Covers</div>
+          </div>
+          <div class="p-5 rounded-xl bg-emerald-900 border border-gold-500/30 shadow-lg">
+            <div class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Confirmation Ratio</div>
+            <div class="text-2xl font-bold font-cinzel text-emerald-300 mt-1">${data.confirmation_rate}</div>
+            <div class="text-[10px] text-gray-400 mt-1 font-medium">${data.confirmed_reservations} Confirmed Tables</div>
+          </div>
+          <div class="p-5 rounded-xl bg-emerald-900 border border-gold-500/30 shadow-lg">
+            <div class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Banquet Event Inquiries</div>
+            <div class="text-2xl font-bold font-cinzel text-pearl mt-1">${data.total_banquet_enquiries}</div>
+            <div class="text-[10px] text-gold-400 mt-1 font-medium">20–150 Pax Inquiries</div>
+          </div>
+        </div>
+
+        <!-- 7-Day Trend Chart -->
+        <div class="p-5 rounded-xl bg-emerald-900 border border-gold-500/30 shadow-lg">
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <h3 class="font-cinzel text-sm font-bold text-pearl">7-Day Diner Engagement Trend</h3>
+              <p class="text-[11px] text-gray-400">Daily menu views and table booking intent at White Lotus Pune</p>
+            </div>
+            <span class="text-xs text-gold-400 font-semibold px-2.5 py-1 rounded bg-emerald-950 border border-gold-500/20">Live First-Party Stats</span>
+          </div>
+          <div class="flex items-end gap-2 pt-4 border-t border-gold-500/15">
+            ${trendBars}
+          </div>
+        </div>
+      `;
+    }
+
+    // Sign out
+    async function handleLogout() {
+      await fetch('/api/admin/logout', { method: 'POST' });
+      window.location.href = '/admin/login';
+    }
+
+    // On Load Initializer
+    window.addEventListener('DOMContentLoaded', async () => {
+      // Verify admin session
+      try {
+        const res = await fetch('/api/admin/me');
+        if (res.status === 401) {
+          window.location.href = '/admin/login';
+          return;
+        }
+        const user = await res.json();
+        document.getElementById('sidebarStaffName').innerText = user.full_name || user.username;
+      } catch (e) {
+        window.location.href = '/admin/login';
+        return;
+      }
+
+      loadReservations();
+    });
+  </script>
+</body>
+</html>

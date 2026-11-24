@@ -1,12 +1,23 @@
+# Environment secrets
 .env
-.env.*
-!.env.example
-*.pem
-*.key
+.env.local
+
+# Databases & runtime storage
+*.db
+*.sqlite
+*.sqlite3
+backups/
+
+# Python cache & virtualenvs
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+env/
+.pytest_cache/
+
+# Node / OS files
 node_modules/
-dist/
-build/
-.cache/
 .DS_Store
 Thumbs.db
-*.log
