@@ -46,23 +46,20 @@
 
 ---
 
-## 3. Commercial Quotation & Contract Options
+## 3. Commercial Quotation & Asset Handover
 
-| Option | Contract Duration | Investment | Domain Inclusions | Free Bonus |
-|---|---|---|---|---|
-| **Option 1: Turnkey Launch** | **3-Year Digital Asset** | **₹31,999** | First 3 Years Domain **ON US** | 2x Smart NFC Review Cards FREE |
-| **Option 2: Growth Contract** | **5-Year Digital Contract** | **₹33,999** | First 3 Yrs on us + 2 Yrs (+₹2,000) | 2x Smart NFC Review Cards FREE |
-| **Option 3: Master Asset** | **10-Year Enterprise Lock** | **₹38,299** | First 3 Yrs on us + 7 Yrs (+₹6,300) | 2x Smart NFC Review Cards FREE |
-
-*Zero monthly retainer fees. Lifetime global high-speed edge hosting included.*
+| Deliverable | Package Scope | Investment | Inclusions |
+|---|---|---|---|
+| **White Lotus Executive Flagship** | **Turnkey Digital Asset & Booking Portal** | **₹74,999** *(All-Inclusive Net)* | • 3-Year Domain (`whitelotuspune.com`) **Included Free**<br>• High-Speed Global Cloud Hosting & SSL<br>• Complete 166+ Food & Bar Menu with Dietary Switcher<br>• 60 FPS Interactive 3D Lotus Petals Physics<br>• WhatsApp Floor Captain Sync (+91 95135 75757)<br>• Automated Google Sheets CRM System<br>• **2x Smart NFC Google Review Tap Cards** (Worth ₹3,000) **FREE**<br>• **Zero Monthly Retainers Forever** (Saves ₹60,000+/yr) |
 
 ---
 
 ## 4. Deliverables in this Directory
 
-- `index.html`: Production-ready luxury restaurant portal with text-based menu.
-- `proposal-quotation.html`: 3-page executive proposal and investment document.
-- `White_Lotus_Executive_Quotation.pdf`: Pixel-perfect executive PDF quotation generated via Edge headless (~915 KB).
+- `index.html`: Production-ready luxury restaurant portal with 3D petals, 166+ menu items, and dietary switcher.
+- `quotation.html`: Clean 2-page executive commercial quotation source.
+- `White_Lotus_Quotation.pdf`: Exactly 2-page executive PDF quotation generated via Edge headless (~777 KB).
 - `google-apps-script.js`: Automated Google Sheets table booking CRM backend.
+- `build_full_menu.py`: Python script compiling and auditing the complete 166+ menu dataset.
 - `404.html`: Custom branded error page.
 - `README.md`: System manual and client presentation guide.
