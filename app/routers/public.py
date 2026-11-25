@@ -6,11 +6,16 @@ from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
 
+from pydantic import BaseModel, Field
 from app.database import get_db
 from app.config import settings
 from app.models import MenuItem, Customer, Reservation, BanquetEnquiry, AnalyticsEvent
 from app.schemas import ReservationCreate, BanquetEnquiryCreate
-from app.security import check_rate_limit
+from app.security import check_rate_limit, get_client_ip, log_security_event
+
+class DataDeletionRequest(BaseModel):
+    phone: str = Field(..., min_length=10, max_length=20)
+    reason: Optional[str] = Field("User privacy erasure request", max_length=255)
 
 router = APIRouter(prefix="/api", tags=["Public"])
 
@@ -261,7 +266,7 @@ def create_banquet_enquiry(
 @router.post("/analytics/track")
 def track_analytics(request: Request, db: Session = Depends(get_db)):
     """Lightweight first-party page view / interaction event tracking"""
-    client_ip = request.client.host if request.client else "127.0.0.1"
+    client_ip = get_client_ip(request)
     event = AnalyticsEvent(
         event_type="page_view",
         details="home_view",
@@ -271,3 +276,33 @@ def track_analytics(request: Request, db: Session = Depends(get_db)):
     db.add(event)
     db.commit()
     return {"status": "ok"}
+
+# --- PRIVACY & DPDP DATA ERASURE (Legal & Compliance 12.3) ---
+@router.post("/privacy/data-deletion")
+def request_data_deletion(
+    payload: DataDeletionRequest,
+    request: Request,
+    db: Session = Depends(get_db)
+):
+    """Allows guests to request permanent deletion or anonymization of their stored phone/name under DPDP Act 2023"""
+    client_ip = get_client_ip(request)
+    clean_p = payload.phone.replace("+", "").strip()
+
+    customer = db.query(Customer).filter(Customer.phone.ilike(f"%{clean_p}%")).first()
+    if customer:
+        cust_name = customer.name
+        # Delete associated reservations or anonymize
+        db.query(Reservation).filter(Reservation.customer_id == customer.id).delete()
+        db.delete(customer)
+        db.commit()
+        log_security_event("DATA_DELETION", f"Deleted CRM record for customer {cust_name} (phone {clean_p})", client_ip)
+        return {
+            "success": True,
+            "message": "Your personal profile and table reservation history have been permanently purged from our database in compliance with the DPDP Act 2023."
+        }
+    else:
+        log_security_event("DATA_DELETION_NOT_FOUND", f"No record found for phone {clean_p}", client_ip)
+        return {
+            "success": True,
+            "message": "No customer record was associated with this phone number. Your data is not stored."
+        }

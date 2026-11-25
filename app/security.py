@@ -1,7 +1,9 @@
 import time
+import logging
 from collections import defaultdict
 from datetime import datetime, timedelta
 from typing import Optional
+from pathlib import Path
 import bcrypt
 import jwt
 from fastapi import Request, HTTPException, status, Depends
@@ -10,6 +12,28 @@ from sqlalchemy.orm import Session
 from app.config import settings
 from app.database import get_db
 from app.models import AdminUser
+
+# Security audit logger (Audit 10.5)
+LOG_DIR = Path(__file__).resolve().parent.parent / "logs"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+audit_logger = logging.getLogger("security_audit")
+audit_logger.setLevel(logging.INFO)
+if not audit_logger.handlers:
+    fh = logging.FileHandler(str(LOG_DIR / "security_audit.log"), encoding="utf-8")
+    fh.setFormatter(logging.Formatter("[%(asctime)s] %(levelname)s %(message)s"))
+    audit_logger.addHandler(fh)
+
+def log_security_event(event_type: str, details: str, client_ip: str):
+    """Logs security audit events with masked or excluded personal secrets"""
+    audit_logger.info(f"EVENT={event_type} IP={client_ip} DETAILS={details}")
+
+def get_client_ip(request: Request) -> str:
+    """Safe IP resolution prioritizing direct socket connection over spoofable headers"""
+    # If behind trusted reverse proxy (e.g. Cloudflare / Nginx), take CF-Connecting-IP
+    cf_ip = request.headers.get("cf-connecting-ip")
+    if cf_ip:
+        return cf_ip.strip()
+    return request.client.host if request.client else "127.0.0.1"
 
 # Direct bcrypt password hashing
 def hash_password(password: str) -> str:

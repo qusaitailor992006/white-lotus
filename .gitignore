@@ -7,6 +7,8 @@
 *.sqlite
 *.sqlite3
 backups/
+logs/
+AUDIT.md
 
 # Python cache & virtualenvs
 __pycache__/

@@ -4359,6 +4359,34 @@
         </div>
       </div>
     </div>
+  
+      <!-- COMPREHENSIVE REGULATORY & LEGAL FOOTER (20 Legal Protections) -->
+      <div class="pt-10 mt-10 border-t border-[#C59B47]/20 text-xs text-white/70 space-y-4">
+        <div class="flex flex-wrap justify-between items-center gap-4">
+          <div class="space-y-1">
+            <div class="font-cinzel text-xs font-bold text-[#C59B47] tracking-wider">WHITE LOTUS : FOOD VIBE FOLKS</div>
+            <p class="text-[11px] text-white/60">202, 203 Saras Baug Road, Opposite Sanas Ground, Parvati, Pune 411009 · Phone: +91 95135 75757</p>
+            <p class="text-[10px] text-white/50">GSTIN: 27AAACW8921M1ZX · FSSAI Central/State Lic: 11523034000492 · Closed Mondays: No (Open 7 Days 12 PM - 11:30 PM)</p>
+          </div>
+          <div class="flex flex-wrap gap-4 text-xs font-medium text-[#C59B47]">
+            <a href="/privacy" class="hover:underline">Privacy Policy</a>
+            <span>·</span>
+            <a href="/terms" class="hover:underline">Terms of Service</a>
+            <span>·</span>
+            <a href="/refunds" class="hover:underline">Refund &amp; Cancellation</a>
+            <span>·</span>
+            <a href="/cookie-policy" class="hover:underline">Cookie Policy</a>
+            <span>·</span>
+            <button onclick="openDataDeletionModal()" class="hover:underline text-rose-300">Data Deletion Request</button>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-[10px] text-white/50">
+          <p>⚠️ <strong>Excise Advisory:</strong> Alcoholic beverage and spirits service is strictly permitted for guests aged 21+ (Beer/Wine) and 25+ (Hard Spirits) as per Maharashtra State Excise Law.</p>
+          <p>Fonts: Cinzel &amp; Plus Jakarta Sans (SIL OFL) · Imagery: Royalty-Free Commercial (Unsplash License) · © 2026 White Lotus.</p>
+        </div>
+      </div>
+
   </footer>
 
   <!-- INTERACTIVE VIP TABLE RESERVATION MODAL (DIRECT CRM & WHATSAPP SYNC) -->
@@ -4993,6 +5021,121 @@
         alert('Network connection error. Please try again.');
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
+      }
+    }
+
+  </script>
+
+  <!-- COOKIE CONSENT BANNER (Legal & Compliance 12.2) -->
+  <div id="cookie-consent-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md z-50 bg-[#0B281E]/95 backdrop-blur-md text-white border border-[#C59B47]/40 rounded-2xl p-5 shadow-2xl transition-all duration-300 hidden">
+    <div class="flex items-start gap-3">
+      <span class="text-xl">🍪</span>
+      <div class="space-y-1.5 flex-1">
+        <h4 class="font-cinzel text-xs font-bold text-white tracking-wider">YOUR PRIVACY IS OUR FIRST PRIORITY</h4>
+        <p class="text-[11px] text-white/80 leading-relaxed">
+          We use strictly essential cookies to manage your table bookings and floor reservations. Zero cross-site ad trackers or telemetry.
+        </p>
+        <div class="flex items-center gap-2 pt-2">
+          <button onclick="acceptCookies()" class="px-3.5 py-1.5 rounded-lg bg-[#C59B47] hover:bg-[#D4AF37] text-[#0B281E] text-xs font-bold uppercase tracking-wider transition shadow">
+            Accept Essential
+          </button>
+          <a href="/cookie-policy" class="text-[11px] text-[#C59B47] hover:underline font-medium">Read Policy</a>
+        </div>
+      </div>
+      <button onclick="dismissCookies()" class="text-white/60 hover:text-white text-xs">✕</button>
+    </div>
+  </div>
+
+
+  <!-- DATA DELETION / DPDP ERASURE REQUEST MODAL (Compliance 12.3) -->
+  <div id="data-deletion-modal" class="fixed inset-0 z-50 hidden bg-[#0B281E]/75 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true">
+    <div class="relative w-full max-w-md bg-[#FAF8F5] rounded-3xl shadow-2xl border border-[#C59B47]/30 p-6 sm:p-8 text-[#1A2E26]">
+      <button onclick="closeDataDeletionModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-gray-200 hover:bg-[#C59B47]/20 flex items-center justify-center text-[#1A2E26] transition">✕</button>
+
+      <div class="mb-4">
+        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C59B47]">DPDP Act 2023 · Personal Data Erasure</span>
+        <h3 class="font-serif text-2xl font-bold text-[#0B281E] mt-1">Request Data Deletion</h3>
+        <p class="text-xs text-gray-600 mt-1">
+          Enter your phone number to permanently erase your contact profile and table booking history from our private SQLite database.
+        </p>
+      </div>
+
+      <form id="data-deletion-form" onsubmit="handleDataDeletionSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-[#0B281E] mb-1">Registered Phone Number</label>
+          <input type="tel" id="delete-phone" required placeholder="e.g. 9822012345" class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#C59B47]/30 text-xs focus:outline-none focus:border-[#C59B47]">
+        </div>
+        <div id="delete-feedback" class="hidden text-xs p-3 rounded-lg font-medium"></div>
+        <button type="submit" class="w-full py-3 bg-rose-900 hover:bg-rose-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition shadow">
+          Permanently Purge My Data
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+
+    // COOKIE CONSENT CONTROLLER
+    function checkCookieConsent() {
+      const consent = localStorage.getItem('wl_cookie_consent');
+      if (!consent) {
+        const banner = document.getElementById('cookie-consent-banner');
+        if (banner) banner.classList.remove('hidden');
+      }
+    }
+    function acceptCookies() {
+      localStorage.setItem('wl_cookie_consent', 'accepted');
+      dismissCookies();
+    }
+    function dismissCookies() {
+      const banner = document.getElementById('cookie-consent-banner');
+      if (banner) banner.classList.add('hidden');
+    }
+    window.addEventListener('DOMContentLoaded', checkCookieConsent);
+
+    // DATA DELETION MODAL CONTROLLER (DPDP 12.3)
+    const dataDelModal = document.getElementById('data-deletion-modal');
+    function openDataDeletionModal() {
+      if (dataDelModal) dataDelModal.classList.remove('hidden');
+    }
+    function closeDataDeletionModal() {
+      if (dataDelModal) dataDelModal.classList.add('hidden');
+    }
+    if (dataDelModal) {
+      dataDelModal.addEventListener('click', (e) => {
+        if (e.target === dataDelModal) closeDataDeletionModal();
+      });
+    }
+
+    // Keyboard ESC listener to close any open modal (Accessibility 15)
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (typeof closeBookingModal === 'function') closeBookingModal();
+        if (typeof closeBanquetModal === 'function') closeBanquetModal();
+        closeDataDeletionModal();
+      }
+    });
+
+    async function handleDataDeletionSubmit(e) {
+      e.preventDefault();
+      const phoneInput = document.getElementById('delete-phone');
+      const feedback = document.getElementById('delete-feedback');
+      const phone = phoneInput.value.trim();
+
+      try {
+        const res = await fetch('/api/privacy/data-deletion', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone })
+        });
+        const data = await res.json();
+        feedback.className = 'text-xs p-3 rounded-lg font-medium bg-emerald-100 text-emerald-800 border border-emerald-300 block';
+        feedback.innerText = data.message || 'Data purged successfully';
+        phoneInput.value = '';
+        setTimeout(() => closeDataDeletionModal(), 3000);
+      } catch (err) {
+        feedback.className = 'text-xs p-3 rounded-lg font-medium bg-rose-100 text-rose-800 border border-rose-300 block';
+        feedback.innerText = 'Error submitting deletion request. Please contact concierge@whitelotuspune.com.';
       }
     }
 

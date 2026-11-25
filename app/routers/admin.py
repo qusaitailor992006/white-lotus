@@ -23,7 +23,9 @@ from app.security import (
     verify_password,
     create_access_token,
     get_current_admin,
-    check_rate_limit
+    check_rate_limit,
+    log_security_event,
+    get_client_ip
 )
 
 router = APIRouter(prefix="/api/admin", tags=["Admin API"])
@@ -31,8 +33,9 @@ router = APIRouter(prefix="/api/admin", tags=["Admin API"])
 # --- AUTHENTICATION ---
 @router.post("/login")
 def admin_login(payload: LoginRequest, request: Request, response: Response, db: Session = Depends(get_db)):
-    client_ip = request.client.host if request.client else "127.0.0.1"
+    client_ip = get_client_ip(request)
     if not check_rate_limit(f"admin_login_{client_ip}", max_calls=5, period_seconds=60):
+        log_security_event("LOGIN_RATE_LIMIT", f"Exceeded login attempts for user '{payload.username}'", client_ip)
         raise HTTPException(
             status_code=status.HTTP_429_TOO_MANY_REQUESTS,
             detail="Too many failed login attempts. Please wait 60 seconds."
@@ -40,11 +43,13 @@ def admin_login(payload: LoginRequest, request: Request, response: Response, db:
 
     admin = db.query(AdminUser).filter(AdminUser.username == payload.username).first()
     if not admin or not verify_password(payload.password, admin.password_hash):
+        log_security_event("FAILED_LOGIN", f"Invalid credentials for '{payload.username}'", client_ip)
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid administrative username or password."
         )
 
+    log_security_event("SUCCESSFUL_LOGIN", f"Admin '{admin.username}' authenticated", client_ip)
     token = create_access_token(data={"sub": admin.username, "role": admin.role})
 
     # Set secure HttpOnly cookie
@@ -53,7 +58,7 @@ def admin_login(payload: LoginRequest, request: Request, response: Response, db:
         value=token,
         httponly=True,
         samesite="strict",
-        secure=False, # True if HTTPS in production
+        secure=settings.ENVIRONMENT == "production", # Strict in production
         max_age=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
         path="/"
     )
